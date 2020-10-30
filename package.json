@@ -1,0 +1,26 @@
+{
+  "name": "paintballpark-landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel serve ./src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/epchela/paintballpark-landing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/epchela/paintballpark-landing/issues"
+  },
+  "homepage": "https://github.com/epchela/paintballpark-landing#readme",
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.1",
+    "posthtml-img-autosize": "^0.1.6",
+    "posthtml-include": "^1.5.0",
+    "stylelint": "^13.7.2",
+    "stylelint-config-standard": "^20.0.0"
+  }
+}

@@ -1,0 +1,61 @@
+<article class="block  block--service">
+  <h2 class="block__title">Наши услуги</h2>
+
+  <div class="service-tabs">
+    <input type="radio" name="tab" id="radio-service-adults" style="display: none;">
+    <input type="radio" name="tab" id="radio-service-children" style="display: none;">
+
+    <ul class="service-tabs__list" role="tablist">
+      <li class="service-tabs__item" role="presentation">
+<!--        <a href="#service-adults" class="service-tabs__link" id="tab-A" role="tab" aria-controls="A" aria-selected="true" tabindex="0">Для взрослых</a>-->
+        <label for="radio-service-adults" class="service-tabs__link  service-tabs__link--adults" tabindex="0">Для взрослых</label>
+      </li>
+      <li class="service-tabs__item" role="presentation">
+<!--        <a href="#service-children" class="service-tabs__link" id="tab-B" role="tab" aria-controls="B" aria-selected="false" tabindex="-1">Для детей</a>-->
+        <label for="radio-service-children" class="service-tabs__link  service-tabs__link--children" tabindex="-1">Для детей</label>
+      </li>
+    </ul>
+
+    <section id="service-adults" class="service-tabs__section" role="tabpanel" aria-labelledby="tab-A" aria-hidden="false">
+      <div class="service-tabs__body">
+        <ul class="service-carousel">
+          <li class="service-carousel__item">
+            <div class="carousel-item">
+              <div class="carousel-item__img"></div>
+              <div class="carousel-item__body">
+              <h3 class="carousel-item__title">Отпраздновать День рождения!</h3>
+              <p class="carousel-item__description">Фотосъемка, шары. оформление, домики, беседки и многое другое</p>
+                <button class="carousel-item__btn">
+                  <span class="visually-hidden">Подробнее</span>
+                  <span class="icon"></span>
+                </button>
+              </div>
+            </div>
+          </li>
+
+          <li class="service-carousel__item">
+            <div class="carousel-item">
+              <div class="carousel-item__img"></div>
+              <div class="carousel-item__body">
+              <h3 class="carousel-item__title">Большой спектр спортивных игр и развлечений</h3>
+              <p class="carousel-item__description">Хочешь еще больше сплотиться с друзьями? Тогда тебе к нам</p>
+                <button class="carousel-item__btn">
+                  <span class="visually-hidden">Подробнее</span>
+                  <span class="icon"></span>
+                </button>
+              </div>
+            </div>
+          </li>
+
+          <!--     TODO: для проверки, потом удалить      -->
+        </ul>
+      </div>
+    </section>
+
+    <section id="service-children" class="service-tabs__section" role="tabpanel" aria-labelledby="tab-B" aria-hidden="true">
+      <div class="service-tabs__body">
+        Content of section B
+      </div>
+    </section>
+  </div>
+</article>

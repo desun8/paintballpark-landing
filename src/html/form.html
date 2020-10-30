@@ -1,0 +1,13 @@
+<form id="{{ id }}" class="form  form--{{ classModifier }}" action="">
+  <h2 class="form__title">{{ title }}</h2>
+
+  <label for="{{ id }}-name" class="form__label">Имя</label>
+  <input id="{{ id }}-name" class="form__input" type="text" name="name">
+
+  <label for="{{ id }}-phone" class="form__label">Телефон</label>
+  <input id="{{ id }}-phone" class="form__input" type="text" name="phone">
+
+  <a href="#" class="form__agreement" target="_blank" ref="nofollow noopener">Нажимая Заказать звонок, Вы соглашаетесь с политикой обработки персональных данных.</a>
+
+  <button class="form__submit" type="submit">{{ submitText }}</button>
+</form>
