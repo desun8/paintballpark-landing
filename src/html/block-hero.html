@@ -1,21 +1,32 @@
 <article class="block-hero">
   <div class="hero-video">
-    <div class="hero-video__container">
+    <div class="hero-video__body">
       <div class="hero-video__header">
         <h2 class="hero-video__title">Почему стоит приехать на пейнтбол?</h2>
         <span class="hero-video__icon" aria-hidden="true"></span>
+        <button class="hero-video__btn"><span class="visually-hidden">Посмотреть видео</span></button>
       </div>
-<!--      <video src=""></video>-->
+      <div class="hero-video__container">
+        <video autoplay loop muted playsinline>
+          <source type="video/webm" src="videos/video-muted.webm">
+          <source type="video/mp4" src="videos/video-muted.mp4">
+        </video>
+        <!--   TODO: скорее всего это будет не нужно -> удалить    -->
+        <video src="videos/video-muted.mp4" class="hero-video__video-fill" autoplay loop muted playsinline>
+          <source type="video/webm" src="videos/video-muted.webm">
+          <source type="video/mp4" src="videos/video-muted.mp4">
+        </video>
+      </div>
     </div>
   </div>
 
   <div class="hero-form">
     <include src="form.html">
       {
-        "id": "form-hero",
-        "classModifier": "hero",
-        "title": "Хотите играть в пейнтбол?",
-        "submitText": "Заказать звонок"
+      "id": "form-hero",
+      "classModifier": "hero",
+      "title": "Хотите играть в пейнтбол?",
+      "submitText": "Заказать звонок"
       }
     </include>
   </div>

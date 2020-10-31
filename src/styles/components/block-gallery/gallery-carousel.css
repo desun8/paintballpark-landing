@@ -1,0 +1,4 @@
+.gallery-carousel {
+  padding: 0 var(--page-gap);
+  overflow-x: scroll;
+}

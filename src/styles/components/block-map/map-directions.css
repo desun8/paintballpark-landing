@@ -1,0 +1,21 @@
+.map-directions {
+  display: flex;
+  justify-content: center;
+  padding: 0 var(--page-gap);
+  list-style: none;
+}
+
+.map-directions__item {
+  --gap: 5px;
+
+  flex: 0 1 calc(100% / 3);
+  margin: 0 var(--gap);
+}
+
+.map-directions__item:first-child {
+  margin-left: 0;
+}
+
+.map-directions__item:last-child {
+  margin-right: 0;
+}

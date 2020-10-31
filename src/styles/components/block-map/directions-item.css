@@ -1,0 +1,30 @@
+.directions-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #c6e2ef;
+  border-radius: 8px;
+}
+
+.directions-item__icon {
+  --size: 45px;
+
+  width: var(--size);
+  height: var(--size);
+  background-color: #eee28b;
+  border-radius: 50%;
+}
+
+.directions-item__name {}
+
+.directions-item__link {}
+
+.directions-item__link::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

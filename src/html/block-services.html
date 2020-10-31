@@ -1,33 +1,38 @@
-<article class="block  block--service">
+<article id="block-services" class="block  block--service">
   <h2 class="block__title">Наши услуги</h2>
 
   <div class="service-tabs">
-    <input type="radio" name="tab" id="radio-service-adults" style="display: none;">
+    <input type="radio" name="tab" id="radio-service-adults" checked style="display: none;">
     <input type="radio" name="tab" id="radio-service-children" style="display: none;">
 
     <ul class="service-tabs__list" role="tablist">
       <li class="service-tabs__item" role="presentation">
-<!--        <a href="#service-adults" class="service-tabs__link" id="tab-A" role="tab" aria-controls="A" aria-selected="true" tabindex="0">Для взрослых</a>-->
-        <label for="radio-service-adults" class="service-tabs__link  service-tabs__link--adults" tabindex="0">Для взрослых</label>
+        <!--        <a href="#service-adults" class="service-tabs__link" id="tab-A" role="tab" aria-controls="A" aria-selected="true" tabindex="0">Для взрослых</a>-->
+        <label for="radio-service-adults" class="service-tabs__link  service-tabs__link--adults" tabindex="0"
+          data-tab="adults">Для взрослых</label>
       </li>
       <li class="service-tabs__item" role="presentation">
-<!--        <a href="#service-children" class="service-tabs__link" id="tab-B" role="tab" aria-controls="B" aria-selected="false" tabindex="-1">Для детей</a>-->
-        <label for="radio-service-children" class="service-tabs__link  service-tabs__link--children" tabindex="-1">Для детей</label>
+        <!--        <a href="#service-children" class="service-tabs__link" id="tab-B" role="tab" aria-controls="B" aria-selected="false" tabindex="-1">Для детей</a>-->
+        <label for="radio-service-children" class="service-tabs__link  service-tabs__link--children" tabindex="0">Для
+          детей</label>
       </li>
     </ul>
 
-    <section id="service-adults" class="service-tabs__section" role="tabpanel" aria-labelledby="tab-A" aria-hidden="false">
+    <section id="service-adults" class="service-tabs__section" role="tabpanel" aria-labelledby="tab-A"
+      aria-hidden="false">
       <div class="service-tabs__body">
-        <ul class="service-carousel">
+        <ul class="service-carousel  list-unstyled">
           <li class="service-carousel__item">
             <div class="carousel-item">
-              <div class="carousel-item__img"></div>
+              <div class="carousel-item__img">
+                <img src="images/__dev-img.jpg" alt="" width="250" aria-hidden="true">
+              </div>
               <div class="carousel-item__body">
-              <h3 class="carousel-item__title">Отпраздновать День рождения!</h3>
-              <p class="carousel-item__description">Фотосъемка, шары. оформление, домики, беседки и многое другое</p>
-                <button class="carousel-item__btn">
+                <h3 class="carousel-item__title">Отпраздновать День рождения!</h3>
+                <p class="carousel-item__description">Фотосъемка, шары. оформление, домики, беседки и многое другое</p>
+                <button class="carousel-item__btn  js-open-modal">
                   <span class="visually-hidden">Подробнее</span>
-                  <span class="icon"></span>
+                  <span class="icon">></span>
                 </button>
               </div>
             </div>
@@ -35,24 +40,96 @@
 
           <li class="service-carousel__item">
             <div class="carousel-item">
-              <div class="carousel-item__img"></div>
+              <div class="carousel-item__img">
+                <video loop muted playsinline>
+                  <source type="video/webm" src="videos/video-muted.webm">
+                  <source type="video/mp4" src="videos/video-muted.mp4">
+                </video>
+              </div>
               <div class="carousel-item__body">
-              <h3 class="carousel-item__title">Большой спектр спортивных игр и развлечений</h3>
-              <p class="carousel-item__description">Хочешь еще больше сплотиться с друзьями? Тогда тебе к нам</p>
-                <button class="carousel-item__btn">
+                <h3 class="carousel-item__title">Большой спектр спортивных игр и развлечений</h3>
+                <p class="carousel-item__description">Хочешь еще больше сплотиться с друзьями? Тогда тебе к нам</p>
+                <button class="carousel-item__btn  js-open-modal">
                   <span class="visually-hidden">Подробнее</span>
-                  <span class="icon"></span>
+                  <span class="icon">></span>
                 </button>
               </div>
             </div>
           </li>
 
           <!--     TODO: для проверки, потом удалить      -->
+          <li class="service-carousel__item">
+            <div class="carousel-item">
+              <div class="carousel-item__img">
+                <img src="images/__dev-img.jpg" alt="" width="250" aria-hidden="true">
+              </div>
+              <div class="carousel-item__body">
+                <h3 class="carousel-item__title">Отпраздновать День рождения!</h3>
+                <p class="carousel-item__description">Фотосъемка, шары. оформление, домики, беседки и многое другое</p>
+                <button class="carousel-item__btn  js-open-modal">
+                  <span class="visually-hidden">Подробнее</span>
+                  <span class="icon">></span>
+                </button>
+              </div>
+            </div>
+          </li>
+          <li class="service-carousel__item">
+            <div class="carousel-item">
+              <div class="carousel-item__img">
+                <video loop muted playsinline>
+                  <source type="video/webm" src="videos/video-muted.webm">
+                  <source type="video/mp4" src="videos/video-muted.mp4">
+                </video>
+              </div>
+              <div class="carousel-item__body">
+                <h3 class="carousel-item__title">Большой спектр спортивных игр и развлечений</h3>
+                <p class="carousel-item__description">Хочешь еще больше сплотиться с друзьями? Тогда тебе к нам</p>
+                <button class="carousel-item__btn  js-open-modal">
+                  <span class="visually-hidden">Подробнее</span>
+                  <span class="icon">></span>
+                </button>
+              </div>
+            </div>
+          </li>
+          <li class="service-carousel__item">
+            <div class="carousel-item">
+              <div class="carousel-item__img">
+                <img src="images/__dev-img.jpg" alt="" width="250" aria-hidden="true">
+              </div>
+              <div class="carousel-item__body">
+                <h3 class="carousel-item__title">Отпраздновать День рождения!</h3>
+                <p class="carousel-item__description">Фотосъемка, шары. оформление, домики, беседки и многое другое</p>
+                <button class="carousel-item__btn  js-open-modal">
+                  <span class="visually-hidden">Подробнее</span>
+                  <span class="icon">></span>
+                </button>
+              </div>
+            </div>
+          </li>
+          <li class="service-carousel__item">
+            <div class="carousel-item">
+              <div class="carousel-item__img">
+                <video loop muted playsinline>
+                  <source type="video/webm" src="videos/video-muted.webm">
+                  <source type="video/mp4" src="videos/video-muted.mp4">
+                </video>
+              </div>
+              <div class="carousel-item__body">
+                <h3 class="carousel-item__title">Большой спектр спортивных игр и развлечений</h3>
+                <p class="carousel-item__description">Хочешь еще больше сплотиться с друзьями? Тогда тебе к нам</p>
+                <button class="carousel-item__btn  js-open-modal">
+                  <span class="visually-hidden">Подробнее</span>
+                  <span class="icon">></span>
+                </button>
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
     </section>
 
-    <section id="service-children" class="service-tabs__section" role="tabpanel" aria-labelledby="tab-B" aria-hidden="true">
+    <section id="service-children" class="service-tabs__section" role="tabpanel" aria-labelledby="tab-B"
+      aria-hidden="true">
       <div class="service-tabs__body">
         Content of section B
       </div>

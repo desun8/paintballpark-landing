@@ -1,0 +1,6 @@
+.block {}
+
+.block__title {
+  padding: 0 var(--page-gap);
+  text-align: center;
+}

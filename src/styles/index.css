@@ -1,0 +1,42 @@
+@import "./_config/var.css";
+
+/* BASE */
+@import "./base/scaffolding.css";
+
+/* COMPONENTS */
+@import "./components/block/block.css";
+@import "./components/banner-price.css";
+@import "./components/banner-instagram.css";
+@import "./components/socials-list.css";
+
+/* header */
+@import "./components/page-header/page-header.css";
+@import "./components/page-header/page-btn.css";
+@import "./components/page-header/short-nav.css";
+
+/* hero */
+@import "./components/block-hero/block-hero.css";
+@import "./components/block-hero/hero-video.css";
+@import "./components/block-hero/hero-form.css";
+
+/* services */
+@import "./components/block-service/service-tabs.css";
+@import "./components/block-service/service-carousel.css";
+@import "./components/block-service/carousel-item.css";
+
+/* map */
+@import "./components/block-map/map-directions.css";
+@import "./components/block-map/directions-item.css";
+
+/* gallery */
+@import "./components/block-gallery/gallery-carousel.css";
+@import "./components/block-gallery/gallery.css";
+
+/* footer */
+@import "./components/page-footer/page-footer.css";
+@import "./components/page-footer/footer-contacts.css";
+
+/* UTILITIES */
+@import "./utilities/visually-hidden.css";
+@import "./utilities/wrapper.css";
+@import "./utilities/list-unstyled.css";

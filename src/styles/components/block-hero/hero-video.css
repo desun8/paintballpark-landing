@@ -1,0 +1,68 @@
+.hero-video {
+}
+
+.hero-video__body {
+  position: relative;
+}
+
+.hero-video__header {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.hero-video__title {}
+
+.hero-video__icon {
+  --size: 36px;
+
+  flex-shrink: 0;
+  display: inline-block;
+  width: var(--size);
+  height: var(--size);
+  background-color: #252525;
+  border-radius: 50%;
+}
+
+.hero-video__btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* TODO: Удалить когда будет сброс дефолтных стилей */
+  background-color: transparent;
+}
+
+.hero-video__container {
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: calc(360 / 280 * 100%); /* aspect-ratio = height / width * 100% */
+  overflow: hidden;
+}
+
+.hero-video__container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-video__container video.hero-video__video-fill {
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  filter: blur(20px);
+  z-index: 0;
+}

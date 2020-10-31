@@ -1,0 +1,24 @@
+.footer-contacts {
+  padding: 0 10px;
+  list-style: none;
+}
+
+.footer-contacts__item {
+  margin-bottom: 20px;
+}
+
+.footer-contacts__item:last-child {
+  margin-bottom: 0;
+}
+
+.footer-contacts__link {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-contacts__link .name {
+  font-weight: 500;
+}
+
+.footer-contacts__link .value {}

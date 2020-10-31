@@ -1,0 +1,9 @@
+.page-footer {
+  padding: 0 10px;
+}
+
+.page-footer .site-dev {}
+
+.page-footer .copyright {
+  display: none;
+}

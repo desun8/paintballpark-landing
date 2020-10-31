@@ -1,0 +1,21 @@
+.service-carousel {
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+}
+
+.service-carousel__item {
+  flex-shrink: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.service-carousel__item:first-child {
+  margin-left: 0;
+  padding-left: var(--page-gap);
+}
+
+.service-carousel__item:last-child {
+  margin-right: 0;
+  padding-right: var(--page-gap);
+}

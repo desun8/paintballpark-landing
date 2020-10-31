@@ -1,0 +1,25 @@
+.gallery {
+  --size: 132px;
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(2, var(--size));
+  gap: 10px;
+}
+
+.gallery__item {
+  min-width: var(--size);
+  overflow: hidden;
+}
+
+.gallery__item__empty-end-gap {
+  width: 1px;
+}
+
+.gallery__item img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+}

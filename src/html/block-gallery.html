@@ -1,18 +1,374 @@
 <article class="block  block--gallery">
   <h2 class="block__title">Галерея <span class="icon-scroll"></span></h2>
 
+<!--
+  Для скорости нужно готовить изображения на беке.
+  Нужны будут разные размеры картинок. 320, 380, 420, 600, 800, оригинал.
+  В иделе еще в разные форматы готовить. Хотябы в webp + оригинал.
+ -->
   <div class="gallery-carousel">
-    <ul class="gallery">
-      <li class="gallery__item"><img src="images/__dev-img.jpg" alt="" loading="lazy"></li>
-      <li class="gallery__item"><img src="images/__dev-img.jpg" alt="" loading="lazy"></li>
-      <li class="gallery__item"><img src="images/__dev-img.jpg" alt="" loading="lazy"></li>
-      <li class="gallery__item"><img src="images/__dev-img.jpg" alt="" loading="lazy"></li>
-      <li class="gallery__item"><img src="images/__dev-img.jpg" alt="" loading="lazy"></li>
-      <li class="gallery__item"><img src="images/__dev-img.jpg" alt="" loading="lazy"></li>
-      <li class="gallery__item"><img src="images/__dev-img.jpg" alt="" loading="lazy"></li>
-      <li class="gallery__item"><img src="images/__dev-img.jpg" alt="" loading="lazy"></li>
-      <li class="gallery__item"><img src="images/__dev-img.jpg" alt="" loading="lazy"></li>
-      <li class="gallery__item"><img src="images/__dev-img.jpg" alt="" loading="lazy"></li>
+    <ul class="gallery  list-unstyled">
+      <li class="gallery__item">
+        <picture>
+          <source type="image/webp" media="(max-width: 370px)" srcset="images/__dev-img320.webp">
+          <source media="(max-width: 370px)" srcset="images/__dev-img320.jpg">
+          <source type="image/webp" media="(max-width: 400px)" srcset="images/__dev-img380.webp">
+          <source media="(max-width: 400px)" srcset="images/__dev-img380.jpg">
+          <source type="image/webp" media="(max-width: 500px)" srcset="images/__dev-img420.webp">
+          <source media="(max-width: 500px)" srcset="images/__dev-img420.jpg">
+          <source type="image/webp" media="(max-width: 760px)" srcset="images/__dev-img600.webp">
+          <source media="(max-width: 760px)" srcset="images/__dev-img600.jpg">
+          <source type="image/webp" media="(max-width: 900px)" srcset="images/__dev-img800.webp">
+          <source media="(max-width: 900px)" srcset="images/__dev-img800.jpg">
+          <source type="image/webp" srcset="images/__dev-img.webp">
+          <!--    Сюда можно вставлять ссылку на оригинал      -->
+          <img src="images/__dev-img.jpg" data-src="images/__dev-img.webp" alt="" loading="lazy">
+        </picture>
+      </li>
+
+      <li class="gallery__item">
+        <picture>
+          <source type="image/webp" media="(max-width: 370px)" srcset="images/__dev-img320.webp">
+          <source media="(max-width: 370px)" srcset="images/__dev-img320.jpg">
+          <source type="image/webp" media="(max-width: 400px)" srcset="images/__dev-img380.webp">
+          <source media="(max-width: 400px)" srcset="images/__dev-img380.jpg">
+          <source type="image/webp" media="(max-width: 500px)" srcset="images/__dev-img420.webp">
+          <source media="(max-width: 500px)" srcset="images/__dev-img420.jpg">
+          <source type="image/webp" media="(max-width: 760px)" srcset="images/__dev-img600.webp">
+          <source media="(max-width: 760px)" srcset="images/__dev-img600.jpg">
+          <source type="image/webp" media="(max-width: 900px)" srcset="images/__dev-img800.webp">
+          <source media="(max-width: 900px)" srcset="images/__dev-img800.jpg">
+          <source type="image/webp" srcset="images/__dev-img.webp">
+          <!--    Сюда можно вставлять ссылку на оригинал      -->
+          <img src="images/__dev-img.jpg" data-src="images/__dev-img.webp" alt="" loading="lazy">
+        </picture>
+      </li>
+      <li class="gallery__item">
+        <picture>
+          <source type="image/webp" media="(max-width: 370px)" srcset="images/__dev-img320.webp">
+          <source media="(max-width: 370px)" srcset="images/__dev-img320.jpg">
+          <source type="image/webp" media="(max-width: 400px)" srcset="images/__dev-img380.webp">
+          <source media="(max-width: 400px)" srcset="images/__dev-img380.jpg">
+          <source type="image/webp" media="(max-width: 500px)" srcset="images/__dev-img420.webp">
+          <source media="(max-width: 500px)" srcset="images/__dev-img420.jpg">
+          <source type="image/webp" media="(max-width: 760px)" srcset="images/__dev-img600.webp">
+          <source media="(max-width: 760px)" srcset="images/__dev-img600.jpg">
+          <source type="image/webp" media="(max-width: 900px)" srcset="images/__dev-img800.webp">
+          <source media="(max-width: 900px)" srcset="images/__dev-img800.jpg">
+          <source type="image/webp" srcset="images/__dev-img.webp">
+          <!--    Сюда можно вставлять ссылку на оригинал      -->
+          <img src="images/__dev-img.jpg" data-src="images/__dev-img.webp" alt="" loading="lazy">
+        </picture>
+      </li>
+      <li class="gallery__item">
+        <picture>
+          <source type="image/webp" media="(max-width: 370px)" srcset="images/__dev-img320.webp">
+          <source media="(max-width: 370px)" srcset="images/__dev-img320.jpg">
+          <source type="image/webp" media="(max-width: 400px)" srcset="images/__dev-img380.webp">
+          <source media="(max-width: 400px)" srcset="images/__dev-img380.jpg">
+          <source type="image/webp" media="(max-width: 500px)" srcset="images/__dev-img420.webp">
+          <source media="(max-width: 500px)" srcset="images/__dev-img420.jpg">
+          <source type="image/webp" media="(max-width: 760px)" srcset="images/__dev-img600.webp">
+          <source media="(max-width: 760px)" srcset="images/__dev-img600.jpg">
+          <source type="image/webp" media="(max-width: 900px)" srcset="images/__dev-img800.webp">
+          <source media="(max-width: 900px)" srcset="images/__dev-img800.jpg">
+          <source type="image/webp" srcset="images/__dev-img.webp">
+          <!--    Сюда можно вставлять ссылку на оригинал      -->
+          <img src="images/__dev-img.jpg" data-src="images/__dev-img.webp" alt="" loading="lazy">
+        </picture>
+      </li>
+      <li class="gallery__item">
+        <picture>
+          <source type="image/webp" media="(max-width: 370px)" srcset="images/__dev-img320.webp">
+          <source media="(max-width: 370px)" srcset="images/__dev-img320.jpg">
+          <source type="image/webp" media="(max-width: 400px)" srcset="images/__dev-img380.webp">
+          <source media="(max-width: 400px)" srcset="images/__dev-img380.jpg">
+          <source type="image/webp" media="(max-width: 500px)" srcset="images/__dev-img420.webp">
+          <source media="(max-width: 500px)" srcset="images/__dev-img420.jpg">
+          <source type="image/webp" media="(max-width: 760px)" srcset="images/__dev-img600.webp">
+          <source media="(max-width: 760px)" srcset="images/__dev-img600.jpg">
+          <source type="image/webp" media="(max-width: 900px)" srcset="images/__dev-img800.webp">
+          <source media="(max-width: 900px)" srcset="images/__dev-img800.jpg">
+          <source type="image/webp" srcset="images/__dev-img.webp">
+          <!--    Сюда можно вставлять ссылку на оригинал      -->
+          <img src="images/__dev-img.jpg" data-src="images/__dev-img.webp" alt="" loading="lazy">
+        </picture>
+      </li>
+      <li class="gallery__item">
+        <picture>
+          <source type="image/webp" media="(max-width: 370px)" srcset="images/__dev-img320.webp">
+          <source media="(max-width: 370px)" srcset="images/__dev-img320.jpg">
+          <source type="image/webp" media="(max-width: 400px)" srcset="images/__dev-img380.webp">
+          <source media="(max-width: 400px)" srcset="images/__dev-img380.jpg">
+          <source type="image/webp" media="(max-width: 500px)" srcset="images/__dev-img420.webp">
+          <source media="(max-width: 500px)" srcset="images/__dev-img420.jpg">
+          <source type="image/webp" media="(max-width: 760px)" srcset="images/__dev-img600.webp">
+          <source media="(max-width: 760px)" srcset="images/__dev-img600.jpg">
+          <source type="image/webp" media="(max-width: 900px)" srcset="images/__dev-img800.webp">
+          <source media="(max-width: 900px)" srcset="images/__dev-img800.jpg">
+          <source type="image/webp" srcset="images/__dev-img.webp">
+          <!--    Сюда можно вставлять ссылку на оригинал      -->
+          <img src="images/__dev-img.jpg" data-src="images/__dev-img.webp" alt="" loading="lazy">
+        </picture>
+      </li>
+      <li class="gallery__item">
+        <picture>
+          <source type="image/webp" media="(max-width: 370px)" srcset="images/__dev-img320.webp">
+          <source media="(max-width: 370px)" srcset="images/__dev-img320.jpg">
+          <source type="image/webp" media="(max-width: 400px)" srcset="images/__dev-img380.webp">
+          <source media="(max-width: 400px)" srcset="images/__dev-img380.jpg">
+          <source type="image/webp" media="(max-width: 500px)" srcset="images/__dev-img420.webp">
+          <source media="(max-width: 500px)" srcset="images/__dev-img420.jpg">
+          <source type="image/webp" media="(max-width: 760px)" srcset="images/__dev-img600.webp">
+          <source media="(max-width: 760px)" srcset="images/__dev-img600.jpg">
+          <source type="image/webp" media="(max-width: 900px)" srcset="images/__dev-img800.webp">
+          <source media="(max-width: 900px)" srcset="images/__dev-img800.jpg">
+          <source type="image/webp" srcset="images/__dev-img.webp">
+          <!--    Сюда можно вставлять ссылку на оригинал      -->
+          <img src="images/__dev-img.jpg" data-src="images/__dev-img.webp" alt="" loading="lazy">
+        </picture>
+      </li>
+      <li class="gallery__item">
+        <picture>
+          <source type="image/webp" media="(max-width: 370px)" srcset="images/__dev-img320.webp">
+          <source media="(max-width: 370px)" srcset="images/__dev-img320.jpg">
+          <source type="image/webp" media="(max-width: 400px)" srcset="images/__dev-img380.webp">
+          <source media="(max-width: 400px)" srcset="images/__dev-img380.jpg">
+          <source type="image/webp" media="(max-width: 500px)" srcset="images/__dev-img420.webp">
+          <source media="(max-width: 500px)" srcset="images/__dev-img420.jpg">
+          <source type="image/webp" media="(max-width: 760px)" srcset="images/__dev-img600.webp">
+          <source media="(max-width: 760px)" srcset="images/__dev-img600.jpg">
+          <source type="image/webp" media="(max-width: 900px)" srcset="images/__dev-img800.webp">
+          <source media="(max-width: 900px)" srcset="images/__dev-img800.jpg">
+          <source type="image/webp" srcset="images/__dev-img.webp">
+          <!--    Сюда можно вставлять ссылку на оригинал      -->
+          <img src="images/__dev-img.jpg" data-src="images/__dev-img.webp" alt="" loading="lazy">
+        </picture>
+      </li>
+      <li class="gallery__item">
+        <picture>
+          <source type="image/webp" media="(max-width: 370px)" srcset="images/__dev-img320.webp">
+          <source media="(max-width: 370px)" srcset="images/__dev-img320.jpg">
+          <source type="image/webp" media="(max-width: 400px)" srcset="images/__dev-img380.webp">
+          <source media="(max-width: 400px)" srcset="images/__dev-img380.jpg">
+          <source type="image/webp" media="(max-width: 500px)" srcset="images/__dev-img420.webp">
+          <source media="(max-width: 500px)" srcset="images/__dev-img420.jpg">
+          <source type="image/webp" media="(max-width: 760px)" srcset="images/__dev-img600.webp">
+          <source media="(max-width: 760px)" srcset="images/__dev-img600.jpg">
+          <source type="image/webp" media="(max-width: 900px)" srcset="images/__dev-img800.webp">
+          <source media="(max-width: 900px)" srcset="images/__dev-img800.jpg">
+          <source type="image/webp" srcset="images/__dev-img.webp">
+          <!--    Сюда можно вставлять ссылку на оригинал      -->
+          <img src="images/__dev-img.jpg" data-src="images/__dev-img.webp" alt="" loading="lazy">
+        </picture>
+      </li>
+      <li class="gallery__item">
+        <picture>
+          <source type="image/webp" media="(max-width: 370px)" srcset="images/__dev-img320.webp">
+          <source media="(max-width: 370px)" srcset="images/__dev-img320.jpg">
+          <source type="image/webp" media="(max-width: 400px)" srcset="images/__dev-img380.webp">
+          <source media="(max-width: 400px)" srcset="images/__dev-img380.jpg">
+          <source type="image/webp" media="(max-width: 500px)" srcset="images/__dev-img420.webp">
+          <source media="(max-width: 500px)" srcset="images/__dev-img420.jpg">
+          <source type="image/webp" media="(max-width: 760px)" srcset="images/__dev-img600.webp">
+          <source media="(max-width: 760px)" srcset="images/__dev-img600.jpg">
+          <source type="image/webp" media="(max-width: 900px)" srcset="images/__dev-img800.webp">
+          <source media="(max-width: 900px)" srcset="images/__dev-img800.jpg">
+          <source type="image/webp" srcset="images/__dev-img.webp">
+          <!--    Сюда можно вставлять ссылку на оригинал      -->
+          <img src="images/__dev-img.jpg" data-src="images/__dev-img.webp" alt="" loading="lazy">
+        </picture>
+      </li>
+      <li class="gallery__item">
+        <picture>
+          <source type="image/webp" media="(max-width: 370px)" srcset="images/__dev-img320.webp">
+          <source media="(max-width: 370px)" srcset="images/__dev-img320.jpg">
+          <source type="image/webp" media="(max-width: 400px)" srcset="images/__dev-img380.webp">
+          <source media="(max-width: 400px)" srcset="images/__dev-img380.jpg">
+          <source type="image/webp" media="(max-width: 500px)" srcset="images/__dev-img420.webp">
+          <source media="(max-width: 500px)" srcset="images/__dev-img420.jpg">
+          <source type="image/webp" media="(max-width: 760px)" srcset="images/__dev-img600.webp">
+          <source media="(max-width: 760px)" srcset="images/__dev-img600.jpg">
+          <source type="image/webp" media="(max-width: 900px)" srcset="images/__dev-img800.webp">
+          <source media="(max-width: 900px)" srcset="images/__dev-img800.jpg">
+          <source type="image/webp" srcset="images/__dev-img.webp">
+          <!--    Сюда можно вставлять ссылку на оригинал      -->
+          <img src="images/__dev-img.jpg" data-src="images/__dev-img.webp" alt="" loading="lazy">
+        </picture>
+      </li>
+      <li class="gallery__item">
+        <picture>
+          <source type="image/webp" media="(max-width: 370px)" srcset="images/__dev-img320.webp">
+          <source media="(max-width: 370px)" srcset="images/__dev-img320.jpg">
+          <source type="image/webp" media="(max-width: 400px)" srcset="images/__dev-img380.webp">
+          <source media="(max-width: 400px)" srcset="images/__dev-img380.jpg">
+          <source type="image/webp" media="(max-width: 500px)" srcset="images/__dev-img420.webp">
+          <source media="(max-width: 500px)" srcset="images/__dev-img420.jpg">
+          <source type="image/webp" media="(max-width: 760px)" srcset="images/__dev-img600.webp">
+          <source media="(max-width: 760px)" srcset="images/__dev-img600.jpg">
+          <source type="image/webp" media="(max-width: 900px)" srcset="images/__dev-img800.webp">
+          <source media="(max-width: 900px)" srcset="images/__dev-img800.jpg">
+          <source type="image/webp" srcset="images/__dev-img.webp">
+          <!--    Сюда можно вставлять ссылку на оригинал      -->
+          <img src="images/__dev-img.jpg" data-src="images/__dev-img.webp" alt="" loading="lazy">
+        </picture>
+      </li>
+      <li class="gallery__item">
+        <picture>
+          <source type="image/webp" media="(max-width: 370px)" srcset="images/__dev-img320.webp">
+          <source media="(max-width: 370px)" srcset="images/__dev-img320.jpg">
+          <source type="image/webp" media="(max-width: 400px)" srcset="images/__dev-img380.webp">
+          <source media="(max-width: 400px)" srcset="images/__dev-img380.jpg">
+          <source type="image/webp" media="(max-width: 500px)" srcset="images/__dev-img420.webp">
+          <source media="(max-width: 500px)" srcset="images/__dev-img420.jpg">
+          <source type="image/webp" media="(max-width: 760px)" srcset="images/__dev-img600.webp">
+          <source media="(max-width: 760px)" srcset="images/__dev-img600.jpg">
+          <source type="image/webp" media="(max-width: 900px)" srcset="images/__dev-img800.webp">
+          <source media="(max-width: 900px)" srcset="images/__dev-img800.jpg">
+          <source type="image/webp" srcset="images/__dev-img.webp">
+          <!--    Сюда можно вставлять ссылку на оригинал      -->
+          <img src="images/__dev-img.jpg" data-src="images/__dev-img.webp" alt="" loading="lazy">
+        </picture>
+      </li>
+      <li class="gallery__item">
+        <picture>
+          <source type="image/webp" media="(max-width: 370px)" srcset="images/__dev-img320.webp">
+          <source media="(max-width: 370px)" srcset="images/__dev-img320.jpg">
+          <source type="image/webp" media="(max-width: 400px)" srcset="images/__dev-img380.webp">
+          <source media="(max-width: 400px)" srcset="images/__dev-img380.jpg">
+          <source type="image/webp" media="(max-width: 500px)" srcset="images/__dev-img420.webp">
+          <source media="(max-width: 500px)" srcset="images/__dev-img420.jpg">
+          <source type="image/webp" media="(max-width: 760px)" srcset="images/__dev-img600.webp">
+          <source media="(max-width: 760px)" srcset="images/__dev-img600.jpg">
+          <source type="image/webp" media="(max-width: 900px)" srcset="images/__dev-img800.webp">
+          <source media="(max-width: 900px)" srcset="images/__dev-img800.jpg">
+          <source type="image/webp" srcset="images/__dev-img.webp">
+          <!--    Сюда можно вставлять ссылку на оригинал      -->
+          <img src="images/__dev-img.jpg" data-src="images/__dev-img.webp" alt="" loading="lazy">
+        </picture>
+      </li>
+      <li class="gallery__item">
+        <picture>
+          <source type="image/webp" media="(max-width: 370px)" srcset="images/__dev-img320.webp">
+          <source media="(max-width: 370px)" srcset="images/__dev-img320.jpg">
+          <source type="image/webp" media="(max-width: 400px)" srcset="images/__dev-img380.webp">
+          <source media="(max-width: 400px)" srcset="images/__dev-img380.jpg">
+          <source type="image/webp" media="(max-width: 500px)" srcset="images/__dev-img420.webp">
+          <source media="(max-width: 500px)" srcset="images/__dev-img420.jpg">
+          <source type="image/webp" media="(max-width: 760px)" srcset="images/__dev-img600.webp">
+          <source media="(max-width: 760px)" srcset="images/__dev-img600.jpg">
+          <source type="image/webp" media="(max-width: 900px)" srcset="images/__dev-img800.webp">
+          <source media="(max-width: 900px)" srcset="images/__dev-img800.jpg">
+          <source type="image/webp" srcset="images/__dev-img.webp">
+          <!--    Сюда можно вставлять ссылку на оригинал      -->
+          <img src="images/__dev-img.jpg" data-src="images/__dev-img.webp" alt="" loading="lazy">
+        </picture>
+      </li>
+      <li class="gallery__item">
+        <picture>
+          <source type="image/webp" media="(max-width: 370px)" srcset="images/__dev-img320.webp">
+          <source media="(max-width: 370px)" srcset="images/__dev-img320.jpg">
+          <source type="image/webp" media="(max-width: 400px)" srcset="images/__dev-img380.webp">
+          <source media="(max-width: 400px)" srcset="images/__dev-img380.jpg">
+          <source type="image/webp" media="(max-width: 500px)" srcset="images/__dev-img420.webp">
+          <source media="(max-width: 500px)" srcset="images/__dev-img420.jpg">
+          <source type="image/webp" media="(max-width: 760px)" srcset="images/__dev-img600.webp">
+          <source media="(max-width: 760px)" srcset="images/__dev-img600.jpg">
+          <source type="image/webp" media="(max-width: 900px)" srcset="images/__dev-img800.webp">
+          <source media="(max-width: 900px)" srcset="images/__dev-img800.jpg">
+          <source type="image/webp" srcset="images/__dev-img.webp">
+          <!--    Сюда можно вставлять ссылку на оригинал      -->
+          <img src="images/__dev-img.jpg" data-src="images/__dev-img.webp" alt="" loading="lazy">
+        </picture>
+      </li>
+      <li class="gallery__item">
+        <picture>
+          <source type="image/webp" media="(max-width: 370px)" srcset="images/__dev-img320.webp">
+          <source media="(max-width: 370px)" srcset="images/__dev-img320.jpg">
+          <source type="image/webp" media="(max-width: 400px)" srcset="images/__dev-img380.webp">
+          <source media="(max-width: 400px)" srcset="images/__dev-img380.jpg">
+          <source type="image/webp" media="(max-width: 500px)" srcset="images/__dev-img420.webp">
+          <source media="(max-width: 500px)" srcset="images/__dev-img420.jpg">
+          <source type="image/webp" media="(max-width: 760px)" srcset="images/__dev-img600.webp">
+          <source media="(max-width: 760px)" srcset="images/__dev-img600.jpg">
+          <source type="image/webp" media="(max-width: 900px)" srcset="images/__dev-img800.webp">
+          <source media="(max-width: 900px)" srcset="images/__dev-img800.jpg">
+          <source type="image/webp" srcset="images/__dev-img.webp">
+          <!--    Сюда можно вставлять ссылку на оригинал      -->
+          <img src="images/__dev-img.jpg" data-src="images/__dev-img.webp" alt="" loading="lazy">
+        </picture>
+      </li>
+      <li class="gallery__item">
+        <picture>
+          <source type="image/webp" media="(max-width: 370px)" srcset="images/__dev-img320.webp">
+          <source media="(max-width: 370px)" srcset="images/__dev-img320.jpg">
+          <source type="image/webp" media="(max-width: 400px)" srcset="images/__dev-img380.webp">
+          <source media="(max-width: 400px)" srcset="images/__dev-img380.jpg">
+          <source type="image/webp" media="(max-width: 500px)" srcset="images/__dev-img420.webp">
+          <source media="(max-width: 500px)" srcset="images/__dev-img420.jpg">
+          <source type="image/webp" media="(max-width: 760px)" srcset="images/__dev-img600.webp">
+          <source media="(max-width: 760px)" srcset="images/__dev-img600.jpg">
+          <source type="image/webp" media="(max-width: 900px)" srcset="images/__dev-img800.webp">
+          <source media="(max-width: 900px)" srcset="images/__dev-img800.jpg">
+          <source type="image/webp" srcset="images/__dev-img.webp">
+          <!--    Сюда можно вставлять ссылку на оригинал      -->
+          <img src="images/__dev-img.jpg" data-src="images/__dev-img.webp" alt="" loading="lazy">
+        </picture>
+      </li>
+      <li class="gallery__item">
+        <picture>
+          <source type="image/webp" media="(max-width: 370px)" srcset="images/__dev-img320.webp">
+          <source media="(max-width: 370px)" srcset="images/__dev-img320.jpg">
+          <source type="image/webp" media="(max-width: 400px)" srcset="images/__dev-img380.webp">
+          <source media="(max-width: 400px)" srcset="images/__dev-img380.jpg">
+          <source type="image/webp" media="(max-width: 500px)" srcset="images/__dev-img420.webp">
+          <source media="(max-width: 500px)" srcset="images/__dev-img420.jpg">
+          <source type="image/webp" media="(max-width: 760px)" srcset="images/__dev-img600.webp">
+          <source media="(max-width: 760px)" srcset="images/__dev-img600.jpg">
+          <source type="image/webp" media="(max-width: 900px)" srcset="images/__dev-img800.webp">
+          <source media="(max-width: 900px)" srcset="images/__dev-img800.jpg">
+          <source type="image/webp" srcset="images/__dev-img.webp">
+          <!--    Сюда можно вставлять ссылку на оригинал      -->
+          <img src="images/__dev-img.jpg" data-src="images/__dev-img.webp" alt="" loading="lazy">
+        </picture>
+      </li>
+      <li class="gallery__item">
+        <picture>
+          <source type="image/webp" media="(max-width: 370px)" srcset="images/__dev-img320.webp">
+          <source media="(max-width: 370px)" srcset="images/__dev-img320.jpg">
+          <source type="image/webp" media="(max-width: 400px)" srcset="images/__dev-img380.webp">
+          <source media="(max-width: 400px)" srcset="images/__dev-img380.jpg">
+          <source type="image/webp" media="(max-width: 500px)" srcset="images/__dev-img420.webp">
+          <source media="(max-width: 500px)" srcset="images/__dev-img420.jpg">
+          <source type="image/webp" media="(max-width: 760px)" srcset="images/__dev-img600.webp">
+          <source media="(max-width: 760px)" srcset="images/__dev-img600.jpg">
+          <source type="image/webp" media="(max-width: 900px)" srcset="images/__dev-img800.webp">
+          <source media="(max-width: 900px)" srcset="images/__dev-img800.jpg">
+          <source type="image/webp" srcset="images/__dev-img.webp">
+          <!--    Сюда можно вставлять ссылку на оригинал      -->
+          <img src="images/__dev-img.jpg" data-src="images/__dev-img.webp" alt="" loading="lazy">
+        </picture>
+      </li>
+      <li class="gallery__item">
+        <picture>
+          <source type="image/webp" media="(max-width: 370px)" srcset="images/__dev-img320.webp">
+          <source media="(max-width: 370px)" srcset="images/__dev-img320.jpg">
+          <source type="image/webp" media="(max-width: 400px)" srcset="images/__dev-img380.webp">
+          <source media="(max-width: 400px)" srcset="images/__dev-img380.jpg">
+          <source type="image/webp" media="(max-width: 500px)" srcset="images/__dev-img420.webp">
+          <source media="(max-width: 500px)" srcset="images/__dev-img420.jpg">
+          <source type="image/webp" media="(max-width: 760px)" srcset="images/__dev-img600.webp">
+          <source media="(max-width: 760px)" srcset="images/__dev-img600.jpg">
+          <source type="image/webp" media="(max-width: 900px)" srcset="images/__dev-img800.webp">
+          <source media="(max-width: 900px)" srcset="images/__dev-img800.jpg">
+          <source type="image/webp" srcset="images/__dev-img.webp">
+          <!--    Сюда можно вставлять ссылку на оригинал      -->
+          <img src="images/__dev-img.jpg" data-src="images/__dev-img.webp" alt="" loading="lazy">
+        </picture>
+      </li>
+
+      <li class="gallery__item__empty-end-gap" aria-hidden="true"></li>
+      <li class="gallery__item__empty-end-gap" aria-hidden="true"></li>
     </ul>
   </div>
 
