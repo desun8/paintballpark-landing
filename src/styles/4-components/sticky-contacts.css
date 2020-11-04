@@ -6,6 +6,12 @@
   z-index: 500;
   background-color: var(--c-yellow);
   border-radius: 10px;
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+  transition-property: opacity, transform, visibility;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 
 .sticky-contacts::after {
@@ -19,6 +25,12 @@
   background-color: #252525;
   border-radius: 10px;
   opacity: 0.2;
+}
+
+.sticky-contacts.is-hide {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100px);
 }
 
 .sticky-contacts__list {
