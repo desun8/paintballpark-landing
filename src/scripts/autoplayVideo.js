@@ -1,7 +1,7 @@
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      const {target, intersectionRatio} = entry;
+      const { target, intersectionRatio } = entry;
 
       if (intersectionRatio > 0.5) {
         target.play();
@@ -15,9 +15,11 @@ const observer = new IntersectionObserver(
   { threshold: 0.5 },
 );
 
-const autoplayVideo = (videoElm) => {
+const autoplay = (videoElm) => {
   observer.observe(videoElm);
-}
+};
 
-const videos = document.querySelectorAll(".carousel-item__img video");
-videos.forEach(video => autoplayVideo(video));
+export default () => {
+  const videos = document.querySelectorAll('.carousel-item__img video');
+   videos.length && videos.forEach(video => autoplay(video));
+}

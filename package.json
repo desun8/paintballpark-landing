@@ -22,5 +22,9 @@
     "posthtml-include": "^1.5.0",
     "stylelint": "^13.7.2",
     "stylelint-config-standard": "^20.0.0"
+  },
+  "dependencies": {
+    "a11y-dialog": "^5.4.2",
+    "scroll-lock": "^2.1.4"
   }
 }

@@ -1,0 +1,26 @@
+.modal {
+  color: #fff;
+}
+
+.modal__body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateX(-100%);
+  transition-delay: 0.3s;
+}
+
+.modal__body.is-active {
+  transform: translateX(0);
+  transition-delay: 0s;
+}
+
+.modal__wrapper {
+  position: relative;
+  min-height: 100vh;
+  padding: 74px 34px;
+  background-color: #252525;
+}
+
+.modal__title {}

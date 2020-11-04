@@ -1,42 +1,50 @@
-@import "./_config/var.css";
+@import "./0-config/var.css";
+
+/* LIB */
+@import "./1-lib/a11y-dialog.css";
 
 /* BASE */
-@import "./base/scaffolding.css";
-
-/* COMPONENTS */
-@import "./components/block/block.css";
-@import "./components/banner-price.css";
-@import "./components/banner-instagram.css";
-@import "./components/socials-list.css";
-
-/* header */
-@import "./components/page-header/page-header.css";
-@import "./components/page-header/page-btn.css";
-@import "./components/page-header/short-nav.css";
-
-/* hero */
-@import "./components/block-hero/block-hero.css";
-@import "./components/block-hero/hero-video.css";
-@import "./components/block-hero/hero-form.css";
-
-/* services */
-@import "./components/block-service/service-tabs.css";
-@import "./components/block-service/service-carousel.css";
-@import "./components/block-service/carousel-item.css";
-
-/* map */
-@import "./components/block-map/map-directions.css";
-@import "./components/block-map/directions-item.css";
-
-/* gallery */
-@import "./components/block-gallery/gallery-carousel.css";
-@import "./components/block-gallery/gallery.css";
-
-/* footer */
-@import "./components/page-footer/page-footer.css";
-@import "./components/page-footer/footer-contacts.css";
+@import "./2-base/scaffolding.css";
 
 /* UTILITIES */
-@import "./utilities/visually-hidden.css";
-@import "./utilities/wrapper.css";
-@import "./utilities/list-unstyled.css";
+@import "./3-utilities/visually-hidden.css";
+@import "./3-utilities/wrapper.css";
+@import "./3-utilities/list-unstyled.css";
+
+/* COMPONENTS */
+@import "./4-components/block/block.css";
+@import "./4-components/banner-price.css";
+@import "./4-components/banner-instagram.css";
+@import "./4-components/socials-list.css";
+
+/* header */
+@import "./4-components/page-header/page-header.css";
+@import "./4-components/page-header/page-btn.css";
+@import "./4-components/page-header/short-nav.css";
+
+/* hero */
+@import "./4-components/block-hero/block-hero.css";
+@import "./4-components/block-hero/hero-video.css";
+@import "./4-components/block-hero/hero-form.css";
+
+/* services */
+@import "./4-components/block-service/service-tabs.css";
+@import "./4-components/block-service/service-carousel.css";
+@import "./4-components/block-service/carousel-item.css";
+
+/* map */
+@import "./4-components/block-map/map-directions.css";
+@import "./4-components/block-map/directions-item.css";
+
+/* gallery */
+@import "./4-components/block-gallery/gallery-carousel.css";
+@import "./4-components/block-gallery/gallery.css";
+
+/* footer */
+@import "./4-components/page-footer/page-footer.css";
+@import "./4-components/page-footer/footer-contacts.css";
+
+/* modals */
+@import "./4-components/modal/modal.css";
+@import "./4-components/modal/modal-service.css";
+@import "./4-components/modal/price-item.css";
