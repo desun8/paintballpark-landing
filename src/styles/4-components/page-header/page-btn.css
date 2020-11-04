@@ -11,3 +11,9 @@
   background-color: #fff500;
   border-radius: 50%;
 }
+
+.page-btn--menu {}
+
+.page-btn--close {
+  background-color: #f00;
+}
