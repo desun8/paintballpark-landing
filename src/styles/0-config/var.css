@@ -1,3 +1,6 @@
 body {
   --page-gap: 10px;
+
+  /* colors */
+  --c-yellow: #fff500;
 }

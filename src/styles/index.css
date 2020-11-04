@@ -16,6 +16,7 @@
 @import "./4-components/banner-price.css";
 @import "./4-components/banner-instagram.css";
 @import "./4-components/socials-list.css";
+@import "./4-components/sticky-contacts.css";
 
 /* header */
 @import "./4-components/page-header/page-header.css";
