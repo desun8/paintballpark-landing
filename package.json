@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "a11y-dialog": "^5.4.2",
+    "inputmask": "^5.0.5",
     "scroll-lock": "^2.1.4"
   }
 }

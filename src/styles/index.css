@@ -44,6 +44,11 @@
 @import "./4-components/page-footer/page-footer.css";
 @import "./4-components/page-footer/footer-contacts.css";
 
+/* form */
+@import "./4-components/block-form/block-form.css";
+@import "./4-components/block-form/form.css";
+@import "./4-components/block-form/success-message.css";
+
 /* modals */
 @import "./4-components/modal/modal.css";
 @import "./4-components/modal/modal-service.css";
