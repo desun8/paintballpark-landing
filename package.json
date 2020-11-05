@@ -2,9 +2,10 @@
   "name": "paintballpark-landing",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "start": "parcel serve ./src/index.html --no-cache"
+    "start": "parcel serve ./src/index.html --no-cache",
+    "build": "parcel build ./src/index.html"
   },
   "repository": {
     "type": "git",
