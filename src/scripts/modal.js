@@ -13,7 +13,6 @@ class Modal {
     this.modalType = ""; // price || service
     this.initDialog = this.initDialog.bind(this);
     this.handleOpen = this.handleOpen.bind(this);
-    this.handleClose = this.handleClose.bind(this);
     this.addEvents = this.addEvents.bind(this);
     this.init = this.init.bind(this);
   }
@@ -23,6 +22,7 @@ class Modal {
 
     this.dialog
       .on("show", () => {
+        this.btnClose.classList.add("js-modal-close");
         this.btnClose.classList.add("page-btn--close");
         // this.root.classList.add("is-active");
         disablePageScroll(this.root);
@@ -39,14 +39,20 @@ class Modal {
         }
       })
       .on("hide", () => {
+        this.btnClose.classList.remove("js-modal-close");
         this.btnClose.classList.remove("page-btn--close");
         // this.root.classList.remove("is-active");
         enablePageScroll(this.root);
 
         switch (this.modalType) {
-          case "price": this.modalPrice.classList.remove("is-active");break;
-          case "service": this.modalService.classList.remove("is-active");break;
-          default:break
+          case "price":
+            this.modalPrice.classList.remove("is-active");
+            break;
+          case "service":
+            this.modalService.classList.remove("is-active");
+            break;
+          default:
+            break;
         }
       });
   }
@@ -64,10 +70,6 @@ class Modal {
     }
 
     this.dialog.show();
-  }
-
-  handleClose() {
-    this.dialog.hide();
   }
 
   addEvents() {

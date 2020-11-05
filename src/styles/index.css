@@ -23,6 +23,10 @@
 @import "./4-components/page-header/page-btn.css";
 @import "./4-components/page-header/short-nav.css";
 
+/* nav */
+@import "./4-components/page-nav/page-nav.css";
+@import "./4-components/page-nav/main-nav.css";
+
 /* hero */
 @import "./4-components/block-hero/block-hero.css";
 @import "./4-components/block-hero/hero-video.css";

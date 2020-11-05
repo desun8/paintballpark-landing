@@ -37,8 +37,7 @@
   min-height: 100%;
   max-height: 100vh;
   transform: translateX(0);
-  transition: transform 0.3s;
-  overflow-y: auto;
+  transition: transform var(--trsdu);
 }
 
 .dialog-container[aria-hidden='true'] {
