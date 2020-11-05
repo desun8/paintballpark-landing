@@ -2,6 +2,8 @@
 
 /* LIB */
 @import "./1-lib/a11y-dialog.css";
+@import "../../node_modules/photoswipe/dist/photoswipe.css";
+@import "../../node_modules/photoswipe/dist/default-skin/default-skin.css";
 
 /* BASE */
 @import "./2-base/scaffolding.css";
