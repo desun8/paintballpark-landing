@@ -13,3 +13,10 @@ new Menu(pageBtn).init();
 new Modal(pageBtn).init();
 new StickyContacts().init();
 // lightbox.init();
+
+// setTimeout(
+//   () => {
+//     pageBtn.focus();
+//   }, 500
+// )
+// pageBtn.addEventListener("focus", alert("focus"));

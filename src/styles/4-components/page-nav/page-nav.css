@@ -1,10 +1,11 @@
 .page-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 90;
+  /*position: fixed;*/
+  /*top: 0;*/
+  /*left: 0;*/
+  /*right: 0;*/
+  /*bottom: 0;*/
+  /*z-index: 90;*/
+  height: 100%;
   padding: 90px var(--page-gap) var(--page-gap);
   background: linear-gradient(180deg, rgba(37, 37, 37, 0.5) -22.98%, #252525 76.8%);
   opacity: 0;
