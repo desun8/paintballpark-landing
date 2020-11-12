@@ -1,6 +1,6 @@
-import A11yDialog from "a11y-dialog";
+// import A11yDialog from "a11y-dialog";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
-// import "wicg-inert";
+import { A11yDialog, A11yDialogOuterBtn } from "./a11yDialog";
 
 const LABEL_CLOSE = "Закрыть меню";
 
@@ -22,26 +22,8 @@ class Menu {
   }
 
   initDialog() {
-    this.dialog = new A11yDialog(this.dialogElm, document.querySelector("#page-main"));
-
-    this.dialog
-      .on("show", () => {
-        // this.menuBtn.tabIndex = 2;
-        setTimeout(() => {
-          console.log(this.menuBtn);
-          this.menuBtn.focus();
-        }, 500);
-      })
-      .on("hide", () => {
-        if (this.isShow) {
-          console.warn("a11y-dialog HIDE");
-          this.handleClick();
-          // this.toggleVisibility();
-          // enablePageScroll(this.root);
-          // this.root.classList.remove("is-active");
-          // this.menuBtn.classList.remove("page-btn--close");
-        }
-      });
+    // this.dialog = new A11yDialog(this.dialogElm, document.querySelector("#page-main"));
+    this.dialog = new A11yDialogOuterBtn(this.dialogElm, this.menuBtn);
   }
 
   toggleVisibility(shouldShow = false) {
