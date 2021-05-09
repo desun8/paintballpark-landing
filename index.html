@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link rel="preload" href="/fonts/guerrilla-normal.woff2" as="font" crossorigin>
+  <link rel="preload" href="/fonts/edo-sz-hq.woff2" as="font" crossorigin>
+
+
+  <title>Пейнтбол парк</title>
+</head>
+<body>
+<header class="page-header">
+  <div class="page-header__head  wrapper">
+    <img class="page-logo" src="/images/logo.svg" width="204" height="67"
+         alt="Пейнтбол парк - спортивно-оздоровительный комплекс">
+
+    <nav class="header-nav">
+      <ul class="header-nav__list list-unstyled">
+        <li class="header-nav__item"><a href="#anchor-service" class="header-nav__link">Услуги</a></li>
+        <li class="header-nav__item"><a href="#anchor-price" class="header-nav__link">Тарифы</a></li>
+        <li class="header-nav__item"><a href="#anchor-map" class="header-nav__link">Как добраться</a></li>
+        <li class="header-nav__item"><a href="#anchor-gallery" class="header-nav__link">Галерея</a></li>
+        <li class="header-nav__item"><a href="#anchor-footer" class="header-nav__link">Контакты</a></li>
+      </ul>
+    </nav>
+
+    <ul class="contacts  list-unstyled">
+      <li><a href="tel:+79094322134" class="contacts__link  contacts__link--blue">+7 909 432-21-34</a></li>
+      <li><a href="https://wa.me/79999999999" class="contacts__link contacts__link--green"><span class="icon-wa"></span>
+        Whats App</a></li>
+    </ul>
+
+    <button class="page-btn" type="button" data-a11y-dialog-hide="my-accessible-dialog" aria-label="Close the dialog">
+      <span class="visually-hidden">Открыть меню или закрыть меню.</span>
+    </button>
+  </div>
+
+  <nav class="short-nav">
+    <div class="short-nav__header  wrapper">
+      <h2 class="visually-hidden">Краткая навигация</h2>
+    </div>
+    <div class="simplebar-container" data-simplebar data-simplebar-auto-hide="false">
+      <ul class="short-nav__list  list-unstyled">
+        <li class="short-nav__item">
+          <div class="short-nav__icon  short-nav__icon--wa"></div>
+          <span class="short-nav__text" aria-hidden="true">Спросить в<br> Whats App</span>
+          <a href="https://wa.me/79094322134" class="short-nav__link" target="_blank" ref="nofollow noopener"
+             aria-label="Начать диалог в What'sApp"></a>
+        </li>
+        <li class="short-nav__item">
+          <div class="short-nav__icon  short-nav__icon--phone"></div>
+          <span class="short-nav__text" aria-hidden="true">Позвонить<br> 7 909 432 21 34</span>
+          <a href="tel:+79094322134" class="short-nav__link" aria-label="Позвонить нам по номеру 7-909-432-21-34"></a>
+        </li>
+        <li class="short-nav__item">
+          <div class="short-nav__icon  short-nav__icon--map"></div>
+          <span class="short-nav__text" aria-hidden="true">Где мы<br> находимся?</span>
+          <!--   TODO: якорь     -->
+          <a href="#block-map" class="short-nav__link" aria-label="Перейти к блоку 'Где мы находимся'"></a>
+        </li>
+        <li class="short-nav__item">
+          <div class="short-nav__icon  short-nav__icon--price"></div>
+          <span class="short-nav__text" aria-hidden="true">Наши<br> тарифы</span>
+          <a href="#block-services" class="short-nav__link" aria-label="Перейти к блоку 'Наши услуги'"></a>
+        </li>
+
+        <li class="short-nav__item">
+          <div class="short-nav__icon"></div>
+          <span class="short-nav__text" aria-hidden="true">Где мы<br> находимся?</span>
+          <a href="#block-map" class="short-nav__link" aria-label="Перейти к блоку 'Где мы находимся'"></a>
+        </li>
+        <li class="short-nav__item">
+          <div class="short-nav__icon"></div>
+          <span class="short-nav__text" aria-hidden="true">Наши<br> услуги</span>
+          <a href="#block-services" class="short-nav__link" aria-label="Перейти к блоку 'Наши услуги'"></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<div id="page-menu" class="dialog-container  dialog-container--menu" aria-hidden="true">
+
+  <!--
+    Overlay related notes:
+    - It has to have the `tabindex="-1"` attribute.
+    - It doesn’t have to have the `data-a11y-dialog-hide` attribute, however this is recommended. It hides the dialog when clicking outside of it.
+  -->
+  <div tabindex="-1" data-a11y-dialog-hide></div>
+
+  <!--
+    Dialog window content related notes:
+    - It is the actual visual dialog element.
+    - It may have the `alertdialog` role to make it behave like a “modal”. See the “Usage as a modal” section of the docs.
+    - It doesn’t have to be a `<dialog>` element, it can be a `<div>` element with the `dialog` or `alertdialog` role (e.g. `<div role="dialog">`).
+    - It doesn’t have to have the `aria-labelledby` attribute however this is recommended. It should match the `id` of the dialog title.
+  -->
+  <div class="dialog-container__dialog" aria-labelledby="dialog-menu-title" role="dialog">
+    <!--
+      Closing button related notes:
+      - It does have to have the `type="button"` attribute.
+      - It does have to have the `data-a11y-dialog-hide` attribute.
+      - It does have to have an aria-label attribute if you use an icon as content.
+    -->
+    <!--    <button type="button" data-a11y-dialog-hide aria-label="Close this dialog window">-->
+    <!--      &times;-->
+    <!--    </button>-->
+
+    <!--
+      Dialog title related notes:
+      - It should have a different content than `Dialog Title`.
+      - It can have a different id than `dialog-title`.
+    -->
+    <h1 id="dialog-menu-title">Меню</h1>
+
+    <!--
+      Here lives the main content of the dialog.
+    -->
+    <div class="page-nav">
+      <div class="page-nav__wrapper">
+        <div class="page-nav__body">
+          <nav class="main-nav" aria-label="Главное меню">
+            <ul class="main-nav__list list-unstyled">
+              <li class="main-nav__item"><a href="#anchor-hero" class="main-nav__link">Видео с игры</a></li>
+              <li class="main-nav__item"><a href="#anchor-service" class="main-nav__link">Улсуги</a></li>
+              <li class="main-nav__item"><a href="#anchor-price" class="main-nav__link">Тариф</a></li>
+              <li class="main-nav__item"><a href="#anchor-gallery" class="main-nav__link">Галерея</a></li>
+              <li class="main-nav__item"><a href="#anchor-map" class="main-nav__link">Карта</a></li>
+            </ul>
+          </nav>
+
+          <div class="page-nav__contacts">
+            <ul class="page-nav-contacts  footer-contacts">
+              <li class="page-nav-contacts__item  footer-contacts__item">
+                <a href="tel:+79999999999" class="page-nav-contacts__link  footer-contacts__link">
+                  <span class="name">Телефон:</span>
+                  <span class="value">+7 999 999 99 99</span>
+                </a>
+              </li>
+              <li class="page-nav-contacts__item  footer-contacts__item">
+                <a href="mailto:deman30@mail.ru" class="page-nav-contacts__link  footer-contacts__link">
+                  <span class="name">Электронная почта:</span>
+                  <span class="value">deman30@mail.ru</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <ul class="socials-list  list-unstyled">
+          <li class="socials-list__item">
+            <a href="#" class="socials-list__link" target="_blank" ref="nofollow noopener">
+              <span class="visually-hidden">Ссылка на facebook</span>
+              <span class="icon  icon--facebook" aria-hidden="true"></span>
+            </a>
+          </li>
+          <li class="socials-list__item">
+            <a href="#" class="socials-list__link" target="_blank" ref="nofollow noopener">
+              <span class="visually-hidden">Ссылка на instagram</span>
+              <span class="icon  icon--instagram" aria-hidden="true"></span>
+            </a>
+          </li>
+          <li class="socials-list__item">
+            <a href="#" class="socials-list__link" target="_blank" ref="nofollow noopener">
+              <span class="visually-hidden">Ссылка на youtube</span>
+              <span class="icon  icon--youtube" aria-hidden="true"></span>
+            </a>
+          </li>
+          <li class="socials-list__item">
+            <a href="#" class="socials-list__link" target="_blank" ref="nofollow noopener">
+              <span class="visually-hidden">Ссылка на вконтакте</span>
+              <span class="icon  icon--vk" aria-hidden="true"></span>
+            </a>
+          </li>
+          <li class="socials-list__item">
+            <a href="#" class="socials-list__link" target="_blank" ref="nofollow noopener">
+              <span class="visually-hidden">Ссылка на одноклассники</span>
+              <span class="icon  icon--ok" aria-hidden="true"></span>
+            </a>
+          </li>
+          <li class="socials-list__item">
+            <a href="#" class="socials-list__link" target="_blank" ref="nofollow noopener">
+              <span class="visually-hidden">Ссылка на соц сеть</span>
+              <span class="icon  icon--soc-name" aria-hidden="true"></span>
+            </a>
+          </li>
+        </ul>
+
+        <button class="page-nav__btn" type="button">Заказать звонок</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main id="page-main">
+  <article class="block-hero">
+    <div class="block-hero__top-pattern"></div>
+    <div class="block-hero__bottom-pattern"></div>
+
+    <div class="block-hero__container wrapper wrapper--md">
+      <div class="hero-form">
+        <article class="block-form  block-form--hero">
+          <form id="form-hero" class="form  form--hero" action="">
+            <h2 class="form__title  font-title">Тебя ждет приключение!</h2>
+
+            <label for="form-hero-name" class="form__label  visually-hidden">Имя</label>
+            <input id="form-hero-name" class="form__input" type="text" name="name" placeholder="Имя">
+
+            <label for="form-hero-phone" class="form__label  visually-hidden">Телефон</label>
+            <input id="form-hero-phone" class="form__input" type="tel" name="phone" placeholder="+7 (xxx) xxx xx xx">
+
+            <button class="form__submit" type="submit">Заказать звонок</button>
+
+            <a href="#" class="form__agreement" target="_blank" ref="nofollow noopener">Нажимая Заказать звонок, Вы
+              соглашаетесь
+              с политикой обработки персональных данных.</a>
+          </form>
+
+          <section class="success-message">
+            <h2 class="success-message__title">Заявка успешно отправлена!</h2>
+            <div class="success-message__icon">✅</div>
+            <button class="success-message__btn" type="button">Заказать еще</button>
+          </section>
+        </article>
+      </div>
+
+      <div class="hero-video">
+        <div class="hero-video__body">
+          <div class="hero-video__header">
+            <div class="hero-video__header-container">
+              <span class="hero-video__founder-name">Дмитрий, владелец пейнтбол-парка</span>
+              <h2 class="hero-video__title">Почему стоит приехать на пейнтбол?</h2>
+              <div class="hero-video__icon" aria-hidden="true">
+                <span class="mask"></span>
+              </div>
+              <button class="hero-video__btn"><span class="visually-hidden">Посмотреть видео</span></button>
+            </div>
+          </div>
+          <div class="hero-video__container">
+            <video autoplay loop muted playsinline>
+              <source type="video/webm" src="/videos/video-vertical--muted.webm">
+              <source type="video/mp4" src="/videos/video-vertical--muted.mp4">
+            </video>
+            <!--   TODO: скорее всего это будет не нужно -> удалить    -->
+            <!--          <video src="/videos/video-vertical&#45;&#45;muted.mp4" class="hero-video__video-fill" autoplay loop muted playsinline>-->
+            <!--            <source type="video/webm" src="/videos/video-vertical&#45;&#45;muted.webm">-->
+            <!--            <source type="video/mp4" src="/videos/video-vertical&#45;&#45;muted.mp4">-->
+            <!--          </video>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article id="block-services" class="block  block--service">
+    <h2 class="block__title  font-title">Услуги</h2>
+
+    <div class="service-tabs">
+      <input type="radio" name="tab" id="radio-service-adults" checked style="display: none;">
+      <input type="radio" name="tab" id="radio-service-children" style="display: none;">
+
+      <ul class="service-tabs__list" role="tablist">
+        <li class="service-tabs__item" role="presentation">
+          <!--        <a href="#service-adults" class="service-tabs__link" id="tab-A" role="tab" aria-controls="A" aria-selected="true" tabindex="0">Для взрослых</a>-->
+          <label for="radio-service-adults" class="service-tabs__link  service-tabs__link--adults" tabindex="0"
+                 data-tab="adults">Для взрослых</label>
+        </li>
+        <li class="service-tabs__item" role="presentation">
+          <!--        <a href="#service-children" class="service-tabs__link" id="tab-B" role="tab" aria-controls="B" aria-selected="false" tabindex="-1">Для детей</a>-->
+          <label for="radio-service-children" class="service-tabs__link  service-tabs__link--children" tabindex="0">Для
+            детей</label>
+        </li>
+      </ul>
+
+      <section id="service-adults" class="service-tabs__section" role="tabpanel" aria-labelledby="tab-A"
+               aria-hidden="false">
+        <div class="service-tabs__body">
+          <ul class="service-carousel  list-unstyled">
+            <li class="service-carousel__item">
+              <div class="carousel-item">
+                <div class="carousel-item__img">
+                  <img src="/images/__dev-img.jpg" alt="" width="250" aria-hidden="true">
+                </div>
+                <div class="carousel-item__body">
+                  <h3 class="carousel-item__title">Отпраздновать День рождения!</h3>
+                  <p class="carousel-item__description">Фотосъемка, шары. оформление, домики, беседки и многое
+                    другое</p>
+                  <button class="carousel-item__btn  js-open-modal" type="button" data-modal="service">
+                    <span class="visually-hidden">Подробнее</span>
+                    <span class="icon">></span>
+                  </button>
+                </div>
+              </div>
+            </li>
+
+            <li class="service-carousel__item">
+              <div class="carousel-item">
+                <div class="carousel-item__img">
+                  <video loop muted playsinline>
+                    <source type="video/webm" src="/videos/video-muted.webm">
+                    <source type="video/mp4" src="/videos/video-muted.mp4">
+                  </video>
+                </div>
+                <div class="carousel-item__body">
+                  <h3 class="carousel-item__title">Большой спектр спортивных игр и развлечений</h3>
+                  <p class="carousel-item__description">Хочешь еще больше сплотиться с друзьями? Тогда тебе к нам</p>
+                  <button class="carousel-item__btn  js-open-modal" type="button" data-modal="service">
+                    <span class="visually-hidden">Подробнее</span>
+                    <span class="icon">></span>
+                  </button>
+                </div>
+              </div>
+            </li>
+
+            <!--     TODO: для проверки, потом удалить      -->
+            <li class="service-carousel__item">
+              <div class="carousel-item">
+                <div class="carousel-item__img">
+                  <img src="/images/__dev-img.jpg" alt="" width="250" aria-hidden="true">
+                </div>
+                <div class="carousel-item__body">
+                  <h3 class="carousel-item__title">Отпраздновать День рождения!</h3>
+                  <p class="carousel-item__description">Фотосъемка, шары. оформление, домики, беседки и многое
+                    другое</p>
+                  <button class="carousel-item__btn  js-open-modal" type="button" data-modal="service">
+                    <span class="visually-hidden">Подробнее</span>
+                    <span class="icon">></span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="service-carousel__item">
+              <div class="carousel-item">
+                <div class="carousel-item__img">
+                  <video loop muted playsinline>
+                    <source type="video/webm" src="/videos/video-muted.webm">
+                    <source type="video/mp4" src="/videos/video-muted.mp4">
+                  </video>
+                </div>
+                <div class="carousel-item__body">
+                  <h3 class="carousel-item__title">Большой спектр спортивных игр и развлечений</h3>
+                  <p class="carousel-item__description">Хочешь еще больше сплотиться с друзьями? Тогда тебе к нам</p>
+                  <button class="carousel-item__btn  js-open-modal" type="button" data-modal="service">
+                    <span class="visually-hidden">Подробнее</span>
+                    <span class="icon">></span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="service-carousel__item">
+              <div class="carousel-item">
+                <div class="carousel-item__img">
+                  <img src="/images/__dev-img.jpg" alt="" width="250" aria-hidden="true">
+                </div>
+                <div class="carousel-item__body">
+                  <h3 class="carousel-item__title">Отпраздновать День рождения!</h3>
+                  <p class="carousel-item__description">Фотосъемка, шары. оформление, домики, беседки и многое
+                    другое</p>
+                  <button class="carousel-item__btn  js-open-modal" type="button" data-modal="service">
+                    <span class="visually-hidden">Подробнее</span>
+                    <span class="icon">></span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="service-carousel__item">
+              <div class="carousel-item">
+                <div class="carousel-item__img">
+                  <video loop muted playsinline>
+                    <source type="video/webm" src="/videos/video-muted.webm">
+                    <source type="video/mp4" src="/videos/video-muted.mp4">
+                  </video>
+                </div>
+                <div class="carousel-item__body">
+                  <h3 class="carousel-item__title">Большой спектр спортивных игр и развлечений</h3>
+                  <p class="carousel-item__description">Хочешь еще больше сплотиться с друзьями? Тогда тебе к нам</p>
+                  <button class="carousel-item__btn  js-open-modal" type="button" data-modal="service">
+                    <span class="visually-hidden">Подробнее</span>
+                    <span class="icon">></span>
+                  </button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="service-children" class="service-tabs__section" role="tabpanel" aria-labelledby="tab-B"
+               aria-hidden="true">
+        <div class="service-tabs__body">
+          Content of section B
+        </div>
+      </section>
+    </div>
+  </article>
+
+  <article class="banner-price">
+    <h2 class="banner-price__title">Тарифы от 600 руб.</h2>
+    <span class="banner-price__text">Тут вы можете ознакомиться с нашим прайсом!</span>
+    <button class="banner-price__btn  js-open-modal" type="button" data-modal="price">Смотреть прайс-лист</button>
+  </article>
+
+  <article class="block-form  block-form--middle">
+    <form id="form-middle" class="form  form--middle" action="">
+      <h2 class="form__title">Тебя ждет приключение!</h2>
+
+      <label for="form-middle-name" class="form__label  visually-hidden">Имя</label>
+      <input id="form-middle-name" class="form__input" type="text" name="name" placeholder="Имя">
+
+      <label for="form-middle-phone" class="form__label  visually-hidden">Телефон</label>
+      <input id="form-middle-phone" class="form__input" type="tel" name="phone" placeholder="+7 (xxx) xxx xx xx">
+
+      <a href="#" class="form__agreement" target="_blank" ref="nofollow noopener">Нажимая Заказать звонок, Вы
+        соглашаетесь
+        с политикой обработки персональных данных.</a>
+
+      <button class="form__submit" type="submit">Заказать звонок</button>
+    </form>
+
+    <section class="success-message">
+      <h2 class="success-message__title">Заявка успешно отправлена!</h2>
+      <div class="success-message__icon">✅</div>
+      <button class="success-message__btn" type="button">Заказать еще</button>
+    </section>
+  </article>
+
+  <article id="block-map" class="block  block--map  block-map">
+    <h2 class="block__title">Где мы находимся?</h2>
+
+    <ul class="map-directions">
+      <li class="map-directions__item">
+        <div class="directions-item">
+          <div class="directions-item__icon"></div>
+          <span class="directions-item__name" aria-hidden="true">Yandex</span>
+          <a href="https://yandex.ru/maps/-/CCQ~vGdptB" class="directions-item__link" target="_blank"
+             ref="nofollow noopener" aria-label="Маршрут яндекс карты">Маршрут ➤<span class="icon-arrow"></span></a>
+        </div>
+      </li>
+      <li class="map-directions__item">
+        <div class="directions-item">
+          <div class="directions-item__icon"></div>
+          <span class="directions-item__name" aria-hidden="true">2Gis</span>
+          <a href="https://go.2gis.com/7ebe2" class="directions-item__link" target="_blank" ref="nofollow noopener"
+             aria-label="Маршрут 2 гис">Маршрут ➤<span class="icon-arrow"></span></a>
+        </div>
+      </li>
+      <li class="map-directions__item">
+        <div class="directions-item">
+          <div class="directions-item__icon"></div>
+          <span class="directions-item__name" aria-hidden="true">Google</span>
+          <a href="https://goo.gl/maps/xWc5i9yJH17kn9Bx7" class="directions-item__link" target="_blank"
+             ref="nofollow noopener" aria-label="Маршрут гугл карты">Маршрут ➤<span class="icon-arrow"></span></a>
+        </div>
+      </li>
+    </ul>
+  </article>
+
+  <article class="block  block--gallery">
+    <h2 class="block__title">Галерея <span class="icon-scroll"></span></h2>
+
+    <!--
+      Для скорости нужно готовить изображения на беке.
+      Нужны будут разные размеры картинок. 320, 380, 420, 600, 800, оригинал.
+      В иделе еще в разные форматы готовить. Хотябы в webp + оригинал.
+     -->
+    <div class="gallery-carousel">
+      <ul class="gallery  list-unstyled">
+        <li class="gallery__item">
+          <picture>
+            <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
+            <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
+            <source type="image/webp" media="(max-width: 400px)" srcset="/images/__dev-img380.webp">
+            <source media="(max-width: 400px)" srcset="/images/__dev-img380.jpg">
+            <source type="image/webp" media="(max-width: 500px)" srcset="/images/__dev-img420.webp">
+            <source media="(max-width: 500px)" srcset="/images/__dev-img420.jpg">
+            <source type="image/webp" media="(max-width: 760px)" srcset="/images/__dev-img600.webp">
+            <source media="(max-width: 760px)" srcset="/images/__dev-img600.jpg">
+            <source type="image/webp" media="(max-width: 900px)" srcset="/images/__dev-img800.webp">
+            <source media="(max-width: 900px)" srcset="/images/__dev-img800.jpg">
+            <source type="image/webp" srcset="/images/__dev-img.webp">
+            <!--    Сюда можно вставлять ссылку на оригинал      -->
+            <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
+          </picture>
+        </li>
+
+        <li class="gallery__item">
+          <picture>
+            <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
+            <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
+            <source type="image/webp" media="(max-width: 400px)" srcset="/images/__dev-img380.webp">
+            <source media="(max-width: 400px)" srcset="/images/__dev-img380.jpg">
+            <source type="image/webp" media="(max-width: 500px)" srcset="/images/__dev-img420.webp">
+            <source media="(max-width: 500px)" srcset="/images/__dev-img420.jpg">
+            <source type="image/webp" media="(max-width: 760px)" srcset="/images/__dev-img600.webp">
+            <source media="(max-width: 760px)" srcset="/images/__dev-img600.jpg">
+            <source type="image/webp" media="(max-width: 900px)" srcset="/images/__dev-img800.webp">
+            <source media="(max-width: 900px)" srcset="/images/__dev-img800.jpg">
+            <source type="image/webp" srcset="/images/__dev-img.webp">
+            <!--    Сюда можно вставлять ссылку на оригинал      -->
+            <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
+          </picture>
+        </li>
+        <li class="gallery__item">
+          <picture>
+            <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
+            <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
+            <source type="image/webp" media="(max-width: 400px)" srcset="/images/__dev-img380.webp">
+            <source media="(max-width: 400px)" srcset="/images/__dev-img380.jpg">
+            <source type="image/webp" media="(max-width: 500px)" srcset="/images/__dev-img420.webp">
+            <source media="(max-width: 500px)" srcset="/images/__dev-img420.jpg">
+            <source type="image/webp" media="(max-width: 760px)" srcset="/images/__dev-img600.webp">
+            <source media="(max-width: 760px)" srcset="/images/__dev-img600.jpg">
+            <source type="image/webp" media="(max-width: 900px)" srcset="/images/__dev-img800.webp">
+            <source media="(max-width: 900px)" srcset="/images/__dev-img800.jpg">
+            <source type="image/webp" srcset="/images/__dev-img.webp">
+            <!--    Сюда можно вставлять ссылку на оригинал      -->
+            <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
+          </picture>
+        </li>
+        <li class="gallery__item">
+          <picture>
+            <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
+            <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
+            <source type="image/webp" media="(max-width: 400px)" srcset="/images/__dev-img380.webp">
+            <source media="(max-width: 400px)" srcset="/images/__dev-img380.jpg">
+            <source type="image/webp" media="(max-width: 500px)" srcset="/images/__dev-img420.webp">
+            <source media="(max-width: 500px)" srcset="/images/__dev-img420.jpg">
+            <source type="image/webp" media="(max-width: 760px)" srcset="/images/__dev-img600.webp">
+            <source media="(max-width: 760px)" srcset="/images/__dev-img600.jpg">
+            <source type="image/webp" media="(max-width: 900px)" srcset="/images/__dev-img800.webp">
+            <source media="(max-width: 900px)" srcset="/images/__dev-img800.jpg">
+            <source type="image/webp" srcset="/images/__dev-img.webp">
+            <!--    Сюда можно вставлять ссылку на оригинал      -->
+            <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
+          </picture>
+        </li>
+        <li class="gallery__item">
+          <picture>
+            <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
+            <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
+            <source type="image/webp" media="(max-width: 400px)" srcset="/images/__dev-img380.webp">
+            <source media="(max-width: 400px)" srcset="/images/__dev-img380.jpg">
+            <source type="image/webp" media="(max-width: 500px)" srcset="/images/__dev-img420.webp">
+            <source media="(max-width: 500px)" srcset="/images/__dev-img420.jpg">
+            <source type="image/webp" media="(max-width: 760px)" srcset="/images/__dev-img600.webp">
+            <source media="(max-width: 760px)" srcset="/images/__dev-img600.jpg">
+            <source type="image/webp" media="(max-width: 900px)" srcset="/images/__dev-img800.webp">
+            <source media="(max-width: 900px)" srcset="/images/__dev-img800.jpg">
+            <source type="image/webp" srcset="/images/__dev-img.webp">
+            <!--    Сюда можно вставлять ссылку на оригинал      -->
+            <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
+          </picture>
+        </li>
+        <li class="gallery__item">
+          <picture>
+            <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
+            <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
+            <source type="image/webp" media="(max-width: 400px)" srcset="/images/__dev-img380.webp">
+            <source media="(max-width: 400px)" srcset="/images/__dev-img380.jpg">
+            <source type="image/webp" media="(max-width: 500px)" srcset="/images/__dev-img420.webp">
+            <source media="(max-width: 500px)" srcset="/images/__dev-img420.jpg">
+            <source type="image/webp" media="(max-width: 760px)" srcset="/images/__dev-img600.webp">
+            <source media="(max-width: 760px)" srcset="/images/__dev-img600.jpg">
+            <source type="image/webp" media="(max-width: 900px)" srcset="/images/__dev-img800.webp">
+            <source media="(max-width: 900px)" srcset="/images/__dev-img800.jpg">
+            <source type="image/webp" srcset="/images/__dev-img.webp">
+            <!--    Сюда можно вставлять ссылку на оригинал      -->
+            <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
+          </picture>
+        </li>
+        <li class="gallery__item">
+          <picture>
+            <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
+            <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
+            <source type="image/webp" media="(max-width: 400px)" srcset="/images/__dev-img380.webp">
+            <source media="(max-width: 400px)" srcset="/images/__dev-img380.jpg">
+            <source type="image/webp" media="(max-width: 500px)" srcset="/images/__dev-img420.webp">
+            <source media="(max-width: 500px)" srcset="/images/__dev-img420.jpg">
+            <source type="image/webp" media="(max-width: 760px)" srcset="/images/__dev-img600.webp">
+            <source media="(max-width: 760px)" srcset="/images/__dev-img600.jpg">
+            <source type="image/webp" media="(max-width: 900px)" srcset="/images/__dev-img800.webp">
+            <source media="(max-width: 900px)" srcset="/images/__dev-img800.jpg">
+            <source type="image/webp" srcset="/images/__dev-img.webp">
+            <!--    Сюда можно вставлять ссылку на оригинал      -->
+            <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
+          </picture>
+        </li>
+        <li class="gallery__item">
+          <picture>
+            <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
+            <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
+            <source type="image/webp" media="(max-width: 400px)" srcset="/images/__dev-img380.webp">
+            <source media="(max-width: 400px)" srcset="/images/__dev-img380.jpg">
+            <source type="image/webp" media="(max-width: 500px)" srcset="/images/__dev-img420.webp">
+            <source media="(max-width: 500px)" srcset="/images/__dev-img420.jpg">
+            <source type="image/webp" media="(max-width: 760px)" srcset="/images/__dev-img600.webp">
+            <source media="(max-width: 760px)" srcset="/images/__dev-img600.jpg">
+            <source type="image/webp" media="(max-width: 900px)" srcset="/images/__dev-img800.webp">
+            <source media="(max-width: 900px)" srcset="/images/__dev-img800.jpg">
+            <source type="image/webp" srcset="/images/__dev-img.webp">
+            <!--    Сюда можно вставлять ссылку на оригинал      -->
+            <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
+          </picture>
+        </li>
+        <li class="gallery__item">
+          <picture>
+            <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
+            <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
+            <source type="image/webp" media="(max-width: 400px)" srcset="/images/__dev-img380.webp">
+            <source media="(max-width: 400px)" srcset="/images/__dev-img380.jpg">
+            <source type="image/webp" media="(max-width: 500px)" srcset="/images/__dev-img420.webp">
+            <source media="(max-width: 500px)" srcset="/images/__dev-img420.jpg">
+            <source type="image/webp" media="(max-width: 760px)" srcset="/images/__dev-img600.webp">
+            <source media="(max-width: 760px)" srcset="/images/__dev-img600.jpg">
+            <source type="image/webp" media="(max-width: 900px)" srcset="/images/__dev-img800.webp">
+            <source media="(max-width: 900px)" srcset="/images/__dev-img800.jpg">
+            <source type="image/webp" srcset="/images/__dev-img.webp">
+            <!--    Сюда можно вставлять ссылку на оригинал      -->
+            <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
+          </picture>
+        </li>
+        <li class="gallery__item">
+          <picture>
+            <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
+            <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
+            <source type="image/webp" media="(max-width: 400px)" srcset="/images/__dev-img380.webp">
+            <source media="(max-width: 400px)" srcset="/images/__dev-img380.jpg">
+            <source type="image/webp" media="(max-width: 500px)" srcset="/images/__dev-img420.webp">
+            <source media="(max-width: 500px)" srcset="/images/__dev-img420.jpg">
+            <source type="image/webp" media="(max-width: 760px)" srcset="/images/__dev-img600.webp">
+            <source media="(max-width: 760px)" srcset="/images/__dev-img600.jpg">
+            <source type="image/webp" media="(max-width: 900px)" srcset="/images/__dev-img800.webp">
+            <source media="(max-width: 900px)" srcset="/images/__dev-img800.jpg">
+            <source type="image/webp" srcset="/images/__dev-img.webp">
+            <!--    Сюда можно вставлять ссылку на оригинал      -->
+            <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
+          </picture>
+        </li>
+        <li class="gallery__item">
+          <picture>
+            <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
+            <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
+            <source type="image/webp" media="(max-width: 400px)" srcset="/images/__dev-img380.webp">
+            <source media="(max-width: 400px)" srcset="/images/__dev-img380.jpg">
+            <source type="image/webp" media="(max-width: 500px)" srcset="/images/__dev-img420.webp">
+            <source media="(max-width: 500px)" srcset="/images/__dev-img420.jpg">
+            <source type="image/webp" media="(max-width: 760px)" srcset="/images/__dev-img600.webp">
+            <source media="(max-width: 760px)" srcset="/images/__dev-img600.jpg">
+            <source type="image/webp" media="(max-width: 900px)" srcset="/images/__dev-img800.webp">
+            <source media="(max-width: 900px)" srcset="/images/__dev-img800.jpg">
+            <source type="image/webp" srcset="/images/__dev-img.webp">
+            <!--    Сюда можно вставлять ссылку на оригинал      -->
+            <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
+          </picture>
+        </li>
+        <li class="gallery__item">
+          <picture>
+            <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
+            <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
+            <source type="image/webp" media="(max-width: 400px)" srcset="/images/__dev-img380.webp">
+            <source media="(max-width: 400px)" srcset="/images/__dev-img380.jpg">
+            <source type="image/webp" media="(max-width: 500px)" srcset="/images/__dev-img420.webp">
+            <source media="(max-width: 500px)" srcset="/images/__dev-img420.jpg">
+            <source type="image/webp" media="(max-width: 760px)" srcset="/images/__dev-img600.webp">
+            <source media="(max-width: 760px)" srcset="/images/__dev-img600.jpg">
+            <source type="image/webp" media="(max-width: 900px)" srcset="/images/__dev-img800.webp">
+            <source media="(max-width: 900px)" srcset="/images/__dev-img800.jpg">
+            <source type="image/webp" srcset="/images/__dev-img.webp">
+            <!--    Сюда можно вставлять ссылку на оригинал      -->
+            <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
+          </picture>
+        </li>
+        <li class="gallery__item">
+          <picture>
+            <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
+            <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
+            <source type="image/webp" media="(max-width: 400px)" srcset="/images/__dev-img380.webp">
+            <source media="(max-width: 400px)" srcset="/images/__dev-img380.jpg">
+            <source type="image/webp" media="(max-width: 500px)" srcset="/images/__dev-img420.webp">
+            <source media="(max-width: 500px)" srcset="/images/__dev-img420.jpg">
+            <source type="image/webp" media="(max-width: 760px)" srcset="/images/__dev-img600.webp">
+            <source media="(max-width: 760px)" srcset="/images/__dev-img600.jpg">
+            <source type="image/webp" media="(max-width: 900px)" srcset="/images/__dev-img800.webp">
+            <source media="(max-width: 900px)" srcset="/images/__dev-img800.jpg">
+            <source type="image/webp" srcset="/images/__dev-img.webp">
+            <!--    Сюда можно вставлять ссылку на оригинал      -->
+            <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
+          </picture>
+        </li>
+        <li class="gallery__item">
+          <picture>
+            <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
+            <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
+            <source type="image/webp" media="(max-width: 400px)" srcset="/images/__dev-img380.webp">
+            <source media="(max-width: 400px)" srcset="/images/__dev-img380.jpg">
+            <source type="image/webp" media="(max-width: 500px)" srcset="/images/__dev-img420.webp">
+            <source media="(max-width: 500px)" srcset="/images/__dev-img420.jpg">
+            <source type="image/webp" media="(max-width: 760px)" srcset="/images/__dev-img600.webp">
+            <source media="(max-width: 760px)" srcset="/images/__dev-img600.jpg">
+            <source type="image/webp" media="(max-width: 900px)" srcset="/images/__dev-img800.webp">
+            <source media="(max-width: 900px)" srcset="/images/__dev-img800.jpg">
+            <source type="image/webp" srcset="/images/__dev-img.webp">
+            <!--    Сюда можно вставлять ссылку на оригинал      -->
+            <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
+          </picture>
+        </li>
+        <li class="gallery__item">
+          <picture>
+            <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
+            <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
+            <source type="image/webp" media="(max-width: 400px)" srcset="/images/__dev-img380.webp">
+            <source media="(max-width: 400px)" srcset="/images/__dev-img380.jpg">
+            <source type="image/webp" media="(max-width: 500px)" srcset="/images/__dev-img420.webp">
+            <source media="(max-width: 500px)" srcset="/images/__dev-img420.jpg">
+            <source type="image/webp" media="(max-width: 760px)" srcset="/images/__dev-img600.webp">
+            <source media="(max-width: 760px)" srcset="/images/__dev-img600.jpg">
+            <source type="image/webp" media="(max-width: 900px)" srcset="/images/__dev-img800.webp">
+            <source media="(max-width: 900px)" srcset="/images/__dev-img800.jpg">
+            <source type="image/webp" srcset="/images/__dev-img.webp">
+            <!--    Сюда можно вставлять ссылку на оригинал      -->
+            <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
+          </picture>
+        </li>
+        <li class="gallery__item">
+          <picture>
+            <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
+            <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
+            <source type="image/webp" media="(max-width: 400px)" srcset="/images/__dev-img380.webp">
+            <source media="(max-width: 400px)" srcset="/images/__dev-img380.jpg">
+            <source type="image/webp" media="(max-width: 500px)" srcset="/images/__dev-img420.webp">
+            <source media="(max-width: 500px)" srcset="/images/__dev-img420.jpg">
+            <source type="image/webp" media="(max-width: 760px)" srcset="/images/__dev-img600.webp">
+            <source media="(max-width: 760px)" srcset="/images/__dev-img600.jpg">
+            <source type="image/webp" media="(max-width: 900px)" srcset="/images/__dev-img800.webp">
+            <source media="(max-width: 900px)" srcset="/images/__dev-img800.jpg">
+            <source type="image/webp" srcset="/images/__dev-img.webp">
+            <!--    Сюда можно вставлять ссылку на оригинал      -->
+            <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
+          </picture>
+        </li>
+        <li class="gallery__item">
+          <picture>
+            <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
+            <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
+            <source type="image/webp" media="(max-width: 400px)" srcset="/images/__dev-img380.webp">
+            <source media="(max-width: 400px)" srcset="/images/__dev-img380.jpg">
+            <source type="image/webp" media="(max-width: 500px)" srcset="/images/__dev-img420.webp">
+            <source media="(max-width: 500px)" srcset="/images/__dev-img420.jpg">
+            <source type="image/webp" media="(max-width: 760px)" srcset="/images/__dev-img600.webp">
+            <source media="(max-width: 760px)" srcset="/images/__dev-img600.jpg">
+            <source type="image/webp" media="(max-width: 900px)" srcset="/images/__dev-img800.webp">
+            <source media="(max-width: 900px)" srcset="/images/__dev-img800.jpg">
+            <source type="image/webp" srcset="/images/__dev-img.webp">
+            <!--    Сюда можно вставлять ссылку на оригинал      -->
+            <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
+          </picture>
+        </li>
+        <li class="gallery__item">
+          <picture>
+            <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
+            <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
+            <source type="image/webp" media="(max-width: 400px)" srcset="/images/__dev-img380.webp">
+            <source media="(max-width: 400px)" srcset="/images/__dev-img380.jpg">
+            <source type="image/webp" media="(max-width: 500px)" srcset="/images/__dev-img420.webp">
+            <source media="(max-width: 500px)" srcset="/images/__dev-img420.jpg">
+            <source type="image/webp" media="(max-width: 760px)" srcset="/images/__dev-img600.webp">
+            <source media="(max-width: 760px)" srcset="/images/__dev-img600.jpg">
+            <source type="image/webp" media="(max-width: 900px)" srcset="/images/__dev-img800.webp">
+            <source media="(max-width: 900px)" srcset="/images/__dev-img800.jpg">
+            <source type="image/webp" srcset="/images/__dev-img.webp">
+            <!--    Сюда можно вставлять ссылку на оригинал      -->
+            <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
+          </picture>
+        </li>
+        <li class="gallery__item">
+          <picture>
+            <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
+            <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
+            <source type="image/webp" media="(max-width: 400px)" srcset="/images/__dev-img380.webp">
+            <source media="(max-width: 400px)" srcset="/images/__dev-img380.jpg">
+            <source type="image/webp" media="(max-width: 500px)" srcset="/images/__dev-img420.webp">
+            <source media="(max-width: 500px)" srcset="/images/__dev-img420.jpg">
+            <source type="image/webp" media="(max-width: 760px)" srcset="/images/__dev-img600.webp">
+            <source media="(max-width: 760px)" srcset="/images/__dev-img600.jpg">
+            <source type="image/webp" media="(max-width: 900px)" srcset="/images/__dev-img800.webp">
+            <source media="(max-width: 900px)" srcset="/images/__dev-img800.jpg">
+            <source type="image/webp" srcset="/images/__dev-img.webp">
+            <!--    Сюда можно вставлять ссылку на оригинал      -->
+            <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
+          </picture>
+        </li>
+        <li class="gallery__item">
+          <picture>
+            <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
+            <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
+            <source type="image/webp" media="(max-width: 400px)" srcset="/images/__dev-img380.webp">
+            <source media="(max-width: 400px)" srcset="/images/__dev-img380.jpg">
+            <source type="image/webp" media="(max-width: 500px)" srcset="/images/__dev-img420.webp">
+            <source media="(max-width: 500px)" srcset="/images/__dev-img420.jpg">
+            <source type="image/webp" media="(max-width: 760px)" srcset="/images/__dev-img600.webp">
+            <source media="(max-width: 760px)" srcset="/images/__dev-img600.jpg">
+            <source type="image/webp" media="(max-width: 900px)" srcset="/images/__dev-img800.webp">
+            <source media="(max-width: 900px)" srcset="/images/__dev-img800.jpg">
+            <source type="image/webp" srcset="/images/__dev-img.webp">
+            <!--    Сюда можно вставлять ссылку на оригинал      -->
+            <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
+          </picture>
+        </li>
+        <li class="gallery__item">
+          <picture>
+            <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
+            <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
+            <source type="image/webp" media="(max-width: 400px)" srcset="/images/__dev-img380.webp">
+            <source media="(max-width: 400px)" srcset="/images/__dev-img380.jpg">
+            <source type="image/webp" media="(max-width: 500px)" srcset="/images/__dev-img420.webp">
+            <source media="(max-width: 500px)" srcset="/images/__dev-img420.jpg">
+            <source type="image/webp" media="(max-width: 760px)" srcset="/images/__dev-img600.webp">
+            <source media="(max-width: 760px)" srcset="/images/__dev-img600.jpg">
+            <source type="image/webp" media="(max-width: 900px)" srcset="/images/__dev-img800.webp">
+            <source media="(max-width: 900px)" srcset="/images/__dev-img800.jpg">
+            <source type="image/webp" srcset="/images/__dev-img.webp">
+            <!--    Сюда можно вставлять ссылку на оригинал      -->
+            <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
+          </picture>
+        </li>
+
+        <li class="gallery__item__empty-end-gap" aria-hidden="true"></li>
+        <li class="gallery__item__empty-end-gap" aria-hidden="true"></li>
+      </ul>
+    </div>
+
+    <include src="banner-instagram.html"></include>
+  </article>
+</main>
+
+<footer class="page-footer">
+  <ul class="footer-contacts">
+    <li class="footer-contacts__item">
+      <a href="tel:+79999999999" class="footer-contacts__link">
+        <span class="name">Телефон:</span>
+        <span class="value">+7 999 999 99 99</span>
+      </a>
+    </li>
+    <li class="footer-contacts__item">
+      <a href="mailto:deman30@mail.ru" class="footer-contacts__link">
+        <span class="name">Электронная почта:</span>
+        <span class="value">deman30@mail.ru</span>
+      </a>
+    </li>
+    <li class="footer-contacts__item">
+      <ul class="socials-list  list-unstyled">
+        <li class="socials-list__item">
+          <a href="#" class="socials-list__link" target="_blank" ref="nofollow noopener">
+            <span class="visually-hidden">Ссылка на facebook</span>
+            <span class="icon  icon--facebook" aria-hidden="true"></span>
+          </a>
+        </li>
+        <li class="socials-list__item">
+          <a href="#" class="socials-list__link" target="_blank" ref="nofollow noopener">
+            <span class="visually-hidden">Ссылка на instagram</span>
+            <span class="icon  icon--instagram" aria-hidden="true"></span>
+          </a>
+        </li>
+        <li class="socials-list__item">
+          <a href="#" class="socials-list__link" target="_blank" ref="nofollow noopener">
+            <span class="visually-hidden">Ссылка на youtube</span>
+            <span class="icon  icon--youtube" aria-hidden="true"></span>
+          </a>
+        </li>
+        <li class="socials-list__item">
+          <a href="#" class="socials-list__link" target="_blank" ref="nofollow noopener">
+            <span class="visually-hidden">Ссылка на вконтакте</span>
+            <span class="icon  icon--vk" aria-hidden="true"></span>
+          </a>
+        </li>
+        <li class="socials-list__item">
+          <a href="#" class="socials-list__link" target="_blank" ref="nofollow noopener">
+            <span class="visually-hidden">Ссылка на одноклассники</span>
+            <span class="icon  icon--ok" aria-hidden="true"></span>
+          </a>
+        </li>
+        <li class="socials-list__item">
+          <a href="#" class="socials-list__link" target="_blank" ref="nofollow noopener">
+            <span class="visually-hidden">Ссылка на соц сеть</span>
+            <span class="icon  icon--soc-name" aria-hidden="true"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="site-dev"></div>
+  <div class="copyright">Paintball-park<br>2020©</div>
+</footer>
+
+<div id="sticky-contacts" class="sticky-contacts  is-hide">
+  <ul class="sticky-contacts__list  list-unstyled">
+    <li class="sticky-contacts__item"><a href="https://wa.me/79999999999"><span class="icon"></span> Whats App</a></li>
+    <li class="sticky-contacts__item"><a href="tel:+79999999999">+ 7 999 999-99-99</a></li>
+  </ul>
+</div>
+
+<!--
+  Dialog container related notes:
+  - It is not the actual dialog window, just the container with which the script interacts.
+  - It can have a different id than `my-accessible-dialog`, but it needs an `id` anyway.
+  - It can have a different class, or no class at all—as long as your CSS accounts for that.
+  - It should have an initial `aria-hidden="true"` to avoid a “flash of unhidden dialog” on page load.
+-->
+<div id="modals my-accessible-dialog" class="dialog-container  dialog-container--modal" aria-hidden="true">
+
+  <!--
+    Overlay related notes:
+    - It has to have the `tabindex="-1"` attribute.
+    - It doesn’t have to have the `data-a11y-dialog-hide` attribute, however this is recommended. It hides the dialog when clicking outside of it.
+  -->
+  <div tabindex="-1" data-a11y-dialog-hide></div>
+
+  <!--
+    Dialog window content related notes:
+    - It is the actual visual dialog element.
+    - It may have the `alertdialog` role to make it behave like a “modal”. See the “Usage as a modal” section of the docs.
+    - It doesn’t have to be a `<dialog>` element, it can be a `<div>` element with the `dialog` or `alertdialog` role (e.g. `<div role="dialog">`).
+    - It doesn’t have to have the `aria-labelledby` attribute however this is recommended. It should match the `id` of the dialog title.
+  -->
+  <div class="dialog-container__dialog" aria-labelledby="dialog-title" role="dialog">
+    <!--
+      Closing button related notes:
+      - It does have to have the `type="button"` attribute.
+      - It does have to have the `data-a11y-dialog-hide` attribute.
+      - It does have to have an aria-label attribute if you use an icon as content.
+    -->
+    <!--    <button type="button" data-a11y-dialog-hide aria-label="Close this dialog window">-->
+    <!--      &times;-->
+    <!--    </button>-->
+
+    <!--
+      Dialog title related notes:
+      - It should have a different content than `Dialog Title`.
+      - It can have a different id than `dialog-title`.
+    -->
+    <h1 id="dialog-title">Dialog Title</h1>
+
+    <!--
+      Here lives the main content of the dialog.
+    -->
+    <article class="modal">
+      <article id="modal-price" class="modal__body">
+        <div class="modal__wrapper">
+          <h2 class="modal__title">Тарифы на игру</h2>
+
+          <section class="price-item">
+            <h3 class="price-item__title">Тариф “На разок”</h3>
+            <ul class="price-item__list  list-unstyled">
+              <li>Шары - 100 шт. (хватит на 1-2 часа)</li>
+              <li>
+                <ul class="price-item__sublist  list-unstyled" aria-label="Дополнительно">
+                  <li class="price-item__sublist-title" aria-hidden="true">Дополнительно:</li>
+                  <li>Граната + 375 руб.</li>
+                  <li>Ствол снайперский + 50 руб.</li>
+                  <li>Костюм + 190 руб.</li>
+                </ul>
+              </li>
+              <li>Цена = <b>600 руб.</b></li>
+            </ul>
+          </section>
+
+          <section class="price-item">
+            <h3 class="price-item__title">Тариф “На разок”</h3>
+            <ul class="price-item__list  list-unstyled">
+              <li>Шары - 100 шт. (хватит на 1-2 часа)</li>
+              <li>
+                <ul class="price-item__sublist  list-unstyled" aria-label="Дополнительно">
+                  <li class="price-item__sublist-title" aria-hidden="true">Дополнительно:</li>
+                  <li>Граната + 375 руб.</li>
+                  <li>Ствол снайперский + 50 руб.</li>
+                  <li>Костюм + 190 руб.</li>
+                </ul>
+              </li>
+              <li>Цена = <b>600 руб.</b></li>
+            </ul>
+          </section>
+
+          <section class="price-item">
+            <h3 class="price-item__title">Тариф “На разок”</h3>
+            <ul class="price-item__list  list-unstyled">
+              <li>Шары - 100 шт. (хватит на 1-2 часа)</li>
+              <li>
+                <ul class="price-item__sublist  list-unstyled" aria-label="Дополнительно">
+                  <li class="price-item__sublist-title" aria-hidden="true">Дополнительно:</li>
+                  <li>Граната + 375 руб.</li>
+                  <li>Ствол снайперский + 50 руб.</li>
+                  <li>Костюм + 190 руб.</li>
+                </ul>
+              </li>
+              <li>Цена = <b>600 руб.</b></li>
+            </ul>
+          </section>
+        </div>
+      </article>
+      <article id="modal-service" class="modal__body  modal-service">
+        <div class="modal__wrapper">
+          <h2 class="modal__title">Как отпраздновать День рождения на пейнтболе?</h2>
+          <section class="modal-service__inner">
+            <p class="modal-service__text">Яркие незабываемые эмоции – лучшее, что может быть в праздник! Поэтому
+              отмечайте в
+              нашем Пейнтбол-парке Дни рождения, корпоративы, мальчишники, девишники, и... даже свадьбу отгулять! Да-да,
+              не
+              удивляйтесь! Молодожёны и гости торжества никогда не забудут красочную свадьбу с выстрелами.</p>
+            <p class="modal-service__text">Мы предлагаем игровые локации с различными сценариями. Вы получите
+              незабываемые
+              впечатления от командной игры! Большая территория парка позволяет проводить различные конкурсы и
+              соревнования.</p>
+            <p class="modal-service__text">Гарантируем, что вам очень понравится и вы запомните такой праздник!</p>
+            <p class="modal-service__text">Бронируйте мероприятие по номеру +7 (909) 123-54-12.</p>
+
+            <video loop muted playsinline style="display: none;">
+              <source type="video/webm" data-type="webm">
+              <source type="video/mp4" data-type="mp4">
+            </video>
+            <picture style="display: none;">
+              <source type="image/webp">
+              <img alt="">
+            </picture>
+          </section>
+        </div>
+      </article>
+    </article>
+  </div>
+</div>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div id="lightbox" class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+  <!-- Background of PhotoSwipe.
+       It's a separate element as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg"></div>
+
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+
+    <!-- Container that holds slides.
+        PhotoSwipe keeps only 3 of them in the DOM to save memory.
+        Don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+
+      <div class="pswp__top-bar">
+
+        <!--  Controls are self-explanatory. Order can be changed. -->
+
+        <div class="pswp__counter"></div>
+
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+        <button class="pswp__button pswp__button--share" title="Share"></button>
+
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+        <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip"></div>
+      </div>
+
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+
+      <div class="pswp__caption">
+        <div class="pswp__caption__center"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+.price-item {}
+
+.price-item__title {}
+
+.price-item__list > li {
+  margin-bottom: 10px;
+}
+
+.price-item__list > li:last-child {
+  margin-bottom: 0;
+}
+
+.price-item__sublist {}
+
+.price-item__sublist-title {
+  font-weight: 700;
+}

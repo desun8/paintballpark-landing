@@ -1,0 +1,39 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  transform: none;
+  transition-property: opacity, transform;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.6s;
+}
+
+.form.is-hide {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition-delay: 0s;
+}
+
+.form__title {
+  text-align: center;
+}
+
+.form__input {
+  margin-bottom: 10px;
+  border: 1px solid #000;
+}
+
+.form__input:last-of-type {
+  margin-bottom: 20px;
+}
+
+.form__input.has-error {
+  border-color: #ed1c24;
+}
+
+.form__agreement {
+  margin-bottom: 20px;
+  text-align: center;
+  color: inherit;
+}

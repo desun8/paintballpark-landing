@@ -1,1 +1,65 @@
-.block-hero {}
+.block-hero {
+  position: relative;
+}
+
+.block-hero__top-pattern {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 160px;
+  background: linear-gradient(174deg, #000 -60%, rgba(0, 0, 0, 0) 60%);
+  z-index: 5;
+}
+
+.block-hero__top-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 68px;
+  background:
+    image-set(
+      url("/images/pattern-header-green.png") 1x,
+      url("/images/pattern-header-green@2x.png") 2x
+    ) round left top/cover;
+}
+
+.block-hero__bottom-pattern {
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  left: 0;
+  height: 110px;
+  background:
+    image-set(
+      url("/images/pattern-hero-white.png") 1x,
+      url("/images/pattern-hero-white@2x.png") 2x
+    ) round left bottom/auto 110px;
+  z-index: 5;
+}
+
+/* noinspection CssInvalidMediaFeature */
+@media (--desktop) {
+  .block-hero {
+    background-color: var(--c-green-light);
+  }
+
+  .block-hero__container {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    column-gap: 100px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .block-hero__top-pattern {
+    display: none;
+  }
+
+  .block-hero__bottom-pattern {
+    display: none;
+  }
+}

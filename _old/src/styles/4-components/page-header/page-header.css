@@ -1,0 +1,19 @@
+.page-header {}
+
+.page-header__head {
+  --pd-top: 18px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.page-header__phone {
+  display: none;
+}
+
+.page-logo {
+
+}

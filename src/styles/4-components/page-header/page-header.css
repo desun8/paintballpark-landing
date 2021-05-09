@@ -1,4 +1,21 @@
-.page-header {}
+.page-header {
+  position: relative;
+  background-color: var(--c-green-light);
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background:
+    image-set(
+      url("/images/pattern-paintball-shooting-airsoft-games-milsim.png") 1x,
+      url("/images/pattern-paintball-shooting-airsoft-games-milsim@2x.png") 2x
+    ) no-repeat center 0/cover;
+}
 
 .page-header__head {
   --pd-top: 18px;
@@ -10,6 +27,38 @@
   padding-bottom: 18px;
 }
 
-.page-header__phone {
+.page-header__head .contacts {
   display: none;
+}
+
+/* .page-logo {} */
+
+/* noinspection CssInvalidMediaFeature */
+@media (--desktop) {
+  .page-header {
+    background-color: transparent;
+  }
+
+  .page-header::before {
+    content: none;
+  }
+
+  .page-header__head {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  .page-logo {
+    width: 256px;
+    height: auto;
+  }
+
+  .page-header__head .contacts {
+    display: grid;
+  }
+
+  .header-nav,
+  .page-header__head .contacts {
+    transform: translateY(10px);
+  }
 }

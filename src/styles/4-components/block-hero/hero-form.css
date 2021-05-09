@@ -1,3 +1,16 @@
 .hero-form {
   display: none;
 }
+
+/* noinspection CssInvalidMediaFeature */
+@media (--desktop) {
+  .hero-form {
+    display: block;
+    max-width: 580px;
+  }
+
+  .hero-form .form__title {
+    font-size: 90px;
+    text-align: left;
+  }
+}

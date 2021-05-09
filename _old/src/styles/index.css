@@ -1,0 +1,63 @@
+@import "0-config/var.css";
+
+/* LIB */
+@import "1-lib/a11y-dialog.css";
+@import "../../node_modules/photoswipe/dist/photoswipe.css";
+@import "../../node_modules/photoswipe/dist/default-skin/default-skin.css";
+
+/* BASE */
+@import "2-base/scaffolding.css";
+@import "2-base/inert.css";
+
+/* UTILITIES */
+@import "3-utilities/visually-hidden.css";
+@import "3-utilities/wrapper.css";
+@import "3-utilities/list-unstyled.css";
+
+/* COMPONENTS */
+@import "4-components/block/block.css";
+@import "4-components/banner-price.css";
+@import "4-components/banner-instagram.css";
+@import "4-components/socials-list.css";
+@import "4-components/sticky-contacts.css";
+
+/* header */
+@import "4-components/page-header/page-header.css";
+@import "4-components/page-header/page-btn.css";
+@import "4-components/page-header/short-nav.css";
+
+/* nav */
+@import "4-components/page-nav/page-nav.css";
+@import "4-components/page-nav/main-nav.css";
+
+/* hero */
+@import "4-components/block-hero/block-hero.css";
+@import "4-components/block-hero/hero-video.css";
+@import "4-components/block-hero/hero-form.css";
+
+/* services */
+@import "4-components/block-service/service-tabs.css";
+@import "4-components/block-service/service-carousel.css";
+@import "4-components/block-service/carousel-item.css";
+
+/* map */
+@import "4-components/block-map/map-directions.css";
+@import "4-components/block-map/directions-item.css";
+
+/* gallery */
+@import "4-components/block-gallery/gallery-carousel.css";
+@import "4-components/block-gallery/gallery.css";
+
+/* footer */
+@import "4-components/page-footer/page-footer.css";
+@import "4-components/page-footer/footer-contacts.css";
+
+/* form */
+@import "4-components/block-form/block-form.css";
+@import "4-components/block-form/form.css";
+@import "4-components/block-form/success-message.css";
+
+/* modals */
+@import "4-components/modal/modal.css";
+@import "4-components/modal/modal-service.css";
+@import "4-components/modal/price-item.css";

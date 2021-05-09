@@ -1,0 +1,40 @@
+.contacts {
+  /* display: grid; */
+  grid-auto-flow: column;
+  gap: 10px;
+}
+
+.contacts__link {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 10px;
+  align-items: center;
+  height: 100%;
+  padding: 12px 20px;
+  color: #fff;
+  border-radius: 10px;
+  transition: background-color var(--trsdu);
+}
+
+.contacts__link--blue {
+  background-color: var(--c-blue);
+}
+
+.contacts__link--blue:hover {
+  background-color: rgb(0, 71, 255);
+}
+
+.contacts__link--green {
+  background-color: var(--c-green);
+}
+
+.contacts__link--green:hover {
+  background-color: #00ad40;
+}
+
+.contacts__link .icon-wa {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: url("/images/icon-wa.svg") no-repeat center/contain;
+}

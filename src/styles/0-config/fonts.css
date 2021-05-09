@@ -1,0 +1,19 @@
+@font-face {
+  font-display: swap;
+  font-family: "Guerrilla";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("/fonts/guerrilla-normal.woff2") format("woff2"),
+    url("/fonts/guerrilla-normal.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Edo";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("/fonts/edo-sz-hq.woff2") format("woff2"),
+    url("/fonts/edo-sz-hq.woff") format("woff");
+}

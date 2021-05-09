@@ -4,9 +4,9 @@
   align-items: center;
 }
 
-.socials-list__item {}
+/* .socials-list__item {} */
 
-.socials-list__link {}
+/* .socials-list__link {} */
 
 .socials-list__link .icon {
   --size: 35px;
@@ -22,25 +22,25 @@
 }
 
 .socials-list__link .icon--facebook {
-  background-image: url("../../images/icon-facebook.svg");
+  background-image: url("/images/icon-facebook.svg");
 }
 
 .socials-list__link .icon--instagram {
-  background-image: url("../../images/icon-instagram.svg");
+  background-image: url("/images/icon-instagram.svg");
 }
 
 .socials-list__link .icon--vk {
-  background-image: url("../../images/icon-vk.svg");
+  background-image: url("/images/icon-vk.svg");
 }
 
 .socials-list__link .icon--ok {
-  background-image: url("../../images/icon-ok.svg");
+  background-image: url("/images/icon-ok.svg");
 }
 
 .socials-list__link .icon--youtube {
-  background-image: url("../../images/icon-youtube.svg");
+  background-image: url("/images/icon-youtube.svg");
 }
 
 .socials-list__link .icon--soc-name {
-  background-image: url("../../images/icon-soc-name.svg");
+  background-image: url("/images/icon-tiktok.svg");
 }

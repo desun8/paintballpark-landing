@@ -1,0 +1,39 @@
+/* stylelint-disable */
+
+/* mobile first */
+@custom-media --mobile-sm (width >= 23.4375em); /* 375px */
+@custom-media --mobile-md (width >= 25.625em); /* 410px */
+@custom-media --mobile-lg (width >= 28em); /* 448 */
+@custom-media --pre-tablet (width >= 34em); /* 554 */
+
+@custom-media --tablet (width >= 48em); /* 768px */
+@custom-media --tablet-lg (width >= 64em); /* 1024px */
+
+@custom-media --like-ipad-pro (width >= 64em) and (width <= 80em) and (height >= 1000px); /* 1024px */
+
+@custom-media --desktop (width >= 68.75em); /* 1100 */
+@custom-media --desktop-sm (width >= 78em); /* 1248 */
+@custom-media --desktop-md (width >= 88em); /* 1408 */
+@custom-media --desktop-lg (width >= 100em); /* 1600 */
+@custom-media --desktop-fullhd (width >= 120em); /* 1920 */
+
+/* @custom-media --desktop-height-sm (height < 43.75em) and (--desktop); */
+/* @custom-media --desktop-height-md (height <= 53em) and (--desktop); */
+
+@custom-media --only-mobile (width < 48em);
+@custom-media --only-tablet (48em <= width < 64em);
+@custom-media --only-mobile-tablet (width < 64em);
+@custom-media --only-sm-screen (width < 68.75em); /* 1100 */
+
+@custom-media --w448 (width >= 28em); /* 448 */
+
+@custom-media --h900 (height >= 56.25em); /* 900 */
+@custom-media --laptop-sm  (--desktop) and (height < 47.5em); /* 760 */
+
+/* desktop first */
+/* @custom-media --desktop-md (width <= 90em); */
+/* @custom-media --desktop (width <= 80em); */
+/* @custom-media --desktop-sm (width <= 78.75em); // 1260px */
+/* @custom-media --tablet (width <= 64em); // 1024px */
+/* @custom-media --tablet-sm (width <= 60em); // 960px */
+/* @custom-media --mobile-sm (width <= 23.125em); // 370px */

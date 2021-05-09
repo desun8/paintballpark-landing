@@ -1,0 +1,38 @@
+.header-nav {
+  display: none;
+  color: var(--c-blue-dark);
+}
+
+.header-nav__list {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 30px;
+}
+
+.header-nav__item {
+  position: relative;
+}
+
+.header-nav__item::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 124px;
+  height: 62px;
+  background: url("/images/hover-circle.svg") no-repeat center/contain;
+  opacity: 0;
+  transition: opacity var(--trsdu);
+}
+
+.header-nav__item:hover::after {
+  opacity: 1;
+}
+
+/* noinspection CssInvalidMediaFeature */
+@media (--desktop) {
+  .header-nav {
+    display: block;
+  }
+}

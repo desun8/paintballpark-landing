@@ -1,0 +1,18 @@
+.block-form {
+  position: relative;
+}
+
+.block-form--hero {
+}
+
+.block-form--middle {
+  padding: 0 var(--page-gap);
+}
+
+.block-form--middle .form,
+.block-form--middle .success-message {
+  padding: 24px;
+  color: #fff;
+  background-color: #702dff;
+  border-radius: 10px;
+}

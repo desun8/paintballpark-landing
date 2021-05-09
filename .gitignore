@@ -1,8 +1,6 @@
-.idea
-/node_modules/
-/.parcel-cache/
-/dist/
-/src/styles/@_config/
-/src/styles/@fonts/
-/src/styles/@root/
-/src/styles/@root.scss
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+_old

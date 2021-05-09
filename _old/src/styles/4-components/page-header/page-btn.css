@@ -1,0 +1,23 @@
+.page-btn {
+  --size: 40px;
+  --top: calc(var(--pd-top, 18px) + ((88 - var(--size)) / 2));
+
+  position: fixed;
+  top: var(--top);
+  right: var(--page-gap);
+  z-index: 100;
+  width: var(--size);
+  height: var(--size);
+  background-color: var(--c-blue-dark);
+  mask-image: url("../../../images/mask-btn-menu.svg");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  border-radius: 50%;
+  border: 0;
+}
+
+.page-btn--menu {}
+
+.page-btn--close {
+  background-color: #f00;
+}

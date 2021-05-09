@@ -1,7 +1,17 @@
 body {
-  --page-gap: 10px;
+  --page-gap: 20px;
   --trsdu: 0.3s;
+  --page-max-width: 1240px;
+
+  /* fonts */
+  --font-main: "Guerrilla", sans-serif;
+  --font-title: "Edo", sans-serif;
 
   /* colors */
   --c-yellow: #fff500;
+  --c-blue-dark: #304477;
+  --c-blue: #3c72ff;
+  --c-red: #fe4c4c;
+  --c-green-light: #daf530;
+  --c-green: #12bc53;
 }

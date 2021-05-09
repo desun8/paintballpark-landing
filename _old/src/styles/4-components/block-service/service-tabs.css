@@ -1,0 +1,42 @@
+.service-tabs {}
+
+input[type="radio"]#radio-service-adults:checked ~ #service-adults,
+input[type="radio"]#radio-service-children:checked ~ #service-children {
+  display: block;
+}
+
+input[type="radio"]#radio-service-adults:not(:checked) ~ #service-adults,
+input[type="radio"]#radio-service-children:not(:checked) ~ #service-children {
+  display: none;
+}
+
+input[type="radio"]#radio-service-adults:checked ~ .service-tabs__list .service-tabs__link[for="radio-service-adults"],
+input[type="radio"]#radio-service-children:checked ~ .service-tabs__list .service-tabs__link[for="radio-service-children"] {
+  --bg-c: #fff500;
+}
+
+/* tabs list */
+.service-tabs__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: var(--page-gap);
+  padding-right: var(--page-gap);
+  list-style: none;
+}
+
+
+.service-tabs__item {
+  flex-grow: 1;
+}
+
+.service-tabs__link {
+  --bg-c: transparent;
+
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--bg-c);
+  text-align: center;
+  border-radius: 8px;
+}

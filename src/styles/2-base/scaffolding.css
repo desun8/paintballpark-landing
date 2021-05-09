@@ -8,5 +8,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: var(--font-main);
+}
+
+.font-title {
+  font-family: var(--font-title);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.container {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
 }

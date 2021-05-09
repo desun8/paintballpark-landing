@@ -1,0 +1,8 @@
+body {
+  --page-gap: 20px;
+  --trsdu: 0.3s;
+
+  /* colors */
+  --c-yellow: #fff500;
+  --c-blue-dark: #304477;
+}
