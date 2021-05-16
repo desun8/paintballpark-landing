@@ -1,21 +1,31 @@
 .map-directions {
-  display: flex;
+  position: relative;
+  margin: 0 calc(var(--page-gap-sm) * -1);
+  padding: 10px var(--page-gap);
+  background-color: var(--c-green-light);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.map-directions__title {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+  color: var(--c-blue);
+  font-size: 10px;
+  text-align: center;
+}
+
+.map-directions__list {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 18px;
   justify-content: center;
-  padding: 0 var(--page-gap);
-  list-style: none;
 }
 
-.map-directions__item {
-  --gap: 5px;
+.map-directions .bg-rifle {
+  --bg-pos: -300px -180px;
 
-  flex: 0 1 calc(100% / 3);
-  margin: 0 var(--gap);
-}
-
-.map-directions__item:first-child {
-  margin-left: 0;
-}
-
-.map-directions__item:last-child {
-  margin-right: 0;
+  top: 0;
+  left: 0;
 }

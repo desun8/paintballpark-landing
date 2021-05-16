@@ -1,0 +1,16 @@
+.block-gallery {
+  position: relative;
+  margin-bottom: 150px;
+}
+
+.block-gallery .block__title {
+  margin-bottom: 20px;
+  padding: 0;
+  color: var(--c-blue);
+  font-size: 52px;
+  letter-spacing: -0.03em;
+}
+
+.block-gallery .bg-rifle {
+  --bg-pos: 10px 120px;
+}

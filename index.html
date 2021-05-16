@@ -255,157 +255,209 @@
     </div>
   </article>
 
-  <article id="block-services" class="block  block--service">
-    <h2 class="block__title  font-title">Услуги</h2>
+  <article id="block-services" class="block  block-service">
+    <div class="bg-rifle"></div>
 
-    <div class="service-tabs">
-      <input type="radio" name="tab" id="radio-service-adults" checked style="display: none;">
-      <input type="radio" name="tab" id="radio-service-children" style="display: none;">
+    <div class="wrapper">
+      <div class="service-tabs">
+        <h2 class="block__title  font-title">Услуги</h2>
 
-      <ul class="service-tabs__list" role="tablist">
-        <li class="service-tabs__item" role="presentation">
-          <!--        <a href="#service-adults" class="service-tabs__link" id="tab-A" role="tab" aria-controls="A" aria-selected="true" tabindex="0">Для взрослых</a>-->
-          <label for="radio-service-adults" class="service-tabs__link  service-tabs__link--adults" tabindex="0"
-                 data-tab="adults">Для взрослых</label>
-        </li>
-        <li class="service-tabs__item" role="presentation">
-          <!--        <a href="#service-children" class="service-tabs__link" id="tab-B" role="tab" aria-controls="B" aria-selected="false" tabindex="-1">Для детей</a>-->
-          <label for="radio-service-children" class="service-tabs__link  service-tabs__link--children" tabindex="0">Для
-            детей</label>
-        </li>
-      </ul>
+        <input type="radio" name="tab" id="radio-service-adults" checked style="display: none;">
+        <input type="radio" name="tab" id="radio-service-children" style="display: none;">
+        <input type="radio" name="tab" id="radio-service-groups" style="display: none;">
 
-      <section id="service-adults" class="service-tabs__section" role="tabpanel" aria-labelledby="tab-A"
-               aria-hidden="false">
-        <div class="service-tabs__body">
-          <ul class="service-carousel  list-unstyled">
-            <li class="service-carousel__item">
-              <div class="carousel-item">
-                <div class="carousel-item__img">
-                  <img src="/images/__dev-img.jpg" alt="" width="250" aria-hidden="true">
-                </div>
-                <div class="carousel-item__body">
-                  <h3 class="carousel-item__title">Отпраздновать День рождения!</h3>
-                  <p class="carousel-item__description">Фотосъемка, шары. оформление, домики, беседки и многое
-                    другое</p>
-                  <button class="carousel-item__btn  js-open-modal" type="button" data-modal="service">
-                    <span class="visually-hidden">Подробнее</span>
-                    <span class="icon">></span>
-                  </button>
-                </div>
-              </div>
-            </li>
+        <ul class="service-tabs__list" role="tablist">
+          <li class="service-tabs__item" role="presentation">
+            <label for="radio-service-adults" class="service-tabs__link  service-tabs__link--adults" tabindex="0"
+                   data-tab="adults">Взрослым</label>
+          </li>
+          <li class="service-tabs__item" role="presentation">
+            <label for="radio-service-children" class="service-tabs__link  service-tabs__link--children" tabindex="0">Детям</label>
+          </li>
+          <li class="service-tabs__item" role="presentation">
+            <label for="radio-service-groups" class="service-tabs__link  service-tabs__link--children" tabindex="0">Группам</label>
+          </li>
+        </ul>
 
-            <li class="service-carousel__item">
-              <div class="carousel-item">
-                <div class="carousel-item__img">
-                  <video loop muted playsinline>
-                    <source type="video/webm" src="/videos/video-muted.webm">
-                    <source type="video/mp4" src="/videos/video-muted.mp4">
-                  </video>
-                </div>
-                <div class="carousel-item__body">
-                  <h3 class="carousel-item__title">Большой спектр спортивных игр и развлечений</h3>
-                  <p class="carousel-item__description">Хочешь еще больше сплотиться с друзьями? Тогда тебе к нам</p>
-                  <button class="carousel-item__btn  js-open-modal" type="button" data-modal="service">
-                    <span class="visually-hidden">Подробнее</span>
-                    <span class="icon">></span>
-                  </button>
-                </div>
-              </div>
-            </li>
-
-            <!--     TODO: для проверки, потом удалить      -->
-            <li class="service-carousel__item">
-              <div class="carousel-item">
-                <div class="carousel-item__img">
-                  <img src="/images/__dev-img.jpg" alt="" width="250" aria-hidden="true">
-                </div>
-                <div class="carousel-item__body">
-                  <h3 class="carousel-item__title">Отпраздновать День рождения!</h3>
-                  <p class="carousel-item__description">Фотосъемка, шары. оформление, домики, беседки и многое
-                    другое</p>
-                  <button class="carousel-item__btn  js-open-modal" type="button" data-modal="service">
-                    <span class="visually-hidden">Подробнее</span>
-                    <span class="icon">></span>
-                  </button>
-                </div>
-              </div>
-            </li>
-            <li class="service-carousel__item">
-              <div class="carousel-item">
-                <div class="carousel-item__img">
-                  <video loop muted playsinline>
-                    <source type="video/webm" src="/videos/video-muted.webm">
-                    <source type="video/mp4" src="/videos/video-muted.mp4">
-                  </video>
-                </div>
-                <div class="carousel-item__body">
-                  <h3 class="carousel-item__title">Большой спектр спортивных игр и развлечений</h3>
-                  <p class="carousel-item__description">Хочешь еще больше сплотиться с друзьями? Тогда тебе к нам</p>
-                  <button class="carousel-item__btn  js-open-modal" type="button" data-modal="service">
-                    <span class="visually-hidden">Подробнее</span>
-                    <span class="icon">></span>
-                  </button>
-                </div>
-              </div>
-            </li>
-            <li class="service-carousel__item">
-              <div class="carousel-item">
-                <div class="carousel-item__img">
-                  <img src="/images/__dev-img.jpg" alt="" width="250" aria-hidden="true">
-                </div>
-                <div class="carousel-item__body">
-                  <h3 class="carousel-item__title">Отпраздновать День рождения!</h3>
-                  <p class="carousel-item__description">Фотосъемка, шары. оформление, домики, беседки и многое
-                    другое</p>
-                  <button class="carousel-item__btn  js-open-modal" type="button" data-modal="service">
-                    <span class="visually-hidden">Подробнее</span>
-                    <span class="icon">></span>
-                  </button>
-                </div>
-              </div>
-            </li>
-            <li class="service-carousel__item">
-              <div class="carousel-item">
-                <div class="carousel-item__img">
-                  <video loop muted playsinline>
-                    <source type="video/webm" src="/videos/video-muted.webm">
-                    <source type="video/mp4" src="/videos/video-muted.mp4">
-                  </video>
-                </div>
-                <div class="carousel-item__body">
-                  <h3 class="carousel-item__title">Большой спектр спортивных игр и развлечений</h3>
-                  <p class="carousel-item__description">Хочешь еще больше сплотиться с друзьями? Тогда тебе к нам</p>
-                  <button class="carousel-item__btn  js-open-modal" type="button" data-modal="service">
-                    <span class="visually-hidden">Подробнее</span>
-                    <span class="icon">></span>
-                  </button>
-                </div>
-              </div>
-            </li>
-          </ul>
+        <div class="service-tabs__controllers">
+          <button class="service-tabs__btn service-tabs__btn--prev" type="button"
+                  aria-label="Промотать список услуг назад"><span class="icon"></span>
+          </button>
+          <button class="service-tabs__btn service-tabs__btn--next" type="button"
+                  aria-label="Промотать список услуг вперед"><span class="icon"></span>
+          </button>
         </div>
-      </section>
 
-      <section id="service-children" class="service-tabs__section" role="tabpanel" aria-labelledby="tab-B"
-               aria-hidden="true">
-        <div class="service-tabs__body">
-          Content of section B
-        </div>
-      </section>
+        <section id="service-adults" class="service-tabs__section  simplebar-container" role="tabpanel"
+                 aria-labelledby="tab-A" aria-hidden="false" data-simplebar data-simplebar-auto-hide="false">
+          <div class="service-tabs__body">
+            <ul class="service-carousel  list-unstyled">
+              <li class="service-carousel__item">
+                <div class="carousel-item">
+                  <div class="carousel-item__img">
+                    <img src="/images/__dev-img.jpg" alt="" width="250" aria-hidden="true">
+                  </div>
+                  <div class="carousel-item__body">
+                    <div class="truncate">
+                      <h3 class="carousel-item__title">Отпраздновать День рождения!</h3>
+                      <p class="carousel-item__description">Фотосъемка, шары. оформление, домики, беседки и многое
+                        другое</p>
+                      <button class="carousel-item__btn  js-open-modal" type="button" data-modal="service">
+                        <span class="visually-hidden">Подробнее</span>
+
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="service-carousel__item">
+                <div class="carousel-item">
+                  <div class="carousel-item__img">
+                    <video loop muted playsinline>
+                      <source type="video/webm" src="/videos/video-muted.webm">
+                      <source type="video/mp4" src="/videos/video-muted.mp4">
+                    </video>
+                  </div>
+                  <div class="carousel-item__body">
+                    <div class="truncate"><h3 class="carousel-item__title">Большой спектр спортивных игр и
+                      развлечений</h3>
+                      <p class="carousel-item__description">Хочешь еще больше сплотиться с друзьями? Тогда тебе к
+                        нам</p>
+                      <button class="carousel-item__btn  js-open-modal" type="button" data-modal="service">
+                        <span class="visually-hidden">Подробнее</span>
+
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!--     TODO: для проверки, потом удалить      -->
+              <li class="service-carousel__item">
+                <div class="carousel-item">
+                  <div class="carousel-item__img">
+                    <img src="/images/__dev-img.jpg" alt="" width="250" aria-hidden="true">
+                  </div>
+                  <div class="carousel-item__body">
+                    <div class="truncate"><h3 class="carousel-item__title">Отпраздновать День рождения!</h3>
+                      <p class="carousel-item__description">Фотосъемка, шары. оформление, домики, беседки и многое
+                        другое</p>
+                      <button class="carousel-item__btn  js-open-modal" type="button" data-modal="service">
+                        <span class="visually-hidden">Подробнее</span>
+
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="service-carousel__item">
+                <div class="carousel-item">
+                  <div class="carousel-item__img">
+                    <video loop muted playsinline>
+                      <source type="video/webm" src="/videos/video-muted.webm">
+                      <source type="video/mp4" src="/videos/video-muted.mp4">
+                    </video>
+                  </div>
+                  <div class="carousel-item__body">
+                    <div class="truncate"><h3 class="carousel-item__title">Большой спектр спортивных игр и
+                      развлечений</h3>
+                      <p class="carousel-item__description">Хочешь еще больше сплотиться с друзьями? Тогда тебе к
+                        нам</p>
+                      <button class="carousel-item__btn  js-open-modal" type="button" data-modal="service">
+                        <span class="visually-hidden">Подробнее</span>
+
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="service-carousel__item">
+                <div class="carousel-item">
+                  <div class="carousel-item__img">
+                    <img src="/images/__dev-img.jpg" alt="" width="250" aria-hidden="true">
+                  </div>
+                  <div class="carousel-item__body">
+                    <div class="truncate"><h3 class="carousel-item__title">Отпраздновать День рождения!</h3>
+                      <p class="carousel-item__description">Фотосъемка, шары. оформление, домики, беседки и многое
+                        другое</p>
+                      <button class="carousel-item__btn  js-open-modal" type="button" data-modal="service">
+                        <span class="visually-hidden">Подробнее</span>
+
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="service-carousel__item">
+                <div class="carousel-item">
+                  <div class="carousel-item__img">
+                    <video loop muted playsinline>
+                      <source type="video/webm" src="/videos/video-muted.webm">
+                      <source type="video/mp4" src="/videos/video-muted.mp4">
+                    </video>
+                  </div>
+                  <div class="carousel-item__body">
+                    <div class="truncate"><h3 class="carousel-item__title">Большой спектр спортивных игр и
+                      развлечений</h3>
+                      <p class="carousel-item__description">Хочешь еще больше сплотиться с друзьями? Тогда тебе к
+                        нам</p>
+                      <button class="carousel-item__btn  js-open-modal" type="button" data-modal="service">
+                        <span class="visually-hidden">Подробнее</span>
+
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="service-children" class="service-tabs__section simplebar-container" role="tabpanel"
+                 aria-labelledby="tab-B"
+                 aria-hidden="true">
+          <div class="service-tabs__body">
+            Content of section B
+          </div>
+        </section>
+
+        <section id="service-groups" class="service-tabs__section simplebar-container" role="tabpanel"
+                 aria-labelledby="tab-C"
+                 aria-hidden="true">
+          <div class="service-tabs__body">
+            Content of section C
+          </div>
+        </section>
+      </div>
     </div>
   </article>
 
   <article class="banner-price">
-    <h2 class="banner-price__title">Тарифы от 600 руб.</h2>
-    <span class="banner-price__text">Тут вы можете ознакомиться с нашим прайсом!</span>
-    <button class="banner-price__btn  js-open-modal" type="button" data-modal="price">Смотреть прайс-лист</button>
+    <div class="bg-rifle  bg-rifle--top"></div>
+    <div class="bg-rifle  bg-rifle--rotate-right  bg-rifle--bottom"></div>
+
+    <div class="banner-price__container wrapper">
+      <div class="banner-price__content">
+        <div class="banner-price__patter-top"></div>
+        <div class="banner-price__patter-bottom"></div>
+
+        <div class="banner-price__content-wrapper">
+          <h2 class="banner-price__title  font-title">Тарифы от 600Р</h2>
+          <span class="banner-price__text">Мы можем помочь вам рассчитать<br> стоимость игры по телефону:<br> 7 (999) 999-99-77</span>
+          <button class="banner-price__btn  btn  btn--red  js-open-modal" type="button" data-modal="price">Смотреть
+            прайс-лист
+          </button>
+        </div>
+      </div>
+
+      <div class="banner-price__image"></div>
+    </div>
   </article>
 
   <article class="block-form  block-form--middle">
     <form id="form-middle" class="form  form--middle" action="">
-      <h2 class="form__title">Тебя ждет приключение!</h2>
+      <h2 class="form__title  font-title" data-title="Тебя ждет приключение!">Тебя ждет приключение!</h2>
 
       <label for="form-middle-name" class="form__label  visually-hidden">Имя</label>
       <input id="form-middle-name" class="form__input" type="text" name="name" placeholder="Имя">
@@ -417,7 +469,7 @@
         соглашаетесь
         с политикой обработки персональных данных.</a>
 
-      <button class="form__submit" type="submit">Заказать звонок</button>
+      <button class="form__submit  btn  btn--blue" type="submit">Заказать звонок</button>
     </form>
 
     <section class="success-message">
@@ -428,62 +480,91 @@
   </article>
 
   <article id="block-map" class="block  block--map  block-map">
-    <h2 class="block__title">Где мы находимся?</h2>
 
-    <ul class="map-directions">
-      <li class="map-directions__item">
-        <div class="directions-item">
-          <div class="directions-item__icon"></div>
-          <span class="directions-item__name" aria-hidden="true">Yandex</span>
-          <a href="https://yandex.ru/maps/-/CCQ~vGdptB" class="directions-item__link" target="_blank"
-             ref="nofollow noopener" aria-label="Маршрут яндекс карты">Маршрут ➤<span class="icon-arrow"></span></a>
+    <div class="wrapper">
+      <div class="block-map__container">
+        <div class="block-map__content"><h2 class="block__title  font-title">Где мы находимся?</h2>
+
+          <span class="block-map__text">Выберите один из сервисов снизу, чтобы построить до нас маршрут.</span>
+
+          <section class="map-directions">
+            <div class="bg-rifle"></div>
+
+            <span class="map-directions__title">После нажатия, откроется карта в новой вкладке.</span>
+            <ul class="map-directions__list  list-unstyled">
+              <li class="map-directions__item">
+                <div class="directions-item">
+                  <div class="directions-item__icon  directions-item__icon--yandex"></div>
+                  <span class="directions-item__name" aria-hidden="true">Yandex</span>
+                  <a href="https://yandex.ru/maps/-/CCQ~vGdptB" class="directions-item__link" target="_blank"
+                     ref="nofollow noopener" aria-label="Маршрут в яндекс картах"></a>
+                </div>
+              </li>
+              <li class="map-directions__item">
+                <div class="directions-item">
+                  <div class="directions-item__icon  directions-item__icon--2gis"></div>
+                  <span class="directions-item__name" aria-hidden="true">2Gis</span>
+                  <a href="https://go.2gis.com/7ebe2" class="directions-item__link" target="_blank"
+                     ref="nofollow noopener"
+                     aria-label="Маршрут в два гис"></a>
+                </div>
+              </li>
+              <li class="map-directions__item">
+                <div class="directions-item">
+                  <div class="directions-item__icon  directions-item__icon--google"></div>
+                  <span class="directions-item__name" aria-hidden="true">Google</span>
+                  <a href="https://goo.gl/maps/xWc5i9yJH17kn9Bx7" class="directions-item__link" target="_blank"
+                     ref="nofollow noopener" aria-label="Маршрут в гугл картах"></a>
+                </div>
+              </li>
+            </ul>
+          </section>
         </div>
-      </li>
-      <li class="map-directions__item">
-        <div class="directions-item">
-          <div class="directions-item__icon"></div>
-          <span class="directions-item__name" aria-hidden="true">2Gis</span>
-          <a href="https://go.2gis.com/7ebe2" class="directions-item__link" target="_blank" ref="nofollow noopener"
-             aria-label="Маршрут 2 гис">Маршрут ➤<span class="icon-arrow"></span></a>
+
+        <div class="block-map__video-container">
+          <span class="block-map__video-title">Видео проезда от<br> первого лица</span>
+          <div class="block-map__video">
+            <div class="block-map__placeholder"></div>
+            <video loop muted playsinline>
+              <source type="video/webm" src="/videos/video-muted.webm">
+              <source type="video/mp4" src="/videos/video-muted.mp4">
+            </video>
+
+            <button class="block-map__play" type="button" aria-label="Посмотреть видео 'Как добраться'.">
+              <span class="mask"></span>
+            </button>
+
+            <div class="block-map__pattern-top"></div>
+            <div class="block-map__pattern-bottom"></div>
+          </div>
         </div>
-      </li>
-      <li class="map-directions__item">
-        <div class="directions-item">
-          <div class="directions-item__icon"></div>
-          <span class="directions-item__name" aria-hidden="true">Google</span>
-          <a href="https://goo.gl/maps/xWc5i9yJH17kn9Bx7" class="directions-item__link" target="_blank"
-             ref="nofollow noopener" aria-label="Маршрут гугл карты">Маршрут ➤<span class="icon-arrow"></span></a>
-        </div>
-      </li>
-    </ul>
+      </div>
+    </div>
   </article>
 
-  <article class="block  block--gallery">
-    <h2 class="block__title">Галерея <span class="icon-scroll"></span></h2>
+  <article class="block  block-gallery">
+    <div class="bg-rifle"></div>
+
+    <h2 class="block__title  font-title">Заглядывай в instagram</h2>
+
+    <a href="#" class="instagram-link" target="_blank" ref="nofollow noopener">
+      <span class="instagram-link__icon"></span>
+      <span class="instagram-link__text">Подписывайся на нас<br><span class="large">@paintballpark_khv</span></span>
+    </a>
 
     <!--
       Для скорости нужно готовить изображения на беке.
       Нужны будут разные размеры картинок. 320, 380, 420, 600, 800, оригинал.
       В иделе еще в разные форматы готовить. Хотябы в webp + оригинал.
      -->
-    <div class="gallery-carousel">
+    <div class="gallery-carousel  simplebar-container" data-simplebar data-simplebar-auto-hide="false">
       <ul class="gallery  list-unstyled">
+        <!--
+          Я так понимаю медиа из инсты никак не будут "обжиматься".
+          Так что будет либо <img> либо <video>
+        -->
         <li class="gallery__item">
-          <picture>
-            <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
-            <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
-            <source type="image/webp" media="(max-width: 400px)" srcset="/images/__dev-img380.webp">
-            <source media="(max-width: 400px)" srcset="/images/__dev-img380.jpg">
-            <source type="image/webp" media="(max-width: 500px)" srcset="/images/__dev-img420.webp">
-            <source media="(max-width: 500px)" srcset="/images/__dev-img420.jpg">
-            <source type="image/webp" media="(max-width: 760px)" srcset="/images/__dev-img600.webp">
-            <source media="(max-width: 760px)" srcset="/images/__dev-img600.jpg">
-            <source type="image/webp" media="(max-width: 900px)" srcset="/images/__dev-img800.webp">
-            <source media="(max-width: 900px)" srcset="/images/__dev-img800.jpg">
-            <source type="image/webp" srcset="/images/__dev-img.webp">
-            <!--    Сюда можно вставлять ссылку на оригинал      -->
-            <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
-          </picture>
+          <img src="/images/__dev-img.jpg" alt="" loading="lazy">
         </li>
 
         <li class="gallery__item">
@@ -827,72 +908,85 @@
           </picture>
         </li>
 
-        <li class="gallery__item__empty-end-gap" aria-hidden="true"></li>
         <li class="gallery__item__empty-end-gap" aria-hidden="true"></li>
       </ul>
     </div>
-
-    <include src="banner-instagram.html"></include>
   </article>
 </main>
 
 <footer class="page-footer">
-  <ul class="footer-contacts">
-    <li class="footer-contacts__item">
-      <a href="tel:+79999999999" class="footer-contacts__link">
-        <span class="name">Телефон:</span>
-        <span class="value">+7 999 999 99 99</span>
-      </a>
-    </li>
-    <li class="footer-contacts__item">
-      <a href="mailto:deman30@mail.ru" class="footer-contacts__link">
-        <span class="name">Электронная почта:</span>
-        <span class="value">deman30@mail.ru</span>
-      </a>
-    </li>
-    <li class="footer-contacts__item">
-      <ul class="socials-list  list-unstyled">
-        <li class="socials-list__item">
-          <a href="#" class="socials-list__link" target="_blank" ref="nofollow noopener">
-            <span class="visually-hidden">Ссылка на facebook</span>
-            <span class="icon  icon--facebook" aria-hidden="true"></span>
+  <div class="page-footer__top-pattern"></div>
+  <div class="bg-rifle  bg-rifle--rotate-left"></div>
+
+  <div class="footer-container">
+    <div class="bg-rifle bg-rifle--rotate-left"></div>
+
+    <div class="footer-container__wrapper">
+      <h2 class="footer-container__title  font-title" data-title="Оставьте свой номер, и мы вам перезвоним!">Оставьте
+        свой номер, и мы вам перезвоним!</h2>
+
+      <a href="#form-middle" class="footer-container__to-form btn  btn--red" aria-label="Перейти к форме.">Заказать
+        звонок</a>
+
+      <ul class="footer-contacts">
+        <li class="footer-contacts__item">
+          <a href="mailto:deman30@mail.ru" class="footer-contacts__link">
+            <span class="name">Электронная почта:</span>
+            <span class="value">deman30@mail.ru</span>
           </a>
         </li>
-        <li class="socials-list__item">
-          <a href="#" class="socials-list__link" target="_blank" ref="nofollow noopener">
-            <span class="visually-hidden">Ссылка на instagram</span>
-            <span class="icon  icon--instagram" aria-hidden="true"></span>
+        <li class="footer-contacts__item">
+          <a href="tel:+79999999999" class="footer-contacts__link">
+            <span class="name">Телефон:</span>
+            <span class="value">+7 999 999 99 99</span>
           </a>
         </li>
-        <li class="socials-list__item">
-          <a href="#" class="socials-list__link" target="_blank" ref="nofollow noopener">
-            <span class="visually-hidden">Ссылка на youtube</span>
-            <span class="icon  icon--youtube" aria-hidden="true"></span>
-          </a>
-        </li>
-        <li class="socials-list__item">
-          <a href="#" class="socials-list__link" target="_blank" ref="nofollow noopener">
-            <span class="visually-hidden">Ссылка на вконтакте</span>
-            <span class="icon  icon--vk" aria-hidden="true"></span>
-          </a>
-        </li>
-        <li class="socials-list__item">
-          <a href="#" class="socials-list__link" target="_blank" ref="nofollow noopener">
-            <span class="visually-hidden">Ссылка на одноклассники</span>
-            <span class="icon  icon--ok" aria-hidden="true"></span>
-          </a>
-        </li>
-        <li class="socials-list__item">
-          <a href="#" class="socials-list__link" target="_blank" ref="nofollow noopener">
-            <span class="visually-hidden">Ссылка на соц сеть</span>
-            <span class="icon  icon--soc-name" aria-hidden="true"></span>
-          </a>
+        <li class="footer-contacts__item">
+          <ul class="socials-list  list-unstyled">
+            <li class="socials-list__item">
+              <a href="#" class="socials-list__link" target="_blank" ref="nofollow noopener">
+                <span class="visually-hidden">Ссылка на facebook</span>
+                <span class="icon  icon--facebook" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li class="socials-list__item">
+              <a href="#" class="socials-list__link" target="_blank" ref="nofollow noopener">
+                <span class="visually-hidden">Ссылка на instagram</span>
+                <span class="icon  icon--instagram" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li class="socials-list__item">
+              <a href="#" class="socials-list__link" target="_blank" ref="nofollow noopener">
+                <span class="visually-hidden">Ссылка на youtube</span>
+                <span class="icon  icon--youtube" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li class="socials-list__item">
+              <a href="#" class="socials-list__link" target="_blank" ref="nofollow noopener">
+                <span class="visually-hidden">Ссылка на вконтакте</span>
+                <span class="icon  icon--vk" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li class="socials-list__item">
+              <a href="#" class="socials-list__link" target="_blank" ref="nofollow noopener">
+                <span class="visually-hidden">Ссылка на одноклассники</span>
+                <span class="icon  icon--ok" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li class="socials-list__item">
+              <a href="#" class="socials-list__link" target="_blank" ref="nofollow noopener">
+                <span class="visually-hidden">Ссылка на соц сеть</span>
+                <span class="icon  icon--soc-name" aria-hidden="true"></span>
+              </a>
+            </li>
+          </ul>
         </li>
       </ul>
-    </li>
-  </ul>
+    </div>
+  </div>
 
-  <div class="site-dev"></div>
+  <a href="#" class="site-dev" target="_blank" ref="nofollow noopener"
+     aria-label="Сайт разработчика - веб альтернатива."></a>
   <div class="copyright">Paintball-park<br>2020©</div>
 </footer>
 
@@ -1034,7 +1128,7 @@
 
 
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div id="lightbox" class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+<div style="display: none" id="lightbox" class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
   <!-- Background of PhotoSwipe.
        It's a separate element as animating opacity is faster than rgba(). -->

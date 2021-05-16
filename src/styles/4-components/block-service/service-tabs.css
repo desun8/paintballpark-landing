@@ -1,42 +1,146 @@
-.service-tabs {}
+.service-tabs {
+  margin-bottom: 60px;
+}
+
+.service-tabs .block__title {
+  padding: 0;
+}
 
 input[type="radio"]#radio-service-adults:checked ~ #service-adults,
-input[type="radio"]#radio-service-children:checked ~ #service-children {
+input[type="radio"]#radio-service-children:checked ~ #service-children,
+input[type="radio"]#radio-service-groups:checked ~ #service-groups {
   display: block;
 }
 
 input[type="radio"]#radio-service-adults:not(:checked) ~ #service-adults,
-input[type="radio"]#radio-service-children:not(:checked) ~ #service-children {
+input[type="radio"]#radio-service-children:not(:checked) ~ #service-children,
+input[type="radio"]#radio-service-groups:not(:checked) ~ #service-groups {
   display: none;
 }
 
 input[type="radio"]#radio-service-adults:checked ~ .service-tabs__list .service-tabs__link[for="radio-service-adults"],
-input[type="radio"]#radio-service-children:checked ~ .service-tabs__list .service-tabs__link[for="radio-service-children"] {
-  --bg-c: #fff500;
+input[type="radio"]#radio-service-children:checked ~ .service-tabs__list .service-tabs__link[for="radio-service-children"],
+input[type="radio"]#radio-service-groups:checked ~ .service-tabs__list .service-tabs__link[for="radio-service-groups"] {
+  --bg-c: #fff;
 }
 
 /* tabs list */
 .service-tabs__list {
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
   justify-content: space-between;
   align-items: center;
-  padding-left: var(--page-gap);
-  padding-right: var(--page-gap);
+  padding: 12px 10px;
   list-style: none;
-}
-
-
-.service-tabs__item {
-  flex-grow: 1;
+  background-color: var(--c-green-light);
+  border-radius: 10px;
 }
 
 .service-tabs__link {
   --bg-c: transparent;
+  --color: var(--c-blue);
 
   display: inline-block;
   width: 100%;
-  padding: 10px;
+  padding: 12px 10px;
+  color: var(--color);
   background-color: var(--bg-c);
   text-align: center;
-  border-radius: 8px;
+  border-radius: 10px;
+}
+
+/* controllers */
+.service-tabs__controllers {
+  display: none;
+}
+
+.service-tabs__btn,
+.service-tabs__btn .icon {
+  transition: background-color var(--trsdu);
+}
+
+.service-tabs__btn {
+  --bg-color: var(--c-green-light);
+  --icon-color: var(--c-blue);
+
+  width: 54px;
+  height: 54px;
+  background-color: var(--bg-color);
+  border-radius: 50%;
+}
+
+.service-tabs__btn--prev {
+  transform: scaleX(-1);
+}
+
+.service-tabs__btn:hover,
+.service-tabs__btn:focus {
+  --bg-color: var(--c-blue);
+  --icon-color: #fff;
+}
+
+.service-tabs__btn .icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--icon-color);
+  mask:
+    image-set(
+      url("/images/icon-arrow.png") 1x,
+      url("/images/icon-arrow@2x.png") 2x,
+      url("/images/icon-arrow@4x.png") 4x
+    ) no-repeat center / 25px;
+}
+
+/* section */
+.service-tabs__section {
+  --margin: calc(var(--page-gap) * -1);
+
+  margin-left: var(--margin);
+  margin-right: var(--margin);
+}
+
+.service-tabs__section.simplebar-container .simplebar-track.simplebar-horizontal {
+  bottom: 40px;
+}
+
+/* noinspection CssInvalidMediaFeature */
+@media (--desktop) {
+  input[type="radio"]#radio-service-adults:checked ~ .service-tabs__list .service-tabs__link[for="radio-service-adults"],
+  input[type="radio"]#radio-service-children:checked ~ .service-tabs__list .service-tabs__link[for="radio-service-children"],
+  input[type="radio"]#radio-service-groups:checked ~ .service-tabs__list .service-tabs__link[for="radio-service-groups"] {
+    --bg-c: var(--c-red);
+    --color: #fff;
+  }
+
+  .service-tabs {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    column-gap: 100px;
+    row-gap: 50px;
+  }
+
+  .service-tabs .block__title {
+    margin-bottom: 0;
+  }
+
+  .service-tabs__list {
+    justify-content: start;
+    background-color: transparent;
+  }
+
+  .service-tabs__link {
+    padding: 16px 25px;
+  }
+
+  .service-tabs__controllers {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+  }
+
+  .service-tabs__section {
+    grid-column: 1/4;
+  }
 }

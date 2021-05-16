@@ -19,6 +19,7 @@
 @import "3-utilities/visually-hidden.css";
 @import "3-utilities/wrapper.css";
 @import "3-utilities/list-unstyled.css";
+@import "3-utilities/truncate.css";
 
 /* COMPONENTS */
 @import "4-components/block/block.css";
@@ -44,22 +45,26 @@
 @import "4-components/block-hero/hero-form.css";
 
 /* services */
-@import "4-components/block-service/block--service.css";
+@import "4-components/block-service/block-service.css";
 @import "4-components/block-service/service-tabs.css";
 @import "4-components/block-service/service-carousel.css";
 @import "4-components/block-service/carousel-item.css";
 
 /* map */
+@import "4-components/block-map/block-map.css";
 @import "4-components/block-map/map-directions.css";
 @import "4-components/block-map/directions-item.css";
 
 /* gallery */
+@import "4-components/block-gallery/block-gallery.css";
+@import "4-components/block-gallery/instagram-link.css";
 @import "4-components/block-gallery/gallery-carousel.css";
 @import "4-components/block-gallery/gallery.css";
 
 /* footer */
 @import "4-components/page-footer/page-footer.css";
 @import "4-components/page-footer/footer-contacts.css";
+@import "4-components/page-footer/footer-container.css";
 
 /* form */
 @import "4-components/block-form/block-form.css";

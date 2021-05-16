@@ -1,0 +1,44 @@
+.footer-container {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 24px 20px;
+  background-color: var(--c-green-light);
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 4;
+}
+
+.footer-container__wrapper {
+  position: relative;
+  z-index: 5;
+}
+
+.footer-container__title {
+  position: relative;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+
+.footer-container__title::before {
+  content: attr(data-title);
+  position: absolute;
+  top: 0;
+  left: 4px;
+  color: var(--c-blue);
+}
+
+.footer-container__to-form {
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.footer-container > .bg-rifle {
+  --bg-pos: -110px -45px;
+
+  top: 0;
+  left: 0;
+}

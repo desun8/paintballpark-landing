@@ -2,17 +2,25 @@
   position: relative;
 }
 
-.block-form--hero {
-}
+/* .block-form--hero {} */
 
 .block-form--middle {
-  padding: 0 var(--page-gap);
+  margin-bottom: 70px;
+  padding: 0 var(--page-gap-sm);
 }
 
 .block-form--middle .form,
 .block-form--middle .success-message {
-  padding: 24px;
+  padding: 40px 28px 30px;
   color: #fff;
-  background-color: #702dff;
+  background: var(--c-green-light) url(/images/form-middle-bg.svg) no-repeat 160% -100px/212px;
   border-radius: 10px;
+  overflow: hidden;
+
+  /* mask-image: radial-gradient(white, black); !* фикс для safari *! */
+}
+
+.block-form--middle .form__title {
+  margin-left: -28px;
+  margin-right: -28px;
 }

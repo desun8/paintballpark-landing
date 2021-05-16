@@ -1,0 +1,138 @@
+.block-map {
+  margin-bottom: 60px;
+}
+
+.block-map .block__title {
+  margin-bottom: 20px;
+  padding: 0;
+  color: var(--c-blue);
+  font-size: 52px;
+  text-align: left;
+}
+
+.block-map__content {
+  margin-bottom: 20px;
+}
+
+.block-map__text {
+  display: inline-block;
+  margin-bottom: 26px;
+  color: var(--c-blue-dark);
+}
+
+.block-map__video-title {
+  display: inline-block;
+  width: 100%;
+  color: var(--c-blue);
+  font-size: 28px;
+  letter-spacing: -0.03em;
+  text-align: center;
+}
+
+.block-map__video {
+  --ratio: calc(334 / 320 * 100%);
+  --width: calc(100% + (var(--page-gap) * 2));
+
+  position: relative;
+  width: var(--width);
+  height: 0;
+  margin: 0 var(--no-page-gap);
+  padding-top: var(--ratio);
+  overflow: hidden;
+}
+
+.block-map__video video {
+  display: none;
+}
+
+.block-map__placeholder {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background:
+    image-set(
+      url("/images/place-video-placeholder.jpg") 1x,
+      url("/images/place-video-placeholder@2x.jpg") 2x
+    ) no-repeat center 0/120%;
+}
+
+.block-map__play {
+  --size: 75px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  grid-row: 1/3;
+  grid-column: 2/3;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.block-map__play .mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--c-red);
+  mask: url("/images/mask-btn-youtube.svg") no-repeat center;
+}
+
+.block-map__play::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 204px;
+  height: 325px;
+  background:
+    image-set(
+      url("images/btn-bg-splash.png") 1x,
+      url("images/btn-bg-splash@2x.png") 2x
+    ) no-repeat center/cover;
+}
+
+.block-map__play::after {
+  content: '';
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("/images/icon-play.svg") no-repeat 56% 52%/18px;
+  z-index: 2;
+}
+
+.block-map__pattern-top,
+.block-map__pattern-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.block-map__pattern-top {
+  top: 0;
+  height: 44px;
+  background:
+    image-set(
+      url("/images/patter-place-top.png") 1x,
+      url("/images/patter-place-top@2x.png") 2x
+    ) no-repeat center top/auto 44px;
+}
+
+.block-map__pattern-bottom {
+  bottom: 0;
+  height: 64px;
+  background:
+    image-set(
+      url("/images/patter-place-bottom.png") 1x,
+      url("/images/patter-place-bottom@2x.png") 2x
+    ) no-repeat left bottom/auto 64px;
+}

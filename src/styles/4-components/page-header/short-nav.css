@@ -84,26 +84,6 @@
   right: var(--page-gap);
 }
 
-.short-nav .simplebar-container .simplebar-track {
-  height: 2px;
-  margin: 0 var(--page-gap);
-  background-color: var(--c-blue-dark);
-  border-radius: 10px;
-}
-
-.short-nav .simplebar-container .simplebar-scrollbar {
-  top: 0;
-  height: 100%;
-}
-
-.short-nav .simplebar-container .simplebar-scrollbar::before {
-  left: 0;
-  right: 0;
-  background-color: var(--c-red);
-  border-radius: 10px;
-  opacity: 1;
-}
-
 /* noinspection CssInvalidMediaFeature */
 @media (--desktop) {
   .short-nav {

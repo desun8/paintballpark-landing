@@ -15,16 +15,29 @@
 }
 
 .form__title {
+  position: relative;
   margin-bottom: 20px;
   color: var(--c-blue);
   font-size: 40px;
   text-align: center;
 }
 
+.form--middle .form__title {
+  color: #fff;
+}
+
+.form--middle .form__title::before {
+  content: attr(data-title);
+  position: absolute;
+  top: 0;
+  left: 4px;
+  color: var(--c-blue);
+}
+
 .form__input {
   padding: 12px 14px;
   color: var(--c-blue-dark);
-  font-size: 14px;
+  font-size: 16px;
   font-family: var(--font-main);
   border-radius: 10px;
   border: 1px solid #fff;
@@ -52,11 +65,7 @@
 }
 
 .form__submit {
-  padding: 12px 14px;
-  color: #fff;
-  background-color: var(--c-blue);
   font-size: 18px;
-  border-radius: 10px;
 }
 
 /* noinspection CssInvalidMediaFeature */

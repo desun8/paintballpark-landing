@@ -1,7 +1,9 @@
 .socials-list {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 /* .socials-list__item {} */
@@ -14,33 +16,33 @@
   display: inline-block;
   width: var(--size);
   height: var(--size);
-  background-color: #000;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: var(--c-blue);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
   border-radius: 50%;
 }
 
 .socials-list__link .icon--facebook {
-  background-image: url("/images/icon-facebook.svg");
+  mask-image: url("/images/icon-facebook.svg");
 }
 
 .socials-list__link .icon--instagram {
-  background-image: url("/images/icon-instagram.svg");
+  mask-image: url("/images/icon-instagram-v2.svg");
 }
 
 .socials-list__link .icon--vk {
-  background-image: url("/images/icon-vk.svg");
+  mask-image: url("/images/icon-vk.svg");
 }
 
 .socials-list__link .icon--ok {
-  background-image: url("/images/icon-ok.svg");
+  mask-image: url("/images/icon-ok.svg");
 }
 
 .socials-list__link .icon--youtube {
-  background-image: url("/images/icon-youtube.svg");
+  mask-image: url("/images/icon-youtube.svg");
 }
 
 .socials-list__link .icon--soc-name {
-  background-image: url("/images/icon-tiktok.svg");
+  mask-image: url("/images/icon-tiktok.svg");
 }

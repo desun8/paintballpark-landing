@@ -1,5 +1,6 @@
 button {
   padding: 0;
+  background-color: transparent;
   font-family: inherit;
   border: 0;
 }
@@ -7,6 +8,10 @@ button {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+input {
+  appearance: none;
 }
 
 button:focus:not(:focus-visible),

@@ -1,0 +1,13 @@
+.truncate {
+  --line: 3;
+  --line-height: 1.2em;
+  --max-h: calc(var(--line-height) * (var(--line) * 1.4));
+
+  max-height: var(--max-h);
+  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--line);
+  text-overflow: ellipsis;
+  overflow: hidden !important;
+}

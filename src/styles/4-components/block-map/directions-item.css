@@ -3,25 +3,44 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #c6e2ef;
+  color: var(--c-blue-dark);
   border-radius: 8px;
 }
 
 .directions-item__icon {
-  --size: 45px;
+  --size: 75px;
 
   width: var(--size);
   height: var(--size);
-  background-color: #eee28b;
+  margin-bottom: 6px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #eaeaec;
   border-radius: 50%;
 }
 
-.directions-item__name {}
+.directions-item__icon--yandex {
+  background-image: url("/images/icon-yandex-map.svg");
+  background-size: 56px;
+}
 
-.directions-item__link {}
+.directions-item__icon--2gis {
+  background-image: url("/images/icon-2gis.svg");
+  background-size: contain;
+}
+
+.directions-item__icon--google {
+  background-image: url("/images/icon-google-map.svg");
+  background-size: 50px;
+}
+
+/* .directions-item__name {} */
+
+/* .directions-item__link {} */
 
 .directions-item__link::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;

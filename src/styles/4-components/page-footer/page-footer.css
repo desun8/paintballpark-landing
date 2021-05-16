@@ -1,9 +1,45 @@
 .page-footer {
-  padding: 0 10px;
+  position: relative;
+  padding: 10px var(--page-gap-sm) 20px;
+  background-color: var(--c-blue);
 }
 
-.page-footer .site-dev {}
+.page-footer__top-pattern {
+  position: absolute;
+  bottom: 99%;
+  right: 0;
+  left: 0;
+  height: 110px;
+  background-color: var(--c-blue);
+  mask:
+    image-set(
+      url("/images/pattern-hero-white.png") 1x,
+      url("/images/pattern-hero-white@2x.png") 2x
+    ) round left bottom/auto 110px;
+  z-index: 2;
+}
+
+.page-footer .site-dev {
+  display: block;
+  width: 162px;
+  height: 22px;
+  margin: 0 auto;
+  background: url("/images/logo-dev.svg") no-repeat center/contain;
+}
 
 .page-footer .copyright {
   display: none;
+}
+
+.page-footer > .bg-rifle {
+  --bg-pos: -310px -14px;
+
+  top: -17px;
+  left: 0;
+  height: calc(100% + 17px);
+  z-index: 2;
+}
+
+.page-footer > .bg-rifle::after {
+  top: 6px;
 }

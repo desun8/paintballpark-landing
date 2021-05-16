@@ -1,3 +1,23 @@
 .simplebar-content-wrapper::-webkit-scrollbar {
   display: none;
 }
+
+.simplebar-container .simplebar-track.simplebar-horizontal {
+  height: 2px;
+  margin: 0 var(--page-gap);
+  background-color: var(--c-blue-dark);
+  border-radius: 10px;
+}
+
+.simplebar-container .simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+  top: 0;
+  height: 100%;
+}
+
+.simplebar-container .simplebar-track.simplebar-horizontal .simplebar-scrollbar::before {
+  left: 0;
+  right: 0;
+  background-color: var(--c-red);
+  border-radius: 10px;
+  opacity: 1;
+}
