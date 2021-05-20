@@ -1,4 +1,5 @@
 .price-item {
+  position: relative;
   margin-bottom: 80px;
   color: var(--c-blue-dark);
   font-size: 12px;
@@ -172,4 +173,73 @@
 
 .price-item__sublist li .price {
   font-size: 16px;
+}
+
+.currency {
+  display: inline-block;
+  background-color: currentColor;
+  mask: url("/images/icon-currency.svg") no-repeat center/contain;
+}
+
+.price-item__sublist .currency {
+  width: 10px;
+  height: 10px;
+}
+
+.price-item__price .price-old .currency {
+  width: 14px;
+  height: 15px;
+}
+
+.price-item__price .price .currency {
+  width: 30px;
+  height: 34px;
+}
+
+.price-item .bg-rifle {
+  --rotate: -8deg;
+}
+
+.price-item .bg-rifle::after {
+  left: 0;
+  width: 120%;
+  height: 120%;
+  background-size: 660px;
+}
+
+.price-item > .bg-rifle {
+  --bg-pos: -115px -12px;
+
+  top: -90px;
+  right: -15px;
+  width: 100vw;
+  height: 130%;
+  z-index: 1;
+}
+
+.price-item__body > .bg-rifle {
+  --bg-pos: -130px -166px;
+
+  top: 0;
+  left: 0;
+}
+
+.price-item__body > .bg-rifle::after {
+  top: -15px;
+}
+
+.price-item__body > *:not(.bg-rifle) {
+  position: relative;
+  z-index: 2;
+}
+
+/* noinspection CssInvalidMediaFeature */
+@media (--mobile-sm) {
+  .price-item > .bg-rifle {
+    --bg-pos: -115px 10px;
+  }
+
+  .price-item__body > .bg-rifle {
+    --bg-pos: -130px -154px;
+  }
 }

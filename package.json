@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "@types/inputmask": "^5.0.0",
+    "@types/lodash": "^4.14.169",
     "@types/scroll-lock": "^2.1.0",
     "postcss-custom-media": "^8.0.0",
     "postcss-media-minmax": "^5.0.0",
@@ -19,6 +20,7 @@
   "dependencies": {
     "a11y-dialog": "^7.1.0",
     "inputmask": "^5.0.5",
+    "lodash": "^4.17.21",
     "scroll-lock": "^2.1.5",
     "simplebar": "^5.3.3"
   }
