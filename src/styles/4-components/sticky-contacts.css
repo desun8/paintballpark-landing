@@ -1,30 +1,19 @@
 .sticky-contacts {
   position: fixed;
-  left: var(--page-gap);
-  right: var(--page-gap);
+  left: 10px;
+  right: 10px;
   bottom: 20px;
   z-index: 80;
-  background-color: var(--c-yellow);
+  padding: 5px;
+  background-color: #fff;
   border-radius: 10px;
   opacity: 1;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   transform: none;
   visibility: visible;
   transition-property: opacity, transform, visibility;
   transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
-}
-
-.sticky-contacts::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  width: 1px;
-  height: 25px;
-  background-color: #252525;
-  border-radius: 10px;
-  opacity: 0.2;
 }
 
 .sticky-contacts.is-hide {
@@ -34,12 +23,24 @@
 }
 
 .sticky-contacts__list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
 
-.sticky-contacts__item {
-  flex: 1 0 50%;
-  text-align: center;
+.sticky-contacts__link {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 14px;
+}
+
+.sticky-contacts__link--wa::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: url("/images/icon-wa.svg") no-repeat center/20px;
 }

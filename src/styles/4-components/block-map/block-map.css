@@ -8,6 +8,7 @@
   color: var(--c-blue);
   font-size: 52px;
   text-align: left;
+  letter-spacing: -0.03em;
 }
 
 .block-map__content {

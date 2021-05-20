@@ -56,7 +56,7 @@ input[type="radio"]#radio-service-groups:checked ~ .service-tabs__list .service-
 
 .service-tabs__btn,
 .service-tabs__btn .icon {
-  transition: background-color var(--trsdu);
+  transition: background-color var(--duration);
 }
 
 .service-tabs__btn {

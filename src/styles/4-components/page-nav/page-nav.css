@@ -1,49 +1,20 @@
 .page-nav {
-  /*position: fixed;*/
-  /*top: 0;*/
-  /*left: 0;*/
-  /*right: 0;*/
-  /*bottom: 0;*/
-  /*z-index: 90;*/
+  width: 100%;
   height: 100%;
-  padding: 90px var(--page-gap) var(--page-gap);
-  background: linear-gradient(180deg, rgba(37, 37, 37, 0.5) -22.98%, #252525 76.8%);
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: opacity var(--trsdu), transform 0s var(--trsdu);
+  animation: fade-in var(--duration) both;
 }
 
-.page-nav.is-active {
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity var(--trsdu), transform 0s;
-}
-
-.page-nav__wrapper {
-  transform: translateY(100px);
-  transition: transform var(--trsdu);
-}
-
-.page-nav.is-active .page-nav__wrapper {
-  transform: translateY(0);
+.dialog-container.is-hidden .page-nav {
+  animation: fade-out var(--duration) both;
 }
 
 .page-nav__body {
-  padding: 30px var(--page-gap) var(--page-gap);
-  background-color: var(--c-yellow);
-  border-radius: 10px;
+  padding-top: 14px;
 }
 
-.page-nav__contacts {
-  color: #fff;
-  background-color: #252525;
-  border-radius: 10px;
-}
-
-.page-nav__contacts a {
-  color: inherit;
-}
-
-.page-nav__btn {
+.page-nav__btn-form {
+  display: inline-block;
   width: 100%;
+  font-size: 18px;
+  text-align: center;
 }

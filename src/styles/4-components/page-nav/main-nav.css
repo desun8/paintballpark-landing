@@ -1,7 +1,14 @@
 .main-nav {
-  text-align: center;
+  margin-bottom: 36px;
+  color: #fff;
+  font-size: 30px;
 }
 
-.main-nav__item {}
+.main-nav__list {
+  display: grid;
+  gap: 10px;
+}
 
-.main-nav__link {}
+/* .main-nav__item {} */
+
+/* .main-nav__link {} */

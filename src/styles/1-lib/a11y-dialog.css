@@ -1,64 +1,108 @@
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
 /**
- * When the native `<dialog>` element is supported, the overlay is implied and
- * can be styled with `::backdrop`, which means the DOM one should be removed.
- *
- * The `data-a11y-dialog-native` attribute is set by the script when the
- * `<dialog>` element is properly supported.
- *
- * Feel free to replace `:first-child` with the overlay selector you prefer.
+ * 1. Make the dialog container, and its child overlay spread across
+ *    the entire window.
  */
-[data-a11y-dialog-native] > :first-child {
-  display: none;
+.dialog-container,
+.dialog-overlay {
+  position: fixed; /* 1 */
+  top: 0; /* 1 */
+  right: 0; /* 1 */
+  bottom: 0; /* 1 */
+  left: 0; /* 1 */
 }
 
 /**
- * When the `<dialog>` element is not supported, its default display is `inline`
- * which can cause layout issues. This makes sure the dialog is correctly
- * displayed when open.
- */
-.dialog-container__dialog[open] {
-  display: block;
-}
-
-.dialog-container__dialog {
-  height: 100vh;
-}
-
-.dialog-container__dialog > h1 {
-  display: none;
-}
-
-/**
- * When the native `<dialog>` element is not supported, the script toggles the
- * `aria-hidden` attribute on the container. If `aria-hidden` is set to `true`,
- * the container should be hidden entirely.
- *
- * Feel free to replace `.dialog-container` with the container selector you
- * prefer.
+ * 1. Make sure the dialog container and all its descendants sits on
+ *    top of the rest of the page.
+ * 2. Make the dialog container a flex container to easily center the
+ *    dialog.
  */
 .dialog-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 50;
-  width: 100%;
-  min-height: 100%;
-  max-height: 100vh;
-  transform: translateX(0);
+  z-index: 9999; /* 1 */
+  overflow: auto;
 }
 
-.dialog-container--menu {
-  transition-delay: 0s;
-}
-
-.dialog-container--modal {
-  transition: transform var(--trsdu);
-}
-
+/**
+ * 1. Make sure the dialog container and all its descendants are not
+ *    visible and not focusable when it is hidden.
+ */
 .dialog-container[aria-hidden='true'] {
-  transform: translateX(-100%);
+  display: none; /* 1 */
 }
 
-.dialog-container--menu[aria-hidden='true'] {
-  transition-delay: var(--trsdu);
+/**
+ * 1. Make the overlay look like an overlay.
+ */
+.dialog-overlay {
+  background-color: rgba(43, 46, 56, 0.9); /* 1 */
+  animation: fade-in var(--duration) both;
+}
+
+.dialog-container--menu .dialog-overlay {
+  background-color: var(--c-blue);
+}
+
+.dialog-container.is-hidden .dialog-overlay {
+  animation: fade-out var(--duration) both;
+}
+
+/**
+ * 1. Vertically and horizontally center the dialog in the page.
+ * 2. Make sure the dialog sits on top of the overlay.
+ * 3. Make sure the dialog has an opaque background.
+ */
+.dialog-content {
+  /* margin: auto; !* 1 *! */
+  position: relative; /* 2 */
+  z-index: 2; /* 2 */
+}
+
+.dialog-container--menu .dialog-content {
+  padding: var(--page-gap);
+}
+
+.dialog-btn-close {
+  --size: 50px;
+
+  position: fixed;
+  top: 31px;
+  right: calc(var(--page-gap) + 1px);
+  width: var(--size);
+  height: var(--size);
+  background-color: var(--c-green-light);
+  mask: url("/images/mask-btn-menu.svg") no-repeat center;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.dialog-btn-close::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("/images/icon-btn-close.svg") no-repeat 18px 17px/12px;
+}
+
+.dialog-container--modal .dialog-btn-close {
+  background-color: var(--c-red);
+}
+
+.dialog-container.is-hidden .dialog-btn-close {
+  animation: fade-out var(--duration) both;
+}
+
+.dialog-title {
+  display: none;
 }

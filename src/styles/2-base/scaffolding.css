@@ -37,6 +37,24 @@ body {
   background-color: var(--c-blue);
 }
 
+.btn--blue-dark {
+  background-color: var(--c-blue-dark);
+}
+
+.btn--green-light {
+  color: var(--c-blue);
+  background-color: var(--c-green-light);
+}
+
+.btn--green {
+  background-color: var(--c-green);
+}
+
+.btn--white {
+  color: var(--c-blue);
+  background-color: #fff;
+}
+
 .bg-rifle {
   --bg-pos: 0;
   --rotate: 0.01deg;

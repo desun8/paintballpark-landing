@@ -1,0 +1,70 @@
+.nav-contacts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.nav-contacts__item {
+  position: relative;
+  padding-top: 100%;
+}
+
+.nav-contacts__link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 10px;
+}
+
+.nav-contacts__link::before {
+  content: '';
+  width: 78px;
+  height: 78px;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.nav-contacts__link--wa {
+  background: linear-gradient(126.46deg, #14be55 2.79%, #37e178 96.78%);
+}
+
+.nav-contacts__link--wa::before {
+  background-image: url("/images/icon-wa.svg");
+}
+
+.nav-contacts__link--phone {
+  background: linear-gradient(126.23deg, #f70858 3.01%, #ffcd1d 97.42%);
+}
+
+.nav-contacts__link--phone::before {
+  background-image: url("/images/icon-phone-v2.svg");
+}
+
+.nav-contacts__link--tiktok {
+  background: linear-gradient(125.03deg, #ff0052 3.29%, #02f5f2 100%);
+}
+
+.nav-contacts__link--tiktok::before {
+  width: 72px;
+  height: 82px;
+  background-image: url("/images/icon-tiktok.svg");
+}
+
+.nav-contacts__link--instagram {
+  background: linear-gradient(125.24deg, #ed0016 0%, #bc00a9 96.28%);
+}
+
+.nav-contacts__link--instagram::before {
+  background-image: url("/images/icon-instagram.svg");
+}

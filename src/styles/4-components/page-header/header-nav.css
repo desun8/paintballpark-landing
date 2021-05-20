@@ -23,7 +23,7 @@
   height: 62px;
   background: url("/images/hover-circle.svg") no-repeat center/contain;
   opacity: 0;
-  transition: opacity var(--trsdu);
+  transition: opacity var(--duration);
 }
 
 .header-nav__item:hover::after {

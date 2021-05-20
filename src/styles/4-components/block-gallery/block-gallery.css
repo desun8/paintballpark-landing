@@ -5,12 +5,20 @@
 
 .block-gallery .block__title {
   margin-bottom: 20px;
-  padding: 0;
+  padding: 0 var(--page-gap-sm);
   color: var(--c-blue);
   font-size: 52px;
   letter-spacing: -0.03em;
+  text-align: left;
 }
 
 .block-gallery .bg-rifle {
   --bg-pos: 10px 120px;
+}
+
+/* noinspection CssInvalidMediaFeature */
+@media (--mobile-sm) {
+  .block-gallery .block__title {
+    padding: 0 var(--page-gap);
+  }
 }

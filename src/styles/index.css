@@ -38,6 +38,7 @@
 /* nav */
 @import "4-components/page-nav/page-nav.css";
 @import "4-components/page-nav/main-nav.css";
+@import "4-components/page-nav/nav-contacts.css";
 
 /* hero */
 @import "4-components/block-hero/block-hero.css";
