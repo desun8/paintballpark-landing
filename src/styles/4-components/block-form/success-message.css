@@ -1,8 +1,8 @@
 .success-message {
   position: absolute;
   top: 0;
-  left: var(--page-gap);
-  width: calc(100% - var(--page-gap) * 2);
+  left: var(--page-gap-sm);
+  width: calc(100% - var(--page-gap-sm) * 2);
   height: 100%;
   display: flex;
   flex-direction: column;

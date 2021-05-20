@@ -20,11 +20,23 @@
 .page-header__head {
   --pd-top: 18px;
 
+  top: 0;
+  right: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 18px;
   padding-bottom: 18px;
+}
+
+.page-header__head.is-fixed {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.51) 0%, rgba(0, 0, 0, 0) 95%);
+}
+
+.page-header__head.is-fixed .page-logo {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .page-header__head .contacts {

@@ -1,4 +1,5 @@
-import Inputmask from "inputmask";
+// @ts-ignore
+import Inputmask from "inputmask/lib/inputmask";
 import { loadRecaptcha } from "./loadRecaptcha";
 
 type SuccessMessage = {
@@ -6,7 +7,7 @@ type SuccessMessage = {
   btn: HTMLButtonElement
 }
 
-interface HTMLInputMask extends HTMLInputElement{
+interface HTMLInputMask extends HTMLInputElement {
   inputmask?: any,
 }
 
@@ -84,21 +85,18 @@ class Form {
       target.classList.remove(this.errorClassName);
     };
 
-    const imName = new Inputmask({
+    Inputmask({
       regex: this.regName,
       placeholder: "",
       showMaskOnHover: false,
       onKeyDown,
-    });
-    const imPhone = new Inputmask(
-      "+7 (999) 999 99 99", {
-        placeholder: "x",
-        onKeyDown,
-      },
-    );
+    }).mask(this.$elm.name);
 
-    imName.mask(this.$elm.name);
-    imPhone.mask(this.$elm.phone);
+    Inputmask({
+      mask: "+7 (999) 999 99 99",
+      placeholder: "x",
+      onKeyDown,
+    }).mask(this.$elm.phone);
   }
 
   toggleSuccessMessage(shouldShow = false) {
@@ -188,7 +186,7 @@ class Form {
     // При фокусе на форме, загружаем рекапчу
     this.$elm.form.addEventListener("focusin", () => {
       loadRecaptcha();
-    })
+    });
 
     // удаляем пробелы по краям
     this.$elm.name.addEventListener("change", (e) => {

@@ -7,8 +7,10 @@ import service from "./scripts/service";
 import stickyContacts from "./scripts/stickyContacts";
 import Form from "./scripts/Form";
 import autoplayVideo from "./scripts/autoplayVideo";
+import fixedHeader from "./scripts/fixedHeader";
 
 dialog();
+fixedHeader();
 setTimeout(
   () => {
     service();

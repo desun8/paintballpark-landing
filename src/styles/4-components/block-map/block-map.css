@@ -96,8 +96,8 @@
   height: 325px;
   background:
     image-set(
-      url("images/btn-bg-splash.png") 1x,
-      url("images/btn-bg-splash@2x.png") 2x
+      url("/images/btn-bg-splash.png") 1x,
+      url("/images/btn-bg-splash@2x.png") 2x
     ) no-repeat center/cover;
 }
 

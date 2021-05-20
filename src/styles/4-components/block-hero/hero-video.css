@@ -34,8 +34,8 @@
   height: 40px;
   background:
     image-set(
-      url("images/pattern-hero-black.png") 1x,
-      url("images/pattern-hero-black@2x.png") 2x
+      url("/images/pattern-hero-black.png") 1x,
+      url("/images/pattern-hero-black@2x.png") 2x
     ) round no-repeat center top/auto 40px;
 
   /* backdrop-filter: blur(5px); */
@@ -93,8 +93,8 @@
   height: 200px;
   background:
     image-set(
-      url("images/btn-youtube-splash--original.png") 1x,
-      url("images/btn-youtube-splash@2x--original.png") 2x
+      url("/images/btn-youtube-splash--original.png") 1x,
+      url("/images/btn-youtube-splash@2x--original.png") 2x
     ) no-repeat right center/contain;
 }
 
