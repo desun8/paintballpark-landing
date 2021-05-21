@@ -61,23 +61,28 @@
           <div class="short-nav__icon  short-nav__icon--map"></div>
           <span class="short-nav__text" aria-hidden="true">Где мы<br> находимся?</span>
           <!--   TODO: якорь     -->
-          <a href="#block-map" class="short-nav__link" aria-label="Перейти к блоку 'Где мы находимся'"></a>
+          <a href="#block-map" class="short-nav__link" aria-label="Перейти к блоку 'Где мы находимся'."></a>
         </li>
         <li class="short-nav__item">
-          <div class="short-nav__icon  short-nav__icon--price"></div>
+          <div class="short-nav__icon"></div>
           <span class="short-nav__text" aria-hidden="true">Наши<br> тарифы</span>
-          <a href="#block-services" class="short-nav__link" aria-label="Перейти к блоку 'Наши услуги'"></a>
+          <a href="#banner-price" class="short-nav__link" aria-label="Перейти к блоку 'Наши услуги'."></a>
         </li>
 
         <li class="short-nav__item">
           <div class="short-nav__icon"></div>
-          <span class="short-nav__text" aria-hidden="true">Где мы<br> находимся?</span>
-          <a href="#block-map" class="short-nav__link" aria-label="Перейти к блоку 'Где мы находимся'"></a>
+          <span class="short-nav__text" aria-hidden="true">Наши<br> услуги</span>
+          <a href="#block-services" class="short-nav__link" aria-label="Перейти к блоку 'Услуги'."></a>
         </li>
         <li class="short-nav__item">
           <div class="short-nav__icon"></div>
-          <span class="short-nav__text" aria-hidden="true">Наши<br> услуги</span>
-          <a href="#block-services" class="short-nav__link" aria-label="Перейти к блоку 'Наши услуги'"></a>
+          <span class="short-nav__text" aria-hidden="true">Оставить<br> заявку</span>
+          <a href="#form-middle" class="short-nav__link" aria-label="Перейти к блоку 'Оставить заявку'."></a>
+        </li>
+        <li class="short-nav__item">
+          <div class="short-nav__icon  short-nav__icon--instagram"></div>
+          <span class="short-nav__text" aria-hidden="true">Мы<br> в instagram</span>
+          <a href="#form-middle" class="short-nav__link" aria-label="Перейти к блоку 'Галерея'."></a>
         </li>
       </ul>
     </div>
@@ -380,7 +385,7 @@
     </div>
   </article>
 
-  <article class="banner-price">
+  <article id="banner-price" class="banner-price">
     <div class="bg-rifle  bg-rifle--top"></div>
     <div class="bg-rifle  bg-rifle--rotate-right  bg-rifle--bottom"></div>
 
@@ -491,7 +496,7 @@
     </div>
   </article>
 
-  <article class="block  block-gallery">
+  <article id="block-gallery" class="block  block-gallery">
     <div class="bg-rifle"></div>
 
     <h2 class="block__title  font-title">Заглядывай в instagram</h2>
@@ -974,20 +979,25 @@
               <div class="bg-rifle"></div>
 
               <div class="price-item__price">
-                <span class="price-old" aria-label="Старая цена:">2000<span class="currency" aria-label="рублей."></span></span>
-                <span class="price" aria-label="Стоимость:">1350<span class="currency" aria-label="рублей."></span></span>
+                <span class="price-old" aria-label="Старая цена:">2000<span class="currency"
+                                                                            aria-label="рублей."></span></span>
+                <span class="price" aria-label="Стоимость:">1350<span class="currency"
+                                                                      aria-label="рублей."></span></span>
               </div>
               <ul class="price-item__list  list-unstyled">
                 <li><span class="name  name--balls">шары с краской</span><span class="value">250 шт</span></li>
-                <li><span class="name  name--time">Продолжительность</span><span class="value">хватит на 1-2 часа</span></li>
+                <li><span class="name  name--time">Продолжительность</span><span class="value">хватит на 1-2 часа</span>
+                </li>
               </ul>
 
               <span class="price-item__sublist-title" aria-hidden="true">Дополнительно</span>
               <ul class="price-item__sublist  list-unstyled" aria-label="Дополнительно">
-                <li  data-count="2 шт"><span class="icon  icon--grenade"></span><span class="name">Граната</span><span class="price">включен</span></li>
+                <li data-count="2 шт"><span class="icon  icon--grenade"></span><span class="name">Граната</span><span
+                        class="price">включен</span></li>
                 <li><span class="icon  icon--target"></span><span class="name">Ствол снайперский</span><span
                         class="price">+ 375<span class="currency" aria-label="рублей."></span></span></li>
-                <li><span class="icon  icon--uniform"></span><span class="name">Костюм</span><span class="price">+ 375<span class="currency" aria-label="рублей."></span></span></li>
+                <li><span class="icon  icon--uniform"></span><span class="name">Костюм</span><span
+                        class="price">+ 375<span class="currency" aria-label="рублей."></span></span></li>
               </ul>
             </div>
           </section>
@@ -1005,15 +1015,18 @@
               </div>
               <ul class="price-item__list  list-unstyled">
                 <li><span class="name  name--balls">шары с краской</span><span class="value">250 шт</span></li>
-                <li><span class="name  name--time">Продолжительность</span><span class="value">хватит на 1-2 часа</span></li>
+                <li><span class="name  name--time">Продолжительность</span><span class="value">хватит на 1-2 часа</span>
+                </li>
               </ul>
 
               <span class="price-item__sublist-title" aria-hidden="true">Дополнительно</span>
               <ul class="price-item__sublist  list-unstyled" aria-label="Дополнительно">
-                <li><span class="icon  icon--grenade"></span><span class="name">Граната</span><span class="price">+ 375<span class="currency" aria-label="рублей."></span></span></li>
+                <li><span class="icon  icon--grenade"></span><span class="name">Граната</span><span
+                        class="price">+ 375<span class="currency" aria-label="рублей."></span></span></li>
                 <li><span class="icon  icon--target"></span><span class="name">Ствол снайперский</span><span
                         class="price">+ 375<span class="currency" aria-label="рублей."></span></span></li>
-                <li><span class="icon  icon--uniform"></span><span class="name">Костюм</span><span class="price">+ 375<span class="currency" aria-label="рублей."></span></span></li>
+                <li><span class="icon  icon--uniform"></span><span class="name">Костюм</span><span
+                        class="price">+ 375<span class="currency" aria-label="рублей."></span></span></li>
               </ul>
             </div>
           </section>
@@ -1033,15 +1046,18 @@
               </div>
               <ul class="price-item__list  list-unstyled">
                 <li><span class="name  name--balls">шары с краской</span><span class="value">250 шт</span></li>
-                <li><span class="name  name--time">Продолжительность</span><span class="value">хватит на 1-2 часа</span></li>
+                <li><span class="name  name--time">Продолжительность</span><span class="value">хватит на 1-2 часа</span>
+                </li>
               </ul>
 
               <span class="price-item__sublist-title" aria-hidden="true">Дополнительно</span>
               <ul class="price-item__sublist  list-unstyled" aria-label="Дополнительно">
-                <li><span class="icon  icon--grenade"></span><span class="name">Граната</span><span class="price">+ 375<span class="currency" aria-label="рублей."></span></span></li>
+                <li><span class="icon  icon--grenade"></span><span class="name">Граната</span><span
+                        class="price">+ 375<span class="currency" aria-label="рублей."></span></span></li>
                 <li><span class="icon  icon--target"></span><span class="name">Ствол снайперский</span><span
                         class="price">+ 375<span class="currency" aria-label="рублей."></span></span></li>
-                <li><span class="icon  icon--uniform"></span><span class="name">Костюм</span><span class="price">+ 375<span class="currency" aria-label="рублей."></span></span></li>
+                <li><span class="icon  icon--uniform"></span><span class="name">Костюм</span><span
+                        class="price">+ 375<span class="currency" aria-label="рублей."></span></span></li>
               </ul>
             </div>
           </section>

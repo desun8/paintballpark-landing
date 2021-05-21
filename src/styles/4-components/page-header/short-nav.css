@@ -29,14 +29,26 @@
 
 .short-nav__icon {
   --size: 50px;
+  --bg-color: var(--c-blue-dark);
+
+  /* --bg-color: #702dff; */
 
   width: var(--size);
   height: var(--size);
-  background-color: #702dff;
+  background-color: var(--bg-color);
+  background-image: url("/images/icon-tag.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 25px;
   border-radius: 50%;
+}
+
+.short-nav__item:nth-child(3n-2) .short-nav__icon {
+  --bg-color: #00a878;
+}
+
+.short-nav__item:nth-child(3n) .short-nav__icon {
+  --bg-color: #fe5e41;
 }
 
 .short-nav__icon--wa {
@@ -56,9 +68,9 @@
   background-size: 18px;
 }
 
-.short-nav__icon--price {
-  background-color: #3c72ff;
-  background-image: url("/images/icon-tag.svg");
+.short-nav__icon--instagram {
+  background-color: var(--c-red);
+  background-image: url("/images/icon-instagram.svg");
 }
 
 .short-nav__text {

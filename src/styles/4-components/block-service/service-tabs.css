@@ -26,6 +26,7 @@ input[type="radio"]#radio-service-groups:checked ~ .service-tabs__list .service-
 
 /* tabs list */
 .service-tabs__list {
+  position: relative;
   display: grid;
   grid-auto-flow: column;
   justify-content: space-between;
@@ -34,6 +35,24 @@ input[type="radio"]#radio-service-groups:checked ~ .service-tabs__list .service-
   list-style: none;
   background-color: var(--c-green-light);
   border-radius: 10px;
+  overflow: hidden;
+}
+
+.service-tabs__list::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: 0;
+  bottom: -20px;
+  left: 0;
+  background: url("/images/pattern-bg-rifle.png") no-repeat -105px -102px/600px;
+  overflow: hidden;
+  transform: rotate(-8deg);
+}
+
+.service-tabs__item {
+  position: relative;
+  z-index: 1;
 }
 
 .service-tabs__link {
