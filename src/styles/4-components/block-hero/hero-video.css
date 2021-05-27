@@ -237,7 +237,7 @@
   }
 
   .hero-video__title {
-    max-width: 265px;
+    max-width: 210px;
     font-size: 26px;
   }
 
@@ -249,10 +249,14 @@
     object-fit: cover;
   }
 
+  .hero-video__icon {
+    --size: 72px;
+  }
+
   .hero-video__icon::before {
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
     width: 200px;
-    background: url("/images/btn-bg-splash.svg") no-repeat center/115px;
+    background: url("/images/btn-bg-splash.svg") no-repeat center/135px;
   }
 }

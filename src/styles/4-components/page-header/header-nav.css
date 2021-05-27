@@ -30,6 +30,11 @@
   opacity: 1;
 }
 
+.header-nav__link {
+  position: relative;
+  z-index: 1;
+}
+
 /* noinspection CssInvalidMediaFeature */
 @media (--desktop) {
   .header-nav {
