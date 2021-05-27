@@ -14,7 +14,7 @@ import Form from "./scripts/Form";
 import autoplayVideo from "./scripts/autoplayVideo";
 import fixedHeader from "./scripts/fixedHeader";
 
-import carousel from "./scripts/Carousel";
+import carousel from "./scripts/carousel";
 import isDesktop from "./scripts/utils/isDesktop";
 
 // new LocomotiveScroll({
