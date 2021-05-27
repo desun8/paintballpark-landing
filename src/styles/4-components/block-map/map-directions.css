@@ -29,3 +29,29 @@
   top: 0;
   left: 0;
 }
+
+/* noinspection CssInvalidMediaFeature */
+@media (--desktop) {
+  .map-directions {
+    background-color: unset;
+  }
+
+  .map-directions .bg-rifle {
+    display: none;
+  }
+
+  .map-directions__title {
+    display: none;
+  }
+
+  .map-directions__list {
+    gap: 14px;
+    justify-content: start;
+  }
+
+  .map-directions__item {
+    padding: 25px;
+    background-color: var(--c-green-light);
+    border-radius: 10px;
+  }
+}

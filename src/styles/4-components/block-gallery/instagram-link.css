@@ -32,3 +32,16 @@
   font-size: 22px;
   text-transform: uppercase;
 }
+
+/* noinspection CssInvalidMediaFeature */
+@media (--desktop) {
+  .instagram-link {
+    margin: 0;
+    padding: 0;
+    transform: translateX(-215px);
+  }
+
+  .instagram-link__text {
+    color: var(--c-blue);
+  }
+}

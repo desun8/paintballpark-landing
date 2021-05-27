@@ -26,6 +26,7 @@
   position: absolute;
   top: 0;
   left: 4px;
+  width: 100%;
   color: var(--c-blue);
 }
 
@@ -41,4 +42,73 @@
 
   top: 0;
   left: 0;
+}
+
+/* noinspection CssInvalidMediaFeature */
+@media (--desktop) {
+  .footer-container {
+    max-width: calc(var(--page-max-width) + (var(--page-gap) * 2));
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--page-gap);
+    padding-right: var(--page-gap);
+    background-color: unset;
+    border-radius: 0;
+  }
+
+  .footer-container__top-wrapper,
+  .footer-container__bottom-wrapper {
+    border-radius: 14px;
+    background-color: var(--c-green-light);
+  }
+
+  .footer-container__top-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 40px 56px;
+    background-image: url("/images/pattern-bg-rifle-large.png");
+    background-repeat: no-repeat;
+    background-size: 1130px;
+    background-position: -440px -300px;
+    box-shadow: 0 10px 14px rgba(0, 0, 0, 0.2);
+  }
+
+  .footer-container__top-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("/images/pattern-bg-rifle-large.png");
+    background-repeat: no-repeat;
+    background-size: 1130px;
+    background-position: 400px -210px;
+  }
+
+  .footer-container__bottom-wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 50px;
+    padding: 10px 30px;
+  }
+
+  .footer-container__bottom-wrapper .site-dev {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .footer-container__bottom-wrapper .copyright {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+
+  .footer-container__title {
+    display: none;
+  }
+
+  .footer-container__to-form {
+    display: none;
+  }
 }

@@ -11,6 +11,10 @@
   letter-spacing: -0.03em;
 }
 
+.block-map__bg {
+  display: none;
+}
+
 .block-map__content {
   margin-bottom: 20px;
 }
@@ -136,4 +140,78 @@
       url("/images/patter-place-bottom.png") 1x,
       url("/images/patter-place-bottom@2x.png") 2x
     ) no-repeat left bottom/auto 64px;
+}
+
+/* noinspection CssInvalidMediaFeature */
+@media (--desktop) {
+  .block-map {
+    position: relative;
+  }
+
+  .block-map__bg {
+    position: absolute;
+    top: -140px;
+    right: 0;
+    left: 0;
+    display: block;
+    height: 130%;
+    overflow: hidden;
+  }
+
+  .block-map__bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/pattern-bg-rifle-large.png);
+    background-repeat: no-repeat;
+    background-size: 1110px;
+    background-position: 700px -100px;
+    transform: rotate(-10deg);
+  }
+
+  .block-map .block__title {
+    font-size: 90px;
+  }
+
+  .block-map__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 120px;
+  }
+
+  .block-map__text {
+    margin-bottom: 38px;
+    font-size: 24px;
+  }
+
+  .block-map__video-title {
+    display: none;
+  }
+
+  .block-map__video {
+    border-radius: 50%;
+    mask: url("/images/video-map-mask.svg") no-repeat 0 0;
+  }
+
+  .block-map__play {
+    --size: 124px;
+  }
+
+  .block-map__play::before {
+    width: 350px;
+    height: 350px;
+    background: url("/images/btn-bg-splash.svg") no-repeat center/250px;
+  }
+
+  .block-map__play::after {
+    background-size: 35px;
+  }
+
+  .block-map__pattern-top,
+  .block-map__pattern-bottom {
+    display: none;
+  }
 }

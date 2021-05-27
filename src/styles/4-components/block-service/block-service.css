@@ -28,3 +28,41 @@
   width: 140%;
   height: 400px;
 }
+
+/* noinspection CssInvalidMediaFeature */
+@media (--desktop) {
+  .block-service {
+    padding-top: 0;
+    padding-bottom: 150px;
+    background: unset;
+    z-index: 5;
+    overflow: hidden;
+  }
+
+  .block-service::before {
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: image-set(url("/images/pattern-page-bg.png") 1x, url("/images/pattern-page-bg@2x.png") 2x) center/16px;
+  }
+
+  .block-service::after {
+    content: 'ПЕЙНТБОЛ';
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    color: var(--c-blue);
+    font-size: 220px;
+    text-align: center;
+    transform: rotate(-4deg);
+    opacity: 0.1;
+  }
+
+  .block-service .bg-rifle {
+    display: none;
+  }
+}

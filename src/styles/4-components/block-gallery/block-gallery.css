@@ -22,3 +22,35 @@
     padding: 0 var(--page-gap);
   }
 }
+
+/* noinspection CssInvalidMediaFeature */
+@media (--desktop) {
+  .block-gallery {
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+
+  .block-gallery__wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: end;
+    row-gap: 75px;
+    max-width: calc(var(--page-max-width) + (var(--page-gap) * 2));
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--page-gap);
+    padding-right: var(--page-gap);
+  }
+
+  .block-gallery .block__title {
+    max-width: 640px;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 90px;
+    transform: translateY(18px);
+  }
+
+  .block-gallery .bg-rifle {
+    display: none;
+  }
+}

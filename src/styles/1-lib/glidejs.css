@@ -1,0 +1,4 @@
+.glide__slides {
+  display: grid !important;
+  overflow: visible !important;
+}

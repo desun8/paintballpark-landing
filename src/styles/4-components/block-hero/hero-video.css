@@ -4,6 +4,10 @@
   position: relative;
 }
 
+.hero-video__top {
+  display: none;
+}
+
 .hero-video__header {
   position: absolute;
   left: 0;
@@ -149,15 +153,91 @@
 /* noinspection CssInvalidMediaFeature */
 @media (--desktop) {
   .hero-video {
+    position: relative;
     width: 414px;
     transform: rotate(4deg);
+  }
+
+  .hero-video::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 136px;
+    height: 544px;
+    background: url("/images/bg-brush.svg") no-repeat center/contain;
+  }
+
+  .hero-video__body {
+    mask: url("/images/video-mask.svg") no-repeat center/cover;
+  }
+
+  .hero-video__body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(182deg, #000 14%, rgba(0, 0, 0, 0) 72%);
+    z-index: 2;
+  }
+
+  .hero-video__top {
+    position: absolute;
+    top: 64px;
+    right: 50px;
+    left: 65px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+      'avatar account icon'
+      'avatar name icon';
+    column-gap: 10px;
+    color: #fff;
+    font-size: 12px;
+    font-style: italic;
+    transform: rotate(3deg) translateZ(0.01px);
+    z-index: 2;
+  }
+
+  .hero-video__top .avatar {
+    grid-area: avatar;
+    width: 40px;
+    height: 40px;
+    background: url("/images/avatar-instagram.jpg") no-repeat center/44px;
+    border-radius: 50%;
+  }
+
+  .hero-video__top .account-name {
+    grid-area: account;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .hero-video__top .name {
+    grid-area: name;
+  }
+
+  .hero-video__top .icon {
+    grid-area: icon;
+    width: 30px;
+    height: 30px;
+    background: url("/images/icon-instagram.svg") no-repeat center/cover;
   }
 
   .hero-video__header {
     bottom: 0;
   }
 
+  .hero-video__header-container {
+    gap: 5px;
+    justify-content: start;
+    padding: 0 20px;
+  }
+
   .hero-video__title {
+    max-width: 265px;
     font-size: 26px;
   }
 
@@ -167,5 +247,12 @@
 
   .hero-video__container video {
     object-fit: cover;
+  }
+
+  .hero-video__icon::before {
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 200px;
+    background: url("/images/btn-bg-splash.svg") no-repeat center/115px;
   }
 }

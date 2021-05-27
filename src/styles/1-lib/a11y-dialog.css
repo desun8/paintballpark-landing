@@ -46,7 +46,7 @@
  * 1. Make the overlay look like an overlay.
  */
 .dialog-overlay {
-  background-color: rgba(43, 46, 56, 0.9); /* 1 */
+  background-color: rgba(0, 0, 0, 0.7);
   animation: fade-in var(--duration) both;
 }
 
@@ -105,4 +105,25 @@
 
 .dialog-title {
   display: none;
+}
+
+/* noinspection CssInvalidMediaFeature */
+@media (--desktop) {
+  .dialog-container--modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dialog-overlay {
+    backdrop-filter: blur(10px);
+  }
+
+  .dialog-content {
+    width: 610px;
+    height: 80vh;
+    margin: auto;
+    border-radius: 10px;
+    overflow: auto;
+  }
 }

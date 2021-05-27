@@ -33,13 +33,117 @@
 
 .page-footer > .bg-rifle {
   --bg-pos: -310px -14px;
+  --top: -17px;
 
-  top: -17px;
+  top: var(--top);
   left: 0;
-  height: calc(100% + 17px);
+  height: calc(100% + (var(--top) * -1));
   z-index: 2;
 }
 
 .page-footer > .bg-rifle::after {
   top: 6px;
+}
+
+.page-footer .form--footer {
+  display: none;
+}
+
+.page-footer .footer-container .site-dev,
+.page-footer .footer-container .copyright {
+  display: none;
+}
+
+/* noinspection CssInvalidMediaFeature */
+@media (--desktop) {
+  .page-footer {
+    margin-top: 300px;
+    padding: 0;
+    background: linear-gradient(#fff 40px, var(--c-blue) 0);
+  }
+
+  .page-footer .form--footer {
+    display: grid;
+  }
+
+  .page-footer > .bg-rifle {
+    --top: -40px;
+  }
+
+  .page-footer > .bg-rifle::after {
+    --bg-pos: -480px -20px;
+
+    top: -30px;
+    left: -70px;
+    background-size: 866px;
+  }
+
+  .page-footer > .bg-rifle::before {
+    --bg-pos: -480px -20px;
+
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/images/pattern-bg-rifle.png");
+    background-repeat: no-repeat;
+    background-size: 866px;
+    background-position: 130% 0;
+    opacity: 0.5;
+  }
+
+  .page-footer > .site-dev,
+  .page-footer > .copyright {
+    display: none;
+  }
+
+  .page-footer .footer-container .site-dev,
+  .page-footer .footer-container .copyright {
+    display: block;
+  }
+
+  .page-footer .footer-container .site-dev {
+    background-image: url("/images/logo-dev--blue.svg");
+  }
+
+  .page-footer .footer-container .copyright {
+    color: var(--c-blue);
+    text-align: right;
+  }
+
+  .page-footer__top-pattern {
+    position: absolute;
+    top: -250px;
+    right: 0;
+    left: 0;
+    height: 100%;
+    background-color: unset;
+    mask: unset;
+    overflow: hidden;
+    z-index: 2;
+  }
+
+  .page-footer__top-pattern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 120vw;
+    height: 100%;
+    background-color: var(--c-blue);
+    mask: url("/images/pattern-modal-title.svg") no-repeat -800px -260px/3120px;
+    transform-origin: 0;
+    transform: rotate(8deg) translateX(-50%);
+    z-index: 2;
+  }
+}
+
+/* noinspection CssInvalidMediaFeature */
+@media (--desktop-lg) {
+  .page-footer__top-pattern::before {
+    background-position-x: -700px;
+    background-size: 4000px;
+  }
 }

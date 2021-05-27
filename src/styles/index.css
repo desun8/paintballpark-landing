@@ -5,6 +5,7 @@
 /* LIB */
 @import "1-lib/a11y-dialog.css";
 @import "1-lib/simplebar.css";
+@import "1-lib/glidejs.css";
 
 /* @import "../../node_modules/photoswipe/dist/photoswipe.css"; */
 
@@ -28,6 +29,7 @@
 @import "4-components/socials-list.css";
 @import "4-components/contacts.css";
 @import "4-components/sticky-contacts.css";
+@import "4-components/carousel-controllers.css";
 
 /* header */
 @import "4-components/page-header/page-header.css";

@@ -2,3 +2,11 @@
   padding: 0 var(--page-gap);
   overflow-x: scroll;
 }
+
+/* noinspection CssInvalidMediaFeature */
+@media (--desktop) {
+  .gallery-carousel {
+    grid-column: 1/12;
+    overflow: visible;
+  }
+}

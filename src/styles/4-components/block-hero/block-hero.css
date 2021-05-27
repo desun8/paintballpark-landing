@@ -43,23 +43,48 @@
 /* noinspection CssInvalidMediaFeature */
 @media (--desktop) {
   .block-hero {
-    background-color: var(--c-green-light);
+    background: #daf530 image-set(url("/images/pattern-page-bg.png") 1x, url("/images/pattern-page-bg@2x.png") 2x) center/16px;
+    padding-bottom: 160px;
   }
 
   .block-hero__container {
+    position: relative;
     display: grid;
     grid-auto-flow: column;
     align-items: center;
     column-gap: 100px;
     padding-left: 60px;
     padding-right: 60px;
+    z-index: 10;
   }
 
   .block-hero__top-pattern {
-    display: none;
+    top: -20px;
+    width: 100%;
+    height: 100%;
+    background-image: url("/images/pattern-bg-rifle-large.png");
+    background-repeat: no-repeat;
+    background-size: 1590px;
+    background-position: -800px -150px;
+    opacity: 0.5;
+    transform: scaleX(-1);
+    overflow: hidden;
+  }
+
+  .block-hero__top-pattern::before {
+    width: 100%;
+    height: 100%;
+    background-image: url("/images/pattern-bg-rifle-large.png");
+    background-repeat: no-repeat;
+    background-size: 1590px;
+    background-position: -830px -130px;
+    transform: scaleX(-1) rotate(-10deg);
   }
 
   .block-hero__bottom-pattern {
-    display: none;
+    bottom: -60px;
+    height: 360px;
+    background: #fff image-set(url("/images/pattern-page-bg.png") 1x, url("/images/pattern-page-bg@2x.png") 2x) center/16px;
+    mask: url("/images/pattern-modal-title.svg") no-repeat -2200px -510px/5000px;
   }
 }

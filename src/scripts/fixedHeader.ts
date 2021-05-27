@@ -1,4 +1,5 @@
 import { throttle } from "lodash";
+import isDesktop from "./utils/isDesktop";
 
 type Status = {
   offset: { x: number, y: number },
@@ -12,6 +13,8 @@ enum ScrollDirection {
 
 type TimerId = ReturnType<typeof setTimeout> | null;
 
+
+const isDesktopScreen = isDesktop();
 const transition = "transform 0.4s";
 
 export default () => {
@@ -19,7 +22,7 @@ export default () => {
   const headerElement = headerParent.querySelector(".page-header__head") as HTMLElement;
   const footerElement = document.querySelector(".page-footer");
   let headerHeight = headerElement.offsetHeight;
-  let clientHeight = document.documentElement.clientHeight + 200;
+  let clientHeight = document.documentElement.clientHeight + (isDesktopScreen ? 0 : 200);
   const scrollbar = window.smoothScrollbar;
   const isNativeScroll = scrollbar === undefined;
 
@@ -51,13 +54,15 @@ export default () => {
       headerElement.style.position = "fixed";
     }
 
-    headerElement.style.zIndex = "10";
+    headerElement.style.zIndex = "9999";
     headerElement.classList.add("is-fixed");
 
     headerElement.style.transition = "";
     headerElement.style.transform = "translate3d(0, -200px, 0)";
-    headerElement.style.transition = transition;
-    headerElement.style.transform = "translate3d(0, 0, 0)";
+    setTimeout(() => {
+      headerElement.style.transition = transition;
+      headerElement.style.transform = "translate3d(0, 0, 0)";
+    }, 100);
 
     timerId = setTimeout(() => {
       headerElement.style.willChange = "";
@@ -72,6 +77,7 @@ export default () => {
     }
 
     headerElement.style.zIndex = "";
+    headerElement.style.transition = "";
     headerElement.classList.remove("is-fixed");
     headerElement.style.transform = "translate3d(0, 0, 0)";
 
@@ -90,7 +96,7 @@ export default () => {
     headerElement.style.transform = "translate3d(0, -200px, 0)";
     timerId = setTimeout(() => {
       resetStyles(isNative);
-    }, 400);
+    }, 200);
 
   };
 
@@ -106,7 +112,7 @@ export default () => {
 
         pinHeader(isNativeScroll);
       } else {
-        resetStyles(isNativeScroll);
+        unpinHeader(isNativeScroll);
       }
     } else {
       unpinHeader(isNativeScroll);
@@ -123,7 +129,7 @@ export default () => {
           isFooterVisible = isIntersecting;
         });
       },
-      {rootMargin: "200px", threshold: [0.1, 0.5, 1]},
+      {rootMargin: isDesktopScreen ? "-200px" : "200px", threshold: [0.1, 0.5, 1]},
     );
 
     observer.observe(footerElement);

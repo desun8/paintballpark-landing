@@ -4,12 +4,17 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   font-family: var(--font-main);
-  background: image-set(url("/images/pattern-page-bg.png") 1x, url("/images/pattern-page-bg@2x.png") 2x) 16px;
+  background: image-set(url("/images/pattern-page-bg.png") 1x, url("/images/pattern-page-bg@2x.png") 2x) center/16px;
 }
 
 .font-title {
@@ -85,4 +90,23 @@ body {
 
 .bg-rifle--rotate-right::after {
   transform: rotate(10deg);
+}
+
+.has-scroll-init [data-scroll] {
+  opacity: 0;
+  transform: translate3d(0, 50px, 0);
+  transition-property: opacity, transform;
+  transition-duration: 0.6s;
+}
+
+.has-scroll-init .is-inview[data-scroll] {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* noinspection CssInvalidMediaFeature */
+@media (--desktop) {
+  body {
+    background: unset;
+  }
 }

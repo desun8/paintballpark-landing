@@ -2,11 +2,12 @@
   "name": "paintball-landing",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "tsc && vite build",
     "serve": "vite preview"
   },
   "devDependencies": {
+    "@types/glidejs__glide": "^3.4.0",
     "@types/inputmask": "^5.0.0",
     "@types/lodash": "^4.14.169",
     "@types/scroll-lock": "^2.1.0",
@@ -18,10 +19,13 @@
     "vite": "^2.2.3"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
     "a11y-dialog": "^7.1.0",
     "inputmask": "^5.0.5",
+    "locomotive-scroll": "^4.1.1",
     "lodash": "^4.17.21",
     "scroll-lock": "^2.1.5",
-    "simplebar": "^5.3.3"
+    "simplebar": "^5.3.3",
+    "swiper": "^6.6.2"
   }
 }

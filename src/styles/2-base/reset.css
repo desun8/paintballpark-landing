@@ -3,6 +3,7 @@ button {
   background-color: transparent;
   font-family: inherit;
   border: 0;
+  cursor: pointer;
 }
 
 a {

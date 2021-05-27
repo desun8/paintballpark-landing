@@ -4,7 +4,7 @@ const observer = new IntersectionObserver(
       const { intersectionRatio } = entry;
       const target = entry.target as HTMLVideoElement
 
-      if (intersectionRatio > 0.5) {
+      if (intersectionRatio > 0.8) {
         target.play();
         // console.log("play video");
       } else {
@@ -13,7 +13,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.5 },
+  { threshold: 0.8 },
 );
 
 const autoplayVideo = (videoElm: HTMLVideoElement) => {

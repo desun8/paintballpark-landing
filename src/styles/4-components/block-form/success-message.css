@@ -76,3 +76,76 @@
   width: 100%;
   font-size: 18px;
 }
+
+/* noinspection CssInvalidMediaFeature */
+@media (--desktop) {
+  .hero-form .success-message {
+    width: 120%;
+    align-items: start;
+  }
+
+  .page-footer .success-message {
+    padding-top: 40px;
+    justify-content: start;
+  }
+
+  .hero-form .success-message__title {
+    margin-bottom: 90px;
+    margin-right: 0;
+    margin-left: 0;
+    color: var(--c-blue);
+    font-size: 90px;
+    text-align: left;
+  }
+
+  .page-footer .success-message__title {
+    position: relative;
+    margin-bottom: 30px;
+    font-size: 42px;
+  }
+
+  .page-footer .success-message__title::before {
+    content: attr(data-title);
+    position: absolute;
+    top: 0;
+    left: 4px;
+    width: 100%;
+    color: var(--c-blue);
+  }
+
+  .hero-form .success-message__icon {
+    position: absolute;
+    top: -280px;
+    left: -80px;
+    width: 700px;
+    height: 700px;
+    background: url("/images/bg-splash-success.svg") no-repeat center/contain;
+  }
+
+  .hero-form .success-message__icon::before,
+  .hero-form .success-message__icon::after {
+    content: none;
+  }
+
+  .page-footer .success-message__icon {
+    display: none;
+  }
+
+  .hero-form .success-message__btn {
+    width: auto;
+    padding: 20px 45px;
+    font-size: 24px;
+  }
+
+  .page-footer .success-message__btn {
+    width: auto;
+    padding: 16px 56px;
+    font-size: 22px;
+  }
+
+  .hero-form .success-message__title,
+  .hero-form .success-message__btn {
+    position: relative;
+    z-index: 2;
+  }
+}

@@ -66,6 +66,7 @@ input[type="radio"]#radio-service-groups:checked ~ .service-tabs__list .service-
   background-color: var(--bg-c);
   text-align: center;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 /* controllers */
@@ -86,6 +87,7 @@ input[type="radio"]#radio-service-groups:checked ~ .service-tabs__list .service-
   height: 54px;
   background-color: var(--bg-color);
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .service-tabs__btn--prev {
@@ -138,6 +140,7 @@ input[type="radio"]#radio-service-groups:checked ~ .service-tabs__list .service-
     align-items: center;
     column-gap: 100px;
     row-gap: 50px;
+    margin-bottom: 0;
   }
 
   .service-tabs .block__title {
@@ -147,6 +150,10 @@ input[type="radio"]#radio-service-groups:checked ~ .service-tabs__list .service-
   .service-tabs__list {
     justify-content: start;
     background-color: transparent;
+  }
+
+  .service-tabs__list::before {
+    content: none;
   }
 
   .service-tabs__link {

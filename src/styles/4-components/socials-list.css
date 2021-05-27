@@ -46,3 +46,14 @@
 .socials-list__link .icon--soc-name {
   mask-image: url("/images/icon-tiktok-v2.svg");
 }
+
+/* noinspection CssInvalidMediaFeature */
+@media (--desktop) {
+  .socials-list__link {
+    display: flex;
+  }
+
+  .socials-list__link .icon {
+    --size: 28px;
+  }
+}

@@ -22,4 +22,28 @@
   font-weight: 500;
 }
 
-/* .footer-contacts__link .value {} */
+/* noinspection CssInvalidMediaFeature */
+@media (--desktop) {
+  .footer-contacts {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: repeat(2, 240px) auto;
+    justify-content: start;
+    gap: 14px;
+    color: var(--c-blue);
+  }
+
+  .footer-contacts__item {
+    margin-bottom: 0;
+    padding: 10px 0;
+    background-color: rgba(149, 151, 161, 0.1);
+    border-radius: 12px;
+  }
+
+  .footer-contacts__item--socials {
+    display: flex;
+    align-items: center;
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+}
