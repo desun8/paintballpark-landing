@@ -1,10 +1,11 @@
 import { throttle } from "lodash";
 import isDesktop from "./utils/isDesktop";
+import isMobile from "./utils/isMobile";
 
-type Status = {
-  offset: { x: number, y: number },
-  limit: { x: number, y: number }
-}
+// type Status = {
+//   offset: { x: number, y: number },
+//   limit: { x: number, y: number }
+// }
 
 enum ScrollDirection {
   Up,
@@ -23,8 +24,8 @@ export default () => {
   const footerElement = document.querySelector(".page-footer");
   let headerHeight = headerElement.offsetHeight;
   let clientHeight = document.documentElement.clientHeight + (isDesktopScreen ? 0 : 200);
-  const scrollbar = window.smoothScrollbar;
-  const isNativeScroll = scrollbar === undefined;
+  const locomotiveScroll = window.smoothScrollbar;
+  const isNativeScroll = locomotiveScroll === undefined || isMobile();
 
   let prevScrollTop = 0;
   let currScrollTop = 0;
@@ -52,6 +53,10 @@ export default () => {
 
     if (isNative) {
       headerElement.style.position = "fixed";
+    } else {
+      headerParent.style.opacity = "1";
+      headerParent.style.zIndex = "1";
+      headerParent.style.background = "transparent";
     }
 
     headerElement.style.zIndex = "9999";
@@ -73,6 +78,8 @@ export default () => {
     if (isNative) {
       headerElement.style.position = "absolute";
     } else {
+      headerParent.style.opacity = "0";
+      headerParent.style.background = "";
       headerElement.style.transform = "translate3d(0, 0, 0)";
     }
 
@@ -107,7 +114,7 @@ export default () => {
     if (direction === ScrollDirection.Up && !isFooterVisible) {
       if (currScrollTop > clientHeight) {
         if (!isNativeScroll) {
-          headerElement.style.transform = `translate3d(0, ${currScrollTop}px, 0)`;
+          headerElement.style.transform = `translate3d(0, 0, 0)`;
         }
 
         pinHeader(isNativeScroll);
@@ -143,8 +150,12 @@ export default () => {
 
     document.addEventListener("scroll", onScroll, {passive: true});
   } else {
-    scrollbar!.addListener((status: Status) => {
-      toggleHeader(status.offset.y);
+    locomotiveScroll.on("scroll", (e: any) => {
+      // console.log(e);
+      toggleHeader(e.scroll.y);
     });
+    // locomotiveScroll!.addListener((status: Status) => {
+    //   toggleHeader(status.offset.y);
+    // });
   }
 }

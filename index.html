@@ -44,7 +44,7 @@
     <div class="short-nav__header  wrapper">
       <h2 class="visually-hidden">Краткая навигация</h2>
     </div>
-    <div class="simplebar-container" data-simplebar data-simplebar-auto-hide="false">
+    <div class="simplebar-container" data-simplebar-elm data-simplebar-auto-hide="false">
       <ul class="short-nav__list  list-unstyled">
         <li class="short-nav__item">
           <div class="short-nav__icon  short-nav__icon--wa"></div>
@@ -193,7 +193,7 @@
               <div class="hero-video__icon" aria-hidden="true">
                 <span class="mask"></span>
               </div>
-              <button class="hero-video__btn  js-btn-fullscreen"><span class="visually-hidden">Посмотреть видео</span>
+              <button class="hero-video__btn  js-btn-fullscreen" data-video-webm="/videos/video-vertical--muted.webm" data-video-src="/videos/video-vertical--muted.mp4"><span class="visually-hidden">Посмотреть видео</span>
               </button>
             </div>
           </div>
@@ -246,12 +246,12 @@
           </button>
         </div>
 
-        <section id="service-adults" class="service-tabs__section  simplebar-container glide" data-type="0"
+        <section id="service-adults" class="service-tabs__section  simplebar-container" data-type="0" data-glide-root=""
                  role="tabpanel"
-                 aria-labelledby="tab-A" aria-hidden="false" data-simplebar data-simplebar-auto-hide="false">
+                 aria-labelledby="tab-A" aria-hidden="false" data-simplebar-elm data-simplebar-auto-hide="false">
           <div class="service-tabs__body" data-glide-el="track">
-            <ul class="service-carousel  list-unstyled  glide__slides">
-              <li class="service-carousel__item  glide__slide">
+            <ul class="service-carousel  list-unstyled" data-glide-slides>
+              <li class="service-carousel__item" data-glide-slide>
                 <div class="carousel-item">
                   <div class="carousel-item__img">
                     <img src="/images/__dev-img.jpg" alt="" width="250" aria-hidden="true">
@@ -269,7 +269,7 @@
                 </div>
               </li>
 
-              <li class="service-carousel__item  glide__slide">
+              <li class="service-carousel__item" data-glide-slide>
                 <div class="carousel-item">
                   <div class="carousel-item__img">
                     <video loop muted playsinline>
@@ -292,7 +292,7 @@
               </li>
 
               <!--     TODO: для проверки, потом удалить      -->
-              <li class="service-carousel__item  glide__slide">
+              <li class="service-carousel__item" data-glide-slide>
                 <div class="carousel-item">
                   <div class="carousel-item__img">
                     <img src="/images/__dev-img.jpg" alt="" width="250" aria-hidden="true">
@@ -309,7 +309,7 @@
                   </div>
                 </div>
               </li>
-              <li class="service-carousel__item  glide__slide">
+              <li class="service-carousel__item" data-glide-slide>
                 <div class="carousel-item">
                   <div class="carousel-item__img">
                     <video loop muted playsinline>
@@ -330,7 +330,7 @@
                   </div>
                 </div>
               </li>
-              <li class="service-carousel__item  glide__slide">
+              <li class="service-carousel__item" data-glide-slide>
                 <div class="carousel-item">
                   <div class="carousel-item__img">
                     <img src="/images/__dev-img.jpg" alt="" width="250" aria-hidden="true">
@@ -347,7 +347,7 @@
                   </div>
                 </div>
               </li>
-              <li class="service-carousel__item  glide__slide">
+              <li class="service-carousel__item" data-glide-slide>
                 <div class="carousel-item">
                   <div class="carousel-item__img">
                     <video loop muted playsinline>
@@ -374,7 +374,7 @@
 
         <section id="service-children" class="service-tabs__section simplebar-container" data-type="1" role="tabpanel"
                  aria-labelledby="tab-B"
-                 aria-hidden="true" data-simplebar data-simplebar-auto-hide="false">
+                 aria-hidden="true" data-simplebar-elm data-simplebar-auto-hide="false">
           <div class="service-tabs__body">
             Content of section B
           </div>
@@ -382,7 +382,7 @@
 
         <section id="service-groups" class="service-tabs__section simplebar-container" data-type="2" role="tabpanel"
                  aria-labelledby="tab-C"
-                 aria-hidden="true" data-simplebar data-simplebar-auto-hide="false">
+                 aria-hidden="true" data-simplebar-elm data-simplebar-auto-hide="false">
           <div class="service-tabs__body">
             Content of section C
           </div>
@@ -492,7 +492,7 @@
               <source type="video/mp4" src="/videos/video-muted.mp4">
             </video>
 
-            <button class="block-map__play" type="button" aria-label="Посмотреть видео 'Как добраться'.">
+            <button class="block-map__play  js-btn-fullscreen" type="button" aria-label="Посмотреть видео 'Как добраться'." data-video-webm="/videos/video-vertical--muted.webm" data-video-src="/videos/video-vertical--muted.mp4">
               <span class="mask"></span>
             </button>
 
@@ -526,21 +526,21 @@
         </button>
       </div>
 
-      <div class="gallery-carousel  simplebar-container  glide" data-simplebar data-simplebar-auto-hide="false"
+      <div class="gallery-carousel  simplebar-container" data-glide-root="" data-simplebar-elm data-simplebar-auto-hide="false"
            data-scroll
            data-scroll-offset="20%">
 
         <div class="gallery-carousel__body" data-glide-el="track">
-          <ul class="gallery  list-unstyled glide__slides">
+          <ul class="gallery  list-unstyled" data-glide-slides="">
             <!--
               Я так понимаю медиа из инсты никак не будут "обжиматься".
               Так что будет либо <img> либо <video>
             -->
-            <li class="gallery__item  glide__slide">
+            <li class="gallery__item" data-glide-slide>
               <img src="/images/__dev-img.jpg" alt="" loading="lazy">
             </li>
 
-            <li class="gallery__item  glide__slide">
+            <li class="gallery__item" data-glide-slide>
               <picture>
                 <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
                 <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
@@ -557,7 +557,7 @@
                 <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
               </picture>
             </li>
-            <li class="gallery__item  glide__slide">
+            <li class="gallery__item" data-glide-slide>
               <picture>
                 <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
                 <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
@@ -574,7 +574,7 @@
                 <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
               </picture>
             </li>
-            <li class="gallery__item  glide__slide">
+            <li class="gallery__item" data-glide-slide>
               <picture>
                 <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
                 <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
@@ -591,7 +591,7 @@
                 <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
               </picture>
             </li>
-            <li class="gallery__item  glide__slide">
+            <li class="gallery__item" data-glide-slide>
               <picture>
                 <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
                 <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
@@ -608,7 +608,7 @@
                 <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
               </picture>
             </li>
-            <li class="gallery__item  glide__slide">
+            <li class="gallery__item" data-glide-slide>
               <picture>
                 <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
                 <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
@@ -625,7 +625,7 @@
                 <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
               </picture>
             </li>
-            <li class="gallery__item  glide__slide">
+            <li class="gallery__item" data-glide-slide>
               <picture>
                 <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
                 <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
@@ -642,7 +642,7 @@
                 <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
               </picture>
             </li>
-            <li class="gallery__item  glide__slide">
+            <li class="gallery__item" data-glide-slide>
               <picture>
                 <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
                 <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
@@ -659,7 +659,7 @@
                 <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
               </picture>
             </li>
-            <li class="gallery__item  glide__slide">
+            <li class="gallery__item" data-glide-slide>
               <picture>
                 <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
                 <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
@@ -676,7 +676,7 @@
                 <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
               </picture>
             </li>
-            <li class="gallery__item  glide__slide">
+            <li class="gallery__item" data-glide-slide>
               <picture>
                 <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
                 <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
@@ -693,7 +693,7 @@
                 <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
               </picture>
             </li>
-            <li class="gallery__item  glide__slide">
+            <li class="gallery__item" data-glide-slide>
               <picture>
                 <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
                 <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
@@ -710,7 +710,7 @@
                 <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
               </picture>
             </li>
-            <li class="gallery__item  glide__slide">
+            <li class="gallery__item" data-glide-slide>
               <picture>
                 <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
                 <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
@@ -727,7 +727,7 @@
                 <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
               </picture>
             </li>
-            <li class="gallery__item  glide__slide">
+            <li class="gallery__item" data-glide-slide>
               <picture>
                 <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
                 <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
@@ -744,7 +744,7 @@
                 <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
               </picture>
             </li>
-            <li class="gallery__item  glide__slide">
+            <li class="gallery__item" data-glide-slide>
               <picture>
                 <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
                 <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
@@ -761,7 +761,7 @@
                 <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
               </picture>
             </li>
-            <li class="gallery__item  glide__slide">
+            <li class="gallery__item" data-glide-slide>
               <picture>
                 <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
                 <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
@@ -778,7 +778,7 @@
                 <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
               </picture>
             </li>
-            <li class="gallery__item  glide__slide">
+            <li class="gallery__item" data-glide-slide>
               <picture>
                 <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
                 <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
@@ -795,7 +795,7 @@
                 <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
               </picture>
             </li>
-            <li class="gallery__item  glide__slide">
+            <li class="gallery__item" data-glide-slide>
               <picture>
                 <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
                 <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
@@ -812,7 +812,7 @@
                 <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
               </picture>
             </li>
-            <li class="gallery__item  glide__slide">
+            <li class="gallery__item" data-glide-slide>
               <picture>
                 <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
                 <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
@@ -829,7 +829,7 @@
                 <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
               </picture>
             </li>
-            <li class="gallery__item  glide__slide">
+            <li class="gallery__item" data-glide-slide>
               <picture>
                 <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
                 <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
@@ -846,7 +846,7 @@
                 <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
               </picture>
             </li>
-            <li class="gallery__item  glide__slide">
+            <li class="gallery__item" data-glide-slide>
               <picture>
                 <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
                 <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
@@ -863,7 +863,7 @@
                 <img src="/images/__dev-img.jpg" data-src="/__dev-img.983214a0.webp" alt="" loading="lazy">
               </picture>
             </li>
-            <li class="gallery__item  glide__slide">
+            <li class="gallery__item" data-glide-slide>
               <picture>
                 <source type="image/webp" media="(max-width: 370px)" srcset="/images/__dev-img320.webp">
                 <source media="(max-width: 370px)" srcset="/images/__dev-img320.jpg">
@@ -889,7 +889,7 @@
   </article>
 </main>
 
-<footer class="page-footer">
+<footer class="page-footer" data-scroll-section>
   <div class="page-footer__top-pattern"></div>
   <div class="bg-rifle  bg-rifle--rotate-left"></div>
 
@@ -1009,13 +1009,13 @@
   <!-- 2. The dialog overlay -->
   <div class="dialog-overlay" data-a11y-dialog-hide></div>
   <!-- 3. The actual dialog -->
-  <div class="dialog-content dialog-container__dialog" aria-labelledby="dialog-title" role="dialog">
+  <div class="dialog-content dialog-container__dialog" aria-labelledby="dialog-title" role="dialog" data-simplebar-modal>
     <button class="dialog-btn-close" type="button" aria-label="Закрыть меню."></button>
     <!-- 5. The dialog title -->
     <h1 class="dialog-title" id="dialog-title">Dialog Title</h1>
     <!-- 6. Dialog content -->
-    <article class="modal">
-      <article id="modal-price" class="modal__body  modal-price">
+    <article class="modal" style="overflow: hidden;">
+      <article id="modal-price" class="modal__body  modal-price" >
         <div class="modal__wrapper">
           <h2 class="modal__title">Тарифы</h2>
 
@@ -1133,8 +1133,9 @@
           </div>
         </div>
       </article>
-      <article id="modal-service" class="modal__body  modal-service">
+      <article id="modal-service" class="modal__body  modal-service" >
         <div class="modal__wrapper">
+          <div class="bg-rifle"></div>
           <div class="title-wrapper">
             <h2 class="modal__title title">Как отпраздновать День рождения на пейнтболе?</h2>
           </div>

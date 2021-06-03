@@ -67,6 +67,31 @@
   background-color: var(--c-blue);
 }
 
+.modal-service .bg-rifle {
+  --rotate: -8deg;
+  --bg-pos: 30px 35px;
+
+  top: 0;
+  right: -15px;
+  width: 100vw;
+  height: 130%;
+  z-index: 1;
+}
+
+.modal-service .bg-rifle::after {
+  left: 0;
+  width: 120%;
+  height: 120%;
+  background-size: 660px;
+}
+
+.modal-service__media,
+.modal-service__describe,
+.modal-service__contacts {
+  position: relative;
+  z-index: 2;
+}
+
 .modal-service__media {
   margin-bottom: 16px;
   border-radius: 10px;
@@ -116,7 +141,7 @@
 /* noinspection CssInvalidMediaFeature */
 @media (--desktop) {
   .modal__wrapper {
-    padding: 50px 30px;
+    padding: 50px 58px 50px 30px;
   }
 
   .modal-service .modal__wrapper {
@@ -124,6 +149,7 @@
   }
 
   .title-wrapper {
+    margin-right: -58px;
     margin-bottom: 110px;
     min-height: calc((36px *1.2) * 2);
   }
@@ -136,6 +162,10 @@
 
   .title-wrapper .title {
     font-size: 36px;
+  }
+
+  .modal-service .bg-rifle {
+    left: 60px;
   }
 
   .modal-service__media {
@@ -158,7 +188,7 @@
   }
 
   .modal-price .modal__wrapper {
-    padding: 50px 30px;
+    padding: 50px 58px 50px 30px;
   }
 
   .modal-price .title-wrapper {

@@ -126,8 +126,10 @@
   }
 
   .banner-price__container {
+    position: relative;
     max-width: 100%;
     padding: 0;
+    z-index: 1;
   }
 
   .banner-price__content {

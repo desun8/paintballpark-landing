@@ -251,6 +251,17 @@
 
 /* noinspection CssInvalidMediaFeature */
 @media (--desktop) {
+  .price-item > .bg-rifle {
+    --bg-pos: -115px -10px;
+
+    top: -260px;
+    left: 0;
+  }
+
+  .price-item > .bg-rifle::after {
+    background-size: 800px;
+  }
+
   .price-item__body {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -302,7 +313,7 @@
 
   .price-item__sublist {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 10px;
     padding: 0;
     border: 0;
   }
@@ -317,8 +328,20 @@
   }
 
   .price-item__sublist li .icon {
-    width: 10px;
-    height: 10px;
+    width: 11px;
+    height: 11px;
+  }
+
+  .price-item__sublist li .icon--grenade {
+    background-image: url("/images/icon-hand-grenade-bold.svg");
+  }
+
+  .price-item__sublist li .icon--target {
+    background-image: url("/images/icon-target-bold.svg");
+  }
+
+  .price-item__sublist li .icon--uniform {
+    background-image: url("/images/icon-uniform-bold.svg");
   }
 
   .price-item__sublist li .price {

@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-html,
 body {
   height: 100%;
 }
@@ -102,6 +101,11 @@ body {
 .has-scroll-init .is-inview[data-scroll] {
   opacity: 1;
   transform: translate3d(0, 0, 0);
+}
+
+/* locomotiveScroll */
+.c-scrollbar {
+  z-index: 5;
 }
 
 /* noinspection CssInvalidMediaFeature */

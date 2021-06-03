@@ -1,10 +1,10 @@
-// import Simplebar from "simplebar";
+import Simplebar from "simplebar";
 import "simplebar/dist/simplebar.css";
 import "./styles/index.css";
 
 // @ts-ignore
-// import LocomotiveScroll from "locomotive-scroll";
-// import "locomotive-scroll/dist/locomotive-scroll.min.css";
+import LocomotiveScroll from "locomotive-scroll";
+import "locomotive-scroll/dist/locomotive-scroll.min.css";
 
 
 import dialog from "./scripts/dialog";
@@ -16,19 +16,33 @@ import fixedHeader from "./scripts/fixedHeader";
 
 import carousel from "./scripts/carousel";
 import isDesktop from "./scripts/utils/isDesktop";
-
-// new LocomotiveScroll({
-//   el: document.querySelector("[data-scroll-container]"),
-//   smooth: true,
-// });
+import fullscreenVideo from "./scripts/fullscreenVideo";
 
 const isDesktopScreen = isDesktop();
 
+const locomotiveScroll = new LocomotiveScroll({
+  el: document.querySelector("[data-scroll-container]"),
+  smooth: true,
+});
+
+window.smoothScrollbar = locomotiveScroll;
+
 dialog();
 fixedHeader();
+fullscreenVideo();
 
 if (isDesktopScreen) {
   carousel();
+
+  const simplebarsModalElm = document.querySelector("[data-simplebar-modal]") as HTMLElement;
+  new Simplebar(simplebarsModalElm, {
+    autoHide: false
+  });
+} else {
+  const simplebarsElms = Array.from(document.querySelectorAll("[data-simplebar-elm]")) as HTMLElement[];
+  simplebarsElms.forEach(elm => {
+    new Simplebar(elm);
+  });
 }
 
 // if (!isDesktopScreen) {
@@ -42,6 +56,7 @@ if (isDesktopScreen) {
 
 setTimeout(
   () => {
+    locomotiveScroll.update();
     service();
 
     if (!isDesktopScreen) {
@@ -69,10 +84,3 @@ setTimeout(
     });
   }
 })();
-//
-// const app = document.querySelector<HTMLDivElement>('#app')!
-//
-// app.innerHTML = `
-//   <h1>Hello Vite!</h1>
-//   <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-// `

@@ -2,6 +2,15 @@ import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css";
 
 export default () => {
+  const addCarouselStyleClass = (rootElm: HTMLElement) => {
+    const slidesElm = rootElm.querySelector("[data-glide-slides]")!;
+    const slideElm = slidesElm.querySelector("[data-glide-slide]")!;
+
+    rootElm.classList.add("glide")
+    slidesElm.classList.add("glide__slides")
+    slideElm.classList.add("glide__slide")
+  }
+
   const initServiceCarousel = () => {
     const glide = new Glide(".glide", {
       // type: "carousel",
@@ -42,6 +51,11 @@ export default () => {
       });
     });
   };
+
+  const glideElements = Array.from(document.querySelectorAll("[data-glide-root]")) as HTMLElement[];
+  glideElements.forEach(glide => {
+    addCarouselStyleClass(glide)
+  })
 
   initServiceCarousel();
   initInstagramCarousel();

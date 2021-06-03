@@ -11,10 +11,18 @@ const dialogScrollLock = (dialog: A11yDialog) => {
   dialog.on("show", function (element) {
     element.scrollTop = 0;
     disablePageScroll(element);
+
+    if (window.smoothScrollbar) {
+      window.smoothScrollbar.stop();
+    }
   });
 
   dialog.on("hide", function (element) {
     enablePageScroll(element);
+
+    if (window.smoothScrollbar) {
+      window.smoothScrollbar.start();
+    }
   });
 };
 const getDelay = () => {
