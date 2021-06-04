@@ -17,6 +17,7 @@ import fixedHeader from "./scripts/fixedHeader";
 import carousel from "./scripts/carousel";
 import isDesktop from "./scripts/utils/isDesktop";
 import fullscreenVideo from "./scripts/fullscreenVideo";
+import fixAnchors from "./scripts/fixAnchors";
 
 const isDesktopScreen = isDesktop();
 
@@ -27,6 +28,8 @@ const locomotiveScroll = new LocomotiveScroll({
 
 window.smoothScrollbar = locomotiveScroll;
 
+fixAnchors();
+
 dialog();
 fixedHeader();
 fullscreenVideo();
@@ -36,7 +39,7 @@ if (isDesktopScreen) {
 
   const simplebarsModalElm = document.querySelector("[data-simplebar-modal]") as HTMLElement;
   new Simplebar(simplebarsModalElm, {
-    autoHide: false
+    autoHide: false,
   });
 } else {
   const simplebarsElms = Array.from(document.querySelectorAll("[data-simplebar-elm]")) as HTMLElement[];
