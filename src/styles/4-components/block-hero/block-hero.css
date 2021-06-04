@@ -91,6 +91,10 @@
 
 /* noinspection CssInvalidMediaFeature */
 @media (--desktop-lg) {
+  .block-hero__top-pattern {
+    top: 0;
+  }
+
   .block-hero__bottom-pattern {
     mask-position: -1900px -510px;
   }

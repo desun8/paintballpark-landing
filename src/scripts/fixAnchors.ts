@@ -8,8 +8,6 @@ export default () => {
       const id = link.hash;
       const target = document.querySelector(id) as HTMLElement;
 
-      console.log(target);
-
       link.onclick = (event) => {
         event.preventDefault();
 

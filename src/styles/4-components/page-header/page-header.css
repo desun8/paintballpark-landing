@@ -67,7 +67,8 @@
 @media (--tablet-lg) {
   .page-header {
     background: #daf530 image-set(url("/images/pattern-page-bg.png") 1x, url("/images/pattern-page-bg@2x.png") 2x) center/16px;
-    overflow: hidden;
+
+    /* overflow: hidden; */
   }
 
   .page-header::before {
@@ -136,6 +137,10 @@
 
 /* noinspection CssInvalidMediaFeature */
 @media (--desktop-lg) {
+  .page-header {
+    z-index: 1;
+  }
+
   .page-header::before {
     height: 400px;
     mask-position: -600px -1500px;
