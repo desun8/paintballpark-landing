@@ -32,6 +32,7 @@
   position: absolute;
   top: 0;
   left: 4px;
+  width: 100%;
   color: var(--c-blue);
 }
 
@@ -69,8 +70,13 @@
   font-size: 18px;
 }
 
+.form--hero .form__submit.btn--red:hover,
+.form--footer .form__submit.btn--red:hover {
+  background-color: var(--c-blue);
+}
+
 /* noinspection CssInvalidMediaFeature */
-@media (--desktop) {
+@media (--tablet-lg) {
   .form {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;

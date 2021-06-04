@@ -23,7 +23,7 @@
 }
 
 /* noinspection CssInvalidMediaFeature */
-@media (--desktop) {
+@media (--tablet-lg) {
   .footer-contacts {
     grid-column: 2/3;
     display: grid;

@@ -55,7 +55,7 @@
 }
 
 /* noinspection CssInvalidMediaFeature */
-@media (--desktop) {
+@media (--tablet-lg) {
   .page-footer {
     margin-top: 300px;
     padding: 0;
@@ -142,8 +142,12 @@
 
 /* noinspection CssInvalidMediaFeature */
 @media (--desktop-lg) {
+  .page-footer__top-pattern {
+    height: 800px;
+  }
+
   .page-footer__top-pattern::before {
-    background-position-x: -700px;
-    background-size: 4000px;
+    mask-position: -900px -400px;
+    mask-size: 4000px;
   }
 }

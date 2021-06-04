@@ -97,7 +97,7 @@
 }
 
 /* noinspection CssInvalidMediaFeature */
-@media (--desktop) {
+@media (--tablet-lg) {
   .short-nav {
     display: none;
   }

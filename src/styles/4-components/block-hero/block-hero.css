@@ -41,7 +41,7 @@
 }
 
 /* noinspection CssInvalidMediaFeature */
-@media (--desktop) {
+@media (--tablet-lg) {
   .block-hero {
     background: #daf530 image-set(url("/images/pattern-page-bg.png") 1x, url("/images/pattern-page-bg@2x.png") 2x) center/16px;
     padding-bottom: 160px;
@@ -86,5 +86,12 @@
     height: 360px;
     background: #fff image-set(url("/images/pattern-page-bg.png") 1x, url("/images/pattern-page-bg@2x.png") 2x) center/16px;
     mask: url("/images/pattern-modal-title.svg") no-repeat -2200px -510px/5000px;
+  }
+}
+
+/* noinspection CssInvalidMediaFeature */
+@media (--desktop-lg) {
+  .block-hero__bottom-pattern {
+    mask-position: -1900px -510px;
   }
 }

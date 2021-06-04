@@ -31,7 +31,7 @@
 }
 
 /* noinspection CssInvalidMediaFeature */
-@media (--desktop) {
+@media (--tablet-lg) {
   .map-directions {
     background-color: unset;
   }

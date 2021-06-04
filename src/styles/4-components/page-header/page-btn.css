@@ -24,7 +24,7 @@
 }
 
 /* noinspection CssInvalidMediaFeature */
-@media (--desktop) {
+@media (--tablet-lg) {
   .page-btn {
     display: none;
   }

@@ -63,6 +63,18 @@
   font-weight: 400;
 }
 
+.hero-video__btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+
+  /* TODO: Удалить когда будет сброс дефолтных стилей */
+  background-color: transparent;
+}
+
 .hero-video__icon {
   --size: 56px;
 
@@ -95,7 +107,8 @@
   transform: translateY(-50%);
   width: 120px;
   height: 200px;
-  background:
+  background-color: var(--c-red);
+  mask:
     image-set(
       url("/images/btn-youtube-splash--original.png") 1x,
       url("/images/btn-youtube-splash@2x--original.png") 2x
@@ -112,16 +125,14 @@
   z-index: 2;
 }
 
-.hero-video__btn {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
+.hero-video__icon .mask,
+.hero-video__icon::before {
+  transition: background-color var(--duration);
+}
 
-  /* TODO: Удалить когда будет сброс дефолтных стилей */
-  background-color: transparent;
+.hero-video__btn:hover + .hero-video__icon .mask,
+.hero-video__btn:hover + .hero-video__icon::before {
+  background-color: var(--c-blue);
 }
 
 .hero-video__container {
@@ -152,7 +163,7 @@
 }
 
 /* noinspection CssInvalidMediaFeature */
-@media (--desktop) {
+@media (--tablet-lg) {
   .hero-video {
     position: relative;
     width: 414px;
@@ -263,6 +274,6 @@
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
     width: 200px;
-    background: url("/images/btn-bg-splash.svg") no-repeat center/135px;
+    mask: url("/images/btn-bg-splash.svg") no-repeat center/135px;
   }
 }

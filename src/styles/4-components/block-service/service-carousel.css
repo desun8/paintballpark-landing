@@ -5,6 +5,11 @@
   padding-bottom: 60px;
 }
 
+.service-carousel.glide__slides {
+  padding-right: var(--page-gap);
+  padding-left: var(--page-gap);
+}
+
 .service-carousel__item {
   flex-shrink: 0;
   margin-left: 10px;
@@ -19,4 +24,9 @@
 .service-carousel__item:last-child {
   margin-right: 0;
   padding-right: var(--page-gap);
+}
+
+.service-carousel__item.glide__slide {
+  margin: 0;
+  padding: 0;
 }

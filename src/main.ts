@@ -45,15 +45,6 @@ if (isDesktopScreen) {
   });
 }
 
-// if (!isDesktopScreen) {
-//   console.log(isDesktopScreen);
-//   const simplebarsElms = Array.from(document.querySelectorAll("[data-simplebar]")) as HTMLElement[];
-//   simplebarsElms.forEach(elm => {
-//     console.log("heru");
-//     // new Simplebar(elm);
-//   })
-// }
-
 setTimeout(
   () => {
     locomotiveScroll.update();

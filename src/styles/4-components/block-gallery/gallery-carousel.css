@@ -4,7 +4,7 @@
 }
 
 /* noinspection CssInvalidMediaFeature */
-@media (--desktop) {
+@media (--tablet-lg) {
   .gallery-carousel {
     grid-column: 1/12;
     overflow: visible;

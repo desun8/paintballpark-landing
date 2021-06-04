@@ -250,7 +250,7 @@
 }
 
 /* noinspection CssInvalidMediaFeature */
-@media (--desktop) {
+@media (--tablet-lg) {
   .price-item > .bg-rifle {
     --bg-pos: -115px -10px;
 

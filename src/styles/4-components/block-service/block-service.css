@@ -30,7 +30,7 @@
 }
 
 /* noinspection CssInvalidMediaFeature */
-@media (--desktop) {
+@media (--tablet-lg) {
   .block-service {
     padding-top: 0;
     padding-bottom: 150px;

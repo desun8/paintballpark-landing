@@ -38,6 +38,11 @@
   font-size: 14px;
 }
 
+.sticky-contacts__link:hover {
+  color: #fff;
+  background-color: var(--c-red);
+}
+
 .sticky-contacts__link--wa::before {
   content: '';
   width: 20px;

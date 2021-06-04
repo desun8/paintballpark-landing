@@ -16,7 +16,7 @@ type TimerId = ReturnType<typeof setTimeout> | null;
 
 
 const isDesktopScreen = isDesktop();
-const transition = "transform 0.4s";
+const transition = "transform 0.5s";
 
 export default () => {
   const headerParent = document.querySelector(".page-header") as HTMLElement;
@@ -32,6 +32,8 @@ export default () => {
   let isHeaderPinned = false;
   let isFooterVisible = false;
   let timerId: TimerId = null;
+  let isPinnedStart = false;
+  let isUnpinnedStart = false;
 
   headerParent.style.paddingTop = headerHeight + "px";
   headerElement.style.position = "absolute";
@@ -43,68 +45,91 @@ export default () => {
   };
 
   const pinHeader = (isNative = true) => {
-    if (isHeaderPinned) return;
+    requestAnimationFrame(() => {
+      if (isPinnedStart) return;
 
-    clearTimer(timerId);
+      isPinnedStart = true;
 
-    isHeaderPinned = true;
+      if (isHeaderPinned) {
+        isPinnedStart = false;
+        isUnpinnedStart = false;
+        return;
+      }
 
-    headerElement.style.willChange = "transform";
+      console.log("start pinned header");
+      clearTimer(timerId);
 
-    if (isNative) {
-      headerElement.style.position = "fixed";
-    } else {
-      headerParent.style.opacity = "1";
-      headerParent.style.zIndex = "1";
-      headerParent.style.background = "transparent";
-    }
+      isHeaderPinned = true;
+      // headerElement.style.willChange = "transform";
 
-    headerElement.style.zIndex = "9999";
-    headerElement.classList.add("is-fixed");
+      if (isNative) {
+        headerElement.style.position = "fixed";
+      } else {
+        headerParent.classList.add("is-fixed");
+      }
 
-    headerElement.style.transition = "";
-    headerElement.style.transform = "translate3d(0, -200px, 0)";
-    setTimeout(() => {
-      headerElement.style.transition = transition;
-      headerElement.style.transform = "translate3d(0, 0, 0)";
-    }, 100);
+      headerElement.style.zIndex = "9999";
+      headerElement.classList.add("is-fixed");
 
-    timerId = setTimeout(() => {
-      headerElement.style.willChange = "";
-    }, 400);
+      headerElement.style.transition = "";
+
+      headerElement.style.transform = "translate3d(0, -200px, 0)";
+
+      setTimeout(() => {
+        headerElement.style.transition = transition;
+        headerElement.style.transform = "translate3d(0, 0, 0)";
+        isPinnedStart = false;
+      }, 100);
+
+      timerId = setTimeout(() => {
+        headerElement.style.willChange = "";
+      }, 400);
+    });
   };
 
   const resetStyles = (isNative: boolean) => {
-    if (isNative) {
-      headerElement.style.position = "absolute";
-    } else {
-      headerParent.style.opacity = "0";
-      headerParent.style.background = "";
+    requestAnimationFrame(() => {
+      if (isNative) {
+        headerElement.style.position = "absolute";
+      } else {
+        headerParent.classList.remove("is-fixed");
+        headerElement.style.transform = "translate3d(0, 0, 0)";
+      }
+
+      headerElement.style.zIndex = "";
+      headerElement.style.transition = "";
+      headerElement.classList.remove("is-fixed");
       headerElement.style.transform = "translate3d(0, 0, 0)";
-    }
 
-    headerElement.style.zIndex = "";
-    headerElement.style.transition = "";
-    headerElement.classList.remove("is-fixed");
-    headerElement.style.transform = "translate3d(0, 0, 0)";
-
-    isHeaderPinned = false;
-    headerElement.style.willChange = "";
+      isHeaderPinned = false;
+      headerElement.style.willChange = "";
+    });
   };
 
   const unpinHeader = (isNative = true) => {
-    if (!isHeaderPinned) return;
+    requestAnimationFrame(() => {
+      if (isUnpinnedStart) return;
 
-    clearTimer(timerId);
+      isUnpinnedStart = true;
 
-    headerElement.style.willChange = "transform";
+      if (!isHeaderPinned) {
+        isPinnedStart = false;
+        isUnpinnedStart = false;
+        return;
+      }
 
-    headerElement.style.transition = transition;
-    headerElement.style.transform = "translate3d(0, -200px, 0)";
-    timerId = setTimeout(() => {
-      resetStyles(isNative);
-    }, 200);
+      console.log("start unpinned header");
+      clearTimer(timerId);
 
+      headerElement.style.willChange = "transform";
+      headerElement.style.transition = transition;
+      headerElement.style.transform = "translate3d(0, -200px, 0)";
+
+      timerId = setTimeout(() => {
+        resetStyles(isNative);
+        isUnpinnedStart = false;
+      }, 200);
+    });
   };
 
   const toggleHeader = (scrollTop: number) => {

@@ -16,19 +16,37 @@ interface MyHTMLElement extends HTMLElement {
 }
 
 // В Safari 14.0.1 (mac) без префикса webkit не работает
+// Для safari 14.5.1 (ios) используется фикс - styleIOSFix (добавляем стиль)
 const fullscreen = () => {
+  const FULLSCREEN_ELEMENT_ID = "fullscreenElement";
+
   try {
     const setZIndex = (element: HTMLElement, value: string) => {
       element.style.zIndex = value;
     };
+    // Скрываем элемент, если не в фуллскрине (если не работает событие)
+    const styleIOSFix = () => {
+      const styleElement = document.createElement("style");
+      document.head.appendChild(styleElement);
+
+      const styleSheet = styleElement.sheet!;
+
+      styleSheet.insertRule(
+        `#${FULLSCREEN_ELEMENT_ID}:not(:-webkit-full-screen) {
+          display: none;
+        }`,
+      );
+    };
     const createVideoElement = () => {
       const video = document.createElement("video") as MyHTMLVideoElement;
+      video.id = FULLSCREEN_ELEMENT_ID;
       video.controls = true;
       video.preload = "none";
       video.style.position = "absolute";
       video.style.width = "100%";
 
       document.body.appendChild(video);
+      styleIOSFix();
 
       return video;
     };

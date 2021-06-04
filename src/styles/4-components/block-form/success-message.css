@@ -78,7 +78,7 @@
 }
 
 /* noinspection CssInvalidMediaFeature */
-@media (--desktop) {
+@media (--tablet-lg) {
   .hero-form .success-message {
     width: 120%;
     align-items: start;
@@ -90,11 +90,11 @@
   }
 
   .hero-form .success-message__title {
-    margin-bottom: 90px;
+    margin-bottom: 70px;
     margin-right: 0;
     margin-left: 0;
     color: var(--c-blue);
-    font-size: 90px;
+    font-size: 70px;
     text-align: left;
   }
 
@@ -147,5 +147,13 @@
   .hero-form .success-message__btn {
     position: relative;
     z-index: 2;
+  }
+}
+
+/* noinspection CssInvalidMediaFeature */
+@media (--desktop) {
+  .hero-form .success-message__title {
+    margin-bottom: 90px;
+    font-size: 90px;
   }
 }

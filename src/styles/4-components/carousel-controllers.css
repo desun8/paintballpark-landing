@@ -42,7 +42,7 @@
 }
 
 /* noinspection CssInvalidMediaFeature */
-@media (--desktop) {
+@media (--tablet-lg) {
   .carousel-controllers__controllers {
     display: grid;
     grid-auto-flow: column;

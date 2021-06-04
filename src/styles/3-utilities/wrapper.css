@@ -12,7 +12,7 @@
 }
 
 /* noinspection CssInvalidMediaFeature */
-@media (--desktop) {
+@media (--tablet-lg) {
   .wrapper--md {
     padding-left: var(--page-gap);
     padding-right: var(--page-gap);

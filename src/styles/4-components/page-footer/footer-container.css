@@ -45,7 +45,7 @@
 }
 
 /* noinspection CssInvalidMediaFeature */
-@media (--desktop) {
+@media (--tablet-lg) {
   .footer-container {
     max-width: calc(var(--page-max-width) + (var(--page-gap) * 2));
     margin-left: auto;

@@ -108,7 +108,7 @@
 }
 
 /* noinspection CssInvalidMediaFeature */
-@media (--desktop) {
+@media (--tablet-lg) {
   .dialog-container--modal {
     display: flex;
     justify-content: center;
@@ -121,7 +121,8 @@
 
   .dialog-content {
     width: 610px;
-    height: 80vh;
+    height: auto;
+    max-height: 80vh;
     margin: auto;
     border-radius: 10px;
     overflow: auto;

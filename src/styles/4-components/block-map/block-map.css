@@ -98,11 +98,22 @@
   transform: translate3d(-50%, -50%, 0);
   width: 204px;
   height: 325px;
-  background:
+  background: var(--c-red);
+  mask:
     image-set(
       url("/images/btn-bg-splash.png") 1x,
       url("/images/btn-bg-splash@2x.png") 2x
     ) no-repeat center/cover;
+}
+
+.block-map__play .mask,
+.block-map__play::before {
+  transition: background-color var(--duration);
+}
+
+.block-map__play:hover .mask,
+.block-map__play:hover::before {
+  background-color: var(--c-blue);
 }
 
 .block-map__play::after {
@@ -143,7 +154,15 @@
 }
 
 /* noinspection CssInvalidMediaFeature */
-@media (--desktop) {
+@media (--tablet) {
+  .block-map__pattern-top,
+  .block-map__pattern-bottom {
+    background-repeat: round;
+  }
+}
+
+/* noinspection CssInvalidMediaFeature */
+@media (--tablet-lg) {
   .block-map {
     position: relative;
   }
@@ -203,7 +222,7 @@
   .block-map__play::before {
     width: 350px;
     height: 350px;
-    background: url("/images/btn-bg-splash.svg") no-repeat center/250px;
+    mask: url("/images/btn-bg-splash.svg") no-repeat center/250px;
   }
 
   .block-map__play::after {

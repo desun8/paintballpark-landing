@@ -34,11 +34,19 @@
 }
 
 /* noinspection CssInvalidMediaFeature */
-@media (--desktop) {
+@media (--tablet-lg) {
   .instagram-link {
     margin: 0;
     padding: 0;
     transform: translateX(-215px);
+  }
+
+  .has-scroll-init [data-scroll].instagram-link {
+    transform: translate3d(-120px, 50px, 0);
+  }
+
+  .has-scroll-init .is-inview[data-scroll].instagram-link {
+    transform: translate3d(-120px, 0, 0);
   }
 
   .instagram-link__text {

@@ -21,6 +21,7 @@
   mask-repeat: no-repeat;
   mask-position: center;
   border-radius: 50%;
+  transition: background-color var(--duration);
 }
 
 .socials-list__link .icon--facebook {
@@ -47,8 +48,12 @@
   mask-image: url("/images/icon-tiktok-v2.svg");
 }
 
+.socials-list__link:hover .icon {
+  background-color: var(--c-red);
+}
+
 /* noinspection CssInvalidMediaFeature */
-@media (--desktop) {
+@media (--tablet-lg) {
   .socials-list__link {
     display: flex;
   }

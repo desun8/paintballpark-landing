@@ -4,11 +4,14 @@ import "@glidejs/glide/dist/css/glide.core.min.css";
 export default () => {
   const addCarouselStyleClass = (rootElm: HTMLElement) => {
     const slidesElm = rootElm.querySelector("[data-glide-slides]")!;
-    const slideElm = slidesElm.querySelector("[data-glide-slide]")!;
+    const slideElms = Array.from(slidesElm.querySelectorAll("[data-glide-slide]")!);
 
     rootElm.classList.add("glide")
     slidesElm.classList.add("glide__slides")
-    slideElm.classList.add("glide__slide")
+
+    slideElms.forEach(slide => {
+      slide.classList.add("glide__slide")
+    })
   }
 
   const initServiceCarousel = () => {

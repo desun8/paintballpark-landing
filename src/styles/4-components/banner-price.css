@@ -51,6 +51,11 @@
   padding-right: 48px;
 }
 
+.banner-price__btn.btn--red:hover {
+  color: var(--c-blue);
+  background-color: #fff;
+}
+
 .banner-price__image-inner {
   display: none;
 }
@@ -99,7 +104,7 @@
 }
 
 /* noinspection CssInvalidMediaFeature */
-@media (--desktop) {
+@media (--tablet-lg) {
   .banner-price {
     margin-bottom: 70px;
     overflow: hidden;

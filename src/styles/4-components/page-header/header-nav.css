@@ -36,7 +36,7 @@
 }
 
 /* noinspection CssInvalidMediaFeature */
-@media (--desktop) {
+@media (--tablet-lg) {
   .header-nav {
     display: block;
   }

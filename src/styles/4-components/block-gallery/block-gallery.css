@@ -24,7 +24,7 @@
 }
 
 /* noinspection CssInvalidMediaFeature */
-@media (--desktop) {
+@media (--tablet-lg) {
   .block-gallery {
     overflow: hidden;
     margin-bottom: 0;
@@ -48,6 +48,10 @@
     padding: 0;
     font-size: 90px;
     transform: translateY(18px);
+  }
+
+  .has-scroll-init .block-gallery .is-inview[data-scroll].block__title {
+    transform: translate3d(0, 18px, 0);
   }
 
   .block-gallery .bg-rifle {

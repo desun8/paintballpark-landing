@@ -139,13 +139,14 @@
 }
 
 /* noinspection CssInvalidMediaFeature */
-@media (--desktop) {
-  .modal__wrapper {
-    padding: 50px 58px 50px 30px;
+@media (--tablet-lg) {
+  .modal__body {
+    min-height: 100%;
   }
 
-  .modal-service .modal__wrapper {
-    display: grid;
+  .modal__wrapper {
+    min-height: 100%;
+    padding: 50px 58px 50px 30px;
   }
 
   .title-wrapper {
@@ -176,10 +177,14 @@
   .modal-service__describe {
     font-size: 18px;
     line-height: 1.4;
+    flex-grow: 0;
   }
 
   .modal-service__contacts {
     order: 5;
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
     margin: 0;
   }
 

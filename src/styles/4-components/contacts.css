@@ -28,8 +28,9 @@
   background-color: var(--c-green);
 }
 
+.contacts__link--blue:hover,
 .contacts__link--green:hover {
-  background-color: #00ad40;
+  background-color: var(--c-red);
 }
 
 .contacts__link .icon-wa {

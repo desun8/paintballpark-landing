@@ -42,7 +42,7 @@
 }
 
 /* noinspection CssInvalidMediaFeature */
-@media (--desktop) {
+@media (--tablet-lg) {
   .block-form--middle {
     display: none;
   }

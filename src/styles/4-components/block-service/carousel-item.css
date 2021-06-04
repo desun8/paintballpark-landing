@@ -50,10 +50,14 @@
 }
 
 /* noinspection CssInvalidMediaFeature */
-@media (--desktop) {
+@media (--tablet-lg) {
   .carousel-item {
     width: 338px;
     height: 100%;
+  }
+
+  .glide__slide .carousel-item {
+    width: auto;
   }
 
   .carousel-item__img {

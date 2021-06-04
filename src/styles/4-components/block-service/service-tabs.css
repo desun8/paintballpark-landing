@@ -126,7 +126,15 @@ input[type="radio"]#radio-service-groups:checked ~ .service-tabs__list .service-
 }
 
 /* noinspection CssInvalidMediaFeature */
-@media (--desktop) {
+@media (--tablet) {
+  .service-tabs__list {
+    justify-content: center;
+    gap: 24px;
+  }
+}
+
+/* noinspection CssInvalidMediaFeature */
+@media (--tablet-lg) {
   input[type="radio"]#radio-service-adults:checked ~ .service-tabs__list .service-tabs__link[for="radio-service-adults"],
   input[type="radio"]#radio-service-children:checked ~ .service-tabs__list .service-tabs__link[for="radio-service-children"],
   input[type="radio"]#radio-service-groups:checked ~ .service-tabs__list .service-tabs__link[for="radio-service-groups"] {
