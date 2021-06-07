@@ -54,6 +54,18 @@
   background-color: var(--c-blue);
 }
 
+.dialog-container--menu .bg-rifle {
+  --bg-pos: -40px 40px;
+  --rotate: -6deg;
+
+  top: 0;
+  right: 0;
+}
+
+.dialog-container--menu .bg-rifle::after {
+  transform-origin: 0 0;
+}
+
 .dialog-container.is-hidden .dialog-overlay {
   animation: fade-out var(--duration) both;
 }

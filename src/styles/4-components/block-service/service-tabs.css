@@ -153,6 +153,7 @@ input[type="radio"]#radio-service-groups:checked ~ .service-tabs__list .service-
 
   .service-tabs .block__title {
     margin-bottom: 0;
+    font-size: 92px;
   }
 
   .service-tabs__list {

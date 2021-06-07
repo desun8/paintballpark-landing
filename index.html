@@ -95,21 +95,23 @@
   <div class="dialog-overlay"></div>
   <!-- 3. The actual dialog -->
   <div class="dialog-content dialog-container__dialog" aria-labelledby="dialog-menu-title" role="dialog">
+    <div class="bg-rifle"></div>
     <button class="dialog-btn-close" type="button" aria-label="Закрыть меню."></button>
     <!-- 5. The dialog title -->
     <h1 class="dialog-title" id="page-menu-title">Меню</h1>
     <!-- 6. Dialog content -->
     <div class="page-nav">
+
       <div class="page-nav__wrapper">
         <div class="page-nav__body">
           <nav class="main-nav" aria-label="Главное меню">
             <ul class="main-nav__list list-unstyled">
-              <li class="main-nav__item"><a href="#anchor-hero" class="main-nav__link">Видео</a></li>
-              <li class="main-nav__item"><a href="#anchor-service" class="main-nav__link">Услуги</a></li>
-              <li class="main-nav__item"><a href="#anchor-price" class="main-nav__link">Тарифы</a></li>
-              <li class="main-nav__item"><a href="#anchor-price" class="main-nav__link">Оставить заявку</a></li>
-              <li class="main-nav__item"><a href="#anchor-map" class="main-nav__link">Где мы находимся?</a></li>
-              <li class="main-nav__item"><a href="#anchor-gallery" class="main-nav__link">Галерея</a></li>
+              <li class="main-nav__item"><a href="#block-hero" class="main-nav__link">Видео</a></li>
+              <li class="main-nav__item"><a href="#block-services" class="main-nav__link">Услуги</a></li>
+              <li class="main-nav__item"><a href="#banner-price" class="main-nav__link">Тарифы</a></li>
+              <li class="main-nav__item"><a href="#form-middle" class="main-nav__link">Оставить заявку</a></li>
+              <li class="main-nav__item"><a href="#block-map" class="main-nav__link">Где мы находимся?</a></li>
+              <li class="main-nav__item"><a href="#block-gallery" class="main-nav__link">Галерея</a></li>
             </ul>
           </nav>
 
@@ -140,14 +142,14 @@
           </ul>
         </div>
 
-        <button class="page-nav__btn-form btn btn--green-light" type="button">Заказать звонок</button>
+        <a href="#form-middle" class="page-nav__btn-form btn btn--green-light">Заказать звонок</a>
       </div>
     </div>
   </div>
 </div>
 
 <main id="page-main">
-  <article class="block-hero" data-scroll-section>
+  <article id="block-hero" class="block-hero" data-scroll-section>
     <div class="block-hero__top-pattern"></div>
     <div class="block-hero__bottom-pattern"></div>
 
@@ -1156,74 +1158,6 @@
     </article>
   </div>
 </div>
-
-
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<!--<div style="display: none;" id="lightbox" class="pswp" tabindex="-1" role="dialog" aria-hidden="true">-->
-
-<!--  &lt;!&ndash; Background of PhotoSwipe.-->
-<!--       It's a separate element as animating opacity is faster than rgba(). &ndash;&gt;-->
-<!--  <div class="pswp__bg"></div>-->
-
-<!--  &lt;!&ndash; Slides wrapper with overflow:hidden. &ndash;&gt;-->
-<!--  <div class="pswp__scroll-wrap">-->
-
-<!--    &lt;!&ndash; Container that holds slides.-->
-<!--        PhotoSwipe keeps only 3 of them in the DOM to save memory.-->
-<!--        Don't modify these 3 pswp__item elements, data is added later on. &ndash;&gt;-->
-<!--    <div class="pswp__container">-->
-<!--      <div class="pswp__item"></div>-->
-<!--      <div class="pswp__item"></div>-->
-<!--      <div class="pswp__item"></div>-->
-<!--    </div>-->
-
-<!--    &lt;!&ndash; Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. &ndash;&gt;-->
-<!--    <div class="pswp__ui pswp__ui&#45;&#45;hidden">-->
-
-<!--      <div class="pswp__top-bar">-->
-
-<!--        &lt;!&ndash;  Controls are self-explanatory. Order can be changed. &ndash;&gt;-->
-
-<!--        <div class="pswp__counter"></div>-->
-
-<!--        <button class="pswp__button pswp__button&#45;&#45;close" title="Close (Esc)"></button>-->
-
-<!--        <button class="pswp__button pswp__button&#45;&#45;share" title="Share"></button>-->
-
-<!--        <button class="pswp__button pswp__button&#45;&#45;fs" title="Toggle fullscreen"></button>-->
-
-<!--        <button class="pswp__button pswp__button&#45;&#45;zoom" title="Zoom in/out"></button>-->
-
-<!--        &lt;!&ndash; Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR &ndash;&gt;-->
-<!--        &lt;!&ndash; element will get class pswp__preloader&#45;&#45;active when preloader is running &ndash;&gt;-->
-<!--        <div class="pswp__preloader">-->
-<!--          <div class="pswp__preloader__icn">-->
-<!--            <div class="pswp__preloader__cut">-->
-<!--              <div class="pswp__preloader__donut"></div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-
-<!--      <div class="pswp__share-modal pswp__share-modal&#45;&#45;hidden pswp__single-tap">-->
-<!--        <div class="pswp__share-tooltip"></div>-->
-<!--      </div>-->
-
-<!--      <button class="pswp__button pswp__button&#45;&#45;arrow&#45;&#45;left" title="Previous (arrow left)">-->
-<!--      </button>-->
-
-<!--      <button class="pswp__button pswp__button&#45;&#45;arrow&#45;&#45;right" title="Next (arrow right)">-->
-<!--      </button>-->
-
-<!--      <div class="pswp__caption">-->
-<!--        <div class="pswp__caption__center"></div>-->
-<!--      </div>-->
-
-<!--    </div>-->
-
-<!--  </div>-->
-
-<!--</div>-->
 
 <script type="module" src="/src/main.ts"></script>
 </body>

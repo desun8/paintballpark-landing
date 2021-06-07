@@ -45,21 +45,17 @@ export default () => {
   const menuDialog = () => {
     const element = document.querySelector("#page-menu") as HTMLElement;
     const btnClose = element.querySelector(".dialog-btn-close") as HTMLButtonElement;
+    const items = Array.from(element.querySelectorAll('.main-nav__link')) as HTMLAnchorElement[];
     const anchorForm = element.querySelector(".page-nav__btn-form") as HTMLButtonElement;
-    const middleFormElement = document.querySelector("#form-middle")!;
     const dialog = new A11yDialog(element);
 
-    [btnClose, anchorForm].forEach(btn => {
+    [btnClose, anchorForm, ...items].forEach(btn => {
       btn.addEventListener("click", () => {
+        dialog.hide();
         element.classList.add("is-hidden");
         setTimeout(
           () => {
             element.classList.remove("is-hidden");
-            dialog.hide();
-
-            if (btn === anchorForm) {
-              middleFormElement.scrollIntoView();
-            }
           }, delay,
         );
       });

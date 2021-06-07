@@ -56,6 +56,7 @@
     left: 0;
     right: 0;
     color: var(--c-blue);
+    font-family: var(--font-title);
     font-size: 220px;
     text-align: center;
     transform: rotate(-4deg);

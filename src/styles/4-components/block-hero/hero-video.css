@@ -185,11 +185,14 @@
   }
 
   .hero-video__body::before {
+    --gap: 10px;
+
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 20px;
+    right: calc(var(--gap) / 2);
+    left: calc(var(--gap) / 2);
+    width: calc(100% - var(--gap));
     height: 150px;
     background: linear-gradient(182deg, #000 14%, rgba(0, 0, 0, 0) 72%);
     z-index: 2;
@@ -240,6 +243,7 @@
 
   .hero-video__header {
     bottom: 0;
+    transform: rotate(4deg);
   }
 
   .hero-video__header::before,
@@ -263,6 +267,14 @@
   }
 
   .hero-video__container video {
+    --gap: 4px;
+
+    top: calc(var(--gap) / 2);
+    right: calc(var(--gap) / 2);
+    bottom: calc(var(--gap) / 2);
+    left: calc(var(--gap) / 2);
+    width: calc(100% - var(--gap));
+    height: calc(100% - var(--gap));
     object-fit: cover;
   }
 

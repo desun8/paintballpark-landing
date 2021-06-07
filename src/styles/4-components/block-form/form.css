@@ -49,6 +49,11 @@
   margin-bottom: 10px;
 }
 
+.form__input:focus {
+  border-color: var(--c-blue);
+  outline: 0;
+}
+
 .form__input::placeholder {
   color: inherit;
   font-family: inherit;
