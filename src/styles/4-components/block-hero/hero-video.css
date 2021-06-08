@@ -248,7 +248,7 @@
 
   .hero-video__header::before,
   .hero-video__header::after {
-    left: 5px;
+    left: 10px;
   }
 
   .hero-video__header-container {
