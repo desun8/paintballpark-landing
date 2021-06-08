@@ -32,7 +32,6 @@ class Form {
   private captchaKey = "6LfuGfMUAAAAACRlKv0QH2jEz3Ei79ac-QYVRa9E";
   private submitUrl: string;
   private errorClassName = "has-error";
-  private regName = "^[А-Яа-яA-Za-z]+( [А-Яа-яA-Za-z]+)*$";
 
   constructor(elm: HTMLFormElement) {
     this.$elm = {
@@ -84,13 +83,6 @@ class Form {
       const target = event.target as HTMLElement;
       target.classList.remove(this.errorClassName);
     };
-
-    Inputmask({
-      regex: this.regName,
-      placeholder: "",
-      showMaskOnHover: false,
-      onKeyDown,
-    }).mask(this.$elm.name);
 
     Inputmask({
       mask: "+7 (999) 999 99 99",
@@ -194,7 +186,9 @@ class Form {
       const {value} = target;
       const valueTrim = value.trim();
 
-      target.inputmask.setValue(valueTrim);
+      if (target.inputmask) {
+        target.inputmask.setValue(valueTrim);
+      }
     });
 
     // let placeholder = this.$elm.name.placeholder;
