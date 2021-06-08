@@ -14,7 +14,7 @@ import Form from "./scripts/Form";
 import autoplayVideo from "./scripts/autoplayVideo";
 import fixedHeader from "./scripts/fixedHeader";
 
-import carousel from "./scripts/carousel";
+import { initInstagramCarousel } from "./scripts/carousel";
 import isDesktop from "./scripts/utils/isDesktop";
 import fullscreenVideo from "./scripts/fullscreenVideo";
 import fixAnchors from "./scripts/fixAnchors";
@@ -35,7 +35,7 @@ fixedHeader();
 fullscreenVideo();
 
 if (isDesktopScreen) {
-  carousel();
+  initInstagramCarousel();
 
   const simplebarsModalElm = document.querySelector("[data-simplebar-modal]") as HTMLElement;
   new Simplebar(simplebarsModalElm, {

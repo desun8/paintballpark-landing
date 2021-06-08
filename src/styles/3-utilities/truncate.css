@@ -1,6 +1,6 @@
 .truncate {
   --line: 3;
-  --line-height: 1.2em;
+  --line-height: 1em;
   --max-h: calc(var(--line-height) * (var(--line) * 1.4));
 
   max-height: var(--max-h);
@@ -10,4 +10,11 @@
   -webkit-line-clamp: var(--line);
   text-overflow: ellipsis;
   overflow: hidden !important;
+}
+
+/* noinspection CssInvalidMediaFeature */
+@media (--tablet-lg) {
+  .truncate {
+    --line-height: 1.2;
+  }
 }

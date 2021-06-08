@@ -49,6 +49,7 @@
 .banner-price__btn {
   padding-left: 48px;
   padding-right: 48px;
+  font-size: 18px;
 }
 
 .banner-price__btn.btn--red:hover {
@@ -156,7 +157,6 @@
 
   .banner-price__btn {
     padding: 20px 65px;
-    font-size: 18px;
   }
 
   .banner-price__patter-top,

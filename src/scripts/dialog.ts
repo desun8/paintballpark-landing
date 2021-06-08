@@ -136,6 +136,11 @@ export default () => {
         }
 
         dialog.show();
+
+        const modalScrollWrapper = element.querySelector(".simplebar-content-wrapper") as HTMLElement;
+        if (modalScrollWrapper) {
+          modalScrollWrapper.scrollTop = 0;
+        }
       });
     });
 
