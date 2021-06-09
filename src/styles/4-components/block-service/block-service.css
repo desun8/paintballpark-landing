@@ -46,7 +46,10 @@
     left: 0;
     right: 0;
     height: 100%;
-    background: image-set(url("/images/pattern-page-bg.png") 1x, url("/images/pattern-page-bg@2x.png") 2x) center/16px;
+    background-image: image-set(url("/images/pattern-page-bg.png") 1x, url("/images/pattern-page-bg@2x.png") 2x);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px;
   }
 
   .block-service::after {

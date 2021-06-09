@@ -11,12 +11,26 @@
   left: 0;
   height: 110px;
   background-color: var(--c-blue);
-  mask:
+  mask-repeat: round;
+  mask-position: left bottom;
+  mask-size: auto 110px;
+  z-index: 2;
+}
+
+.no-webp .page-footer__top-pattern {
+  mask-image:
     image-set(
       url("/images/pattern-hero-white.png") 1x,
       url("/images/pattern-hero-white@2x.png") 2x
-    ) round left bottom/auto 110px;
-  z-index: 2;
+    );
+}
+
+.webp .page-footer__top-pattern {
+  mask-image:
+    image-set(
+      url("/images/pattern-hero-white.webp") 1x,
+      url("/images/pattern-hero-white@2x.webp") 2x
+    );
 }
 
 .page-footer .site-dev {
@@ -87,11 +101,18 @@
     right: 0;
     width: 100%;
     height: 100%;
-    background-image: url("/images/pattern-bg-rifle.png");
     background-repeat: no-repeat;
     background-size: 866px;
     background-position: 130% 0;
     opacity: 0.5;
+  }
+
+  .no-webp .page-footer > .bg-rifle::before {
+    background-image: url("/images/pattern-bg-rifle.png");
+  }
+
+  .webp .page-footer > .bg-rifle::before {
+    background-image: url("/images/pattern-bg-rifle.webp");
   }
 
   .page-footer > .site-dev,

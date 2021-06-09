@@ -99,11 +99,25 @@
   width: 204px;
   height: 325px;
   background: var(--c-red);
-  mask:
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+}
+
+.no-webp .block-map__play::before {
+  mask-image:
     image-set(
       url("/images/btn-bg-splash.png") 1x,
       url("/images/btn-bg-splash@2x.png") 2x
-    ) no-repeat center/cover;
+    );
+}
+
+.webp .block-map__play::before {
+  mask-image:
+    image-set(
+      url("/images/btn-bg-splash.webp") 1x,
+      url("/images/btn-bg-splash@2x.webp") 2x
+    );
 }
 
 .block-map__play .mask,
@@ -136,21 +150,49 @@
 .block-map__pattern-top {
   top: 0;
   height: 44px;
-  background:
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: auto 44px;
+}
+
+.no-webp .block-map__pattern-top {
+  background-image:
     image-set(
       url("/images/patter-place-top.png") 1x,
       url("/images/patter-place-top@2x.png") 2x
-    ) no-repeat center top/auto 44px;
+    );
+}
+
+.webp .block-map__pattern-top {
+  background-image:
+    image-set(
+      url("/images/patter-place-top.webp") 1x,
+      url("/images/patter-place-top@2x.webp") 2x
+    );
 }
 
 .block-map__pattern-bottom {
   bottom: 0;
   height: 64px;
-  background:
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: auto 64px;
+}
+
+.no-webp .block-map__pattern-bottom {
+  background-image:
     image-set(
       url("/images/patter-place-bottom.png") 1x,
       url("/images/patter-place-bottom@2x.png") 2x
-    ) no-repeat left bottom/auto 64px;
+    );
+}
+
+.webp .block-map__pattern-bottom {
+  background-image:
+    image-set(
+      url("/images/patter-place-bottom.webp") 1x,
+      url("/images/patter-place-bottom@2x.webp") 2x
+    );
 }
 
 /* noinspection CssInvalidMediaFeature */

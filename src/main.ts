@@ -18,6 +18,15 @@ import { initInstagramCarousel } from "./scripts/carousel";
 import isDesktop from "./scripts/utils/isDesktop";
 import fullscreenVideo from "./scripts/fullscreenVideo";
 import fixAnchors from "./scripts/fixAnchors";
+import checkWebpFeature, { Features } from "./scripts/utils/checkWebpFeature";
+
+checkWebpFeature(Features.lossy, (_: Features, result: boolean) => {
+  if (result) {
+    document.documentElement.classList.add("webp");
+  } else {
+    document.documentElement.classList.add("no-webp");
+  }
+})
 
 const isDesktopScreen = isDesktop();
 
@@ -29,7 +38,6 @@ const locomotiveScroll = new LocomotiveScroll({
 window.smoothScrollbar = locomotiveScroll;
 
 fixAnchors();
-
 dialog();
 fixedHeader();
 fullscreenVideo();

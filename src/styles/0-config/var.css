@@ -16,7 +16,4 @@ body {
   --c-red: #fe4c4c;
   --c-green-light: #daf530;
   --c-green: #12bc53;
-
-  /* bg */
-  --bg-noise: image-set(url("/images/pattern-page-bg.png") 1x, url("/images/pattern-page-bg@2x.png") 2x) center/16px;
 }

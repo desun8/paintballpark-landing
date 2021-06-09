@@ -66,12 +66,25 @@
   width: calc(100% + (var(--page-gap) * 2));
   height: 240px;
   margin: 0 var(--no-page-gap);
-  background:
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 280px;
+}
+
+.no-webp .banner-price__image {
+  background-image:
     image-set(
       url("/images/price-image.png") 1x,
       url("/images/price-image@2x.png") 2x
-    )
-    no-repeat center top/auto 280px;
+    );
+}
+
+.webp .banner-price__image {
+  background-image:
+    image-set(
+      url("/images/price-image.webp") 1x,
+      url("/images/price-image@2x.webp") 2x
+    );
 }
 
 .banner-price__patter-top,
@@ -118,7 +131,9 @@
     left: 0;
     right: 0;
     height: 100%;
-    background: image-set(url("/images/pattern-page-bg.png") 1x, url("/images/pattern-page-bg@2x.png") 2x) center/16px;
+    background-image: image-set(url("/images/pattern-page-bg.png") 1x, url("/images/pattern-page-bg@2x.png") 2x);
+    background-position: center;
+    background-size: 16px;
   }
 
   .banner-price::after {
@@ -211,14 +226,27 @@
     display: block;
     width: var(--width);
     height: var(--height);
-    background:
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    clip-path: polygon(100% 0, 100% 25%, 100% 86%, 0 86%, 0% 35%, 0 0);
+    z-index: 2;
+  }
+
+  .no-webp .banner-price__image-inner {
+    background-image:
       image-set(
         url("/images/price-image--large.png") 1x,
         url("/images/price-image--large@2x.png") 2x
-      )
-      no-repeat center/contain;
-    clip-path: polygon(100% 0, 100% 25%, 100% 86%, 0 86%, 0% 35%, 0 0);
-    z-index: 2;
+      );
+  }
+
+  .webp .banner-price__image-inner {
+    background-image:
+      image-set(
+        url("/images/price-image--large.webp") 1x,
+        url("/images/price-image--large@2x.webp") 2x
+      );
   }
 
   .banner-price .bg-rifle--top,

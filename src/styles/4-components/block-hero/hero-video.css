@@ -36,13 +36,25 @@
   right: 0;
   left: 0;
   height: 40px;
-  background:
+  background-repeat: round no-repeat;
+  background-position: center top;
+  background-size: auto 40px;
+}
+
+.no-webp .hero-video__header::after {
+  background-image:
     image-set(
       url("/images/pattern-hero-black.png") 1x,
       url("/images/pattern-hero-black@2x.png") 2x
-    ) round no-repeat center top/auto 40px;
+    );
+}
 
-  /* backdrop-filter: blur(5px); */
+.webp .hero-video__header::after {
+  background-image:
+    image-set(
+      url("/images/pattern-hero-black.webp") 1x,
+      url("/images/pattern-hero-black@2x.webp") 2x
+    );
 }
 
 .hero-video__header-container {
@@ -108,11 +120,25 @@
   width: 120px;
   height: 200px;
   background-color: var(--c-red);
-  mask:
+  mask-repeat: no-repeat;
+  mask-position: right center;
+  mask-size: contain;
+}
+
+.no-webp .hero-video__icon::before {
+  mask-image:
     image-set(
-      url("/images/btn-youtube-splash--original.png") 1x,
-      url("/images/btn-youtube-splash@2x--original.png") 2x
-    ) no-repeat right center/contain;
+      url("/images/btn-bg-splash.png") 1x,
+      url("/images/btn-bg-splash@2x.png") 2x
+    );
+}
+
+.webp .hero-video__icon::before {
+  mask-image:
+    image-set(
+      url("/images/btn-bg-splash.webp") 1x,
+      url("/images/btn-bg-splash@2x.webp") 2x
+    );
 }
 
 .hero-video__icon::after {

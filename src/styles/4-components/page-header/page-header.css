@@ -10,11 +10,14 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background:
+  background-image:
     image-set(
       url("/images/pattern-paintball-shooting-airsoft-games-milsim.png") 1x,
       url("/images/pattern-paintball-shooting-airsoft-games-milsim@2x.png") 2x
-    ) no-repeat center 0/cover;
+    );
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: cover;
 }
 
 .page-header.is-fixed {
@@ -66,14 +69,18 @@
 /* noinspection CssInvalidMediaFeature */
 @media (--tablet-lg) {
   .page-header {
-    background: #daf530 image-set(url("/images/pattern-page-bg.png") 1x, url("/images/pattern-page-bg@2x.png") 2x) center/16px;
-
-    /* overflow: hidden; */
+    background-color: #daf530;
+    background-image: image-set(url("/images/pattern-page-bg.png") 1x, url("/images/pattern-page-bg@2x.png") 2x);
+    background-position: center;
+    background-size: 16px;
   }
 
   .page-header::before {
     content: '';
-    background: #fff image-set(url("/images/pattern-page-bg.png") 1x, url("/images/pattern-page-bg@2x.png") 2x) center/16px;
+    background-color: #fff;
+    background-image: image-set(url("/images/pattern-page-bg.png") 1x, url("/images/pattern-page-bg@2x.png") 2x);
+    background-position: center;
+    background-size: 16px;
     mask: url("/images/pattern-modal-title.svg") no-repeat -1100px -1500px/5000px;
   }
 

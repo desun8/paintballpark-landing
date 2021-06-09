@@ -45,9 +45,19 @@ input[type="radio"]#radio-service-groups:checked ~ .service-tabs__list .service-
   right: 0;
   bottom: -20px;
   left: 0;
-  background: url("/images/pattern-bg-rifle.png") no-repeat -105px -102px/600px;
+  background-repeat: no-repeat;
+  background-position: -105px -102px;
+  background-size: 600px;
   overflow: hidden;
   transform: rotate(-8deg);
+}
+
+.no-webp .service-tabs__list::before {
+  background-image: url("/images/pattern-bg-rifle.png");
+}
+
+.webp .service-tabs__list::before {
+  background-image: url("/images/pattern-bg-rifle.webp");
 }
 
 .service-tabs__item {
@@ -105,12 +115,15 @@ input[type="radio"]#radio-service-groups:checked ~ .service-tabs__list .service-
   width: 100%;
   height: 100%;
   background-color: var(--icon-color);
-  mask:
+  mask-image:
     image-set(
       url("/images/icon-arrow.png") 1x,
       url("/images/icon-arrow@2x.png") 2x,
       url("/images/icon-arrow@4x.png") 4x
-    ) no-repeat center / 25px;
+    );
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 25px;
 }
 
 /* section */

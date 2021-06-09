@@ -33,7 +33,18 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: url("/images/pattern-bg-rifle.png") no-repeat 75% 0;
+  background-repeat: no-repeat;
+  background-position: 75% 0;
+}
+
+.no-webp .block-form--middle .form::before,
+.no-webp .block-form--middle .success-message::before {
+  background-image: url("/images/pattern-bg-rifle.png");
+}
+
+.webp .block-form--middle .form::before,
+.webp .block-form--middle .success-message::before {
+  background-image: url("/images/pattern-bg-rifle.webp");
 }
 
 .block-form--middle .form__title {

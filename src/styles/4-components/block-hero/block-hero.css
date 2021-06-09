@@ -19,11 +19,14 @@
   right: 0;
   left: 0;
   height: 68px;
-  background:
+  background-image:
     image-set(
       url("/images/pattern-header-green.png") 1x,
       url("/images/pattern-header-green@2x.png") 2x
-    ) round left top/cover;
+    );
+  background-repeat: round;
+  background-position: left top;
+  background-size: cover;
 }
 
 .block-hero__bottom-pattern {
@@ -32,19 +35,36 @@
   right: 0;
   left: 0;
   height: 110px;
-  background:
+  background-repeat: round;
+  background-position: left bottom;
+  background-size: auto 110px;
+  z-index: 5;
+}
+
+.no-webp .block-hero__bottom-pattern {
+  background-image:
     image-set(
       url("/images/pattern-hero-white.png") 1x,
       url("/images/pattern-hero-white@2x.png") 2x
-    ) round left bottom/auto 110px;
-  z-index: 5;
+    );
+}
+
+.webp .block-hero__bottom-pattern {
+  background-image:
+    image-set(
+      url("/images/pattern-hero-white.webp") 1x,
+      url("/images/pattern-hero-white@2x.webp") 2x
+    );
 }
 
 /* noinspection CssInvalidMediaFeature */
 @media (--tablet-lg) {
   .block-hero {
-    background: #daf530 image-set(url("/images/pattern-page-bg.png") 1x, url("/images/pattern-page-bg@2x.png") 2x) center/16px;
     padding-bottom: 160px;
+    background-color: #daf530;
+    background-image: image-set(url("/images/pattern-page-bg.png") 1x, url("/images/pattern-page-bg@2x.png") 2x);
+    background-position: center;
+    background-size: 16px;
   }
 
   .block-hero__container {
@@ -84,7 +104,10 @@
   .block-hero__bottom-pattern {
     bottom: -60px;
     height: 360px;
-    background: #fff image-set(url("/images/pattern-page-bg.png") 1x, url("/images/pattern-page-bg@2x.png") 2x) center/16px;
+    background-color: #fff;
+    background-image: image-set(url("/images/pattern-page-bg.png") 1x, url("/images/pattern-page-bg@2x.png") 2x);
+    background-position: center;
+    background-size: 16px;
     mask: url("/images/pattern-modal-title.svg") no-repeat -2200px -510px/5000px;
   }
 }
