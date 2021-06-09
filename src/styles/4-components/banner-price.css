@@ -139,7 +139,7 @@
   }
 
   .banner-price__content {
-    padding: 60px 0;
+    padding: 75px 0;
     overflow: hidden;
   }
 
@@ -175,7 +175,7 @@
   }
 
   .banner-price__patter-bottom {
-    bottom: 0;
+    bottom: 18px;
     background-position-x: -660px;
     background-position-y: 0;
     transform: scale(-1);
@@ -188,7 +188,6 @@
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 50%;
-    background-color: transparent;
     clip-path: none;
     overflow: hidden;
     z-index: 5;
@@ -207,7 +206,7 @@
     --height: 431px;
 
     position: absolute;
-    top: calc(50% - (var(--height) / 2));
+    top: calc(52% - (var(--height) / 2));
     left: calc(50% - var(--width));
     display: block;
     width: var(--width);
@@ -218,7 +217,7 @@
         url("/images/price-image--large@2x.png") 2x
       )
       no-repeat center/contain;
-    clip-path: polygon(100% 0, 100% 25%, 100% 86.2%, 58% 86.4%, 48% 85%, 41% 83%, 0 83%, 0% 35%, 0 0);
+    clip-path: polygon(100% 0, 100% 25%, 100% 86%, 0 86%, 0% 35%, 0 0);
     z-index: 2;
   }
 
