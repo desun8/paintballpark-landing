@@ -84,6 +84,8 @@ class Form {
       target.classList.remove(this.errorClassName);
     };
 
+    this.$elm.name.addEventListener("keydown", onKeyDown);
+
     Inputmask({
       mask: "+7 (999) 999 99 99",
       placeholder: "x",
@@ -190,14 +192,6 @@ class Form {
         target.inputmask.setValue(valueTrim);
       }
     });
-
-    // let placeholder = this.$elm.name.placeholder;
-    // this.$elm.name.addEventListener("invalid", (e) => {
-    //   setTimeout(() => {
-    //     (e.target as HTMLInputMask).placeholder = placeholder;
-    //     (e.target as HTMLInputMask).classList.add(this.errorClassName);
-    //   }, 0)
-    // })
 
     // показываем форму
     this.$elm.successMessage.btn.addEventListener("click", () => this.toggleSuccessMessage(false));
