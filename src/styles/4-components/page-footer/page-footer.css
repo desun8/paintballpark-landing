@@ -141,9 +141,13 @@
     left: 0;
     height: 100%;
     background-color: unset;
-    mask: unset;
     overflow: hidden;
     z-index: 2;
+  }
+
+  .no-webp .page-footer__top-pattern,
+  .webp .page-footer__top-pattern {
+    mask: unset;
   }
 
   .page-footer__top-pattern::before {

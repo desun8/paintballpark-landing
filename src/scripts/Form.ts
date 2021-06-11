@@ -106,7 +106,11 @@ class Form {
   clearForm() {
     const items = [this.$elm.name, this.$elm.phone];
     items.forEach((item) => {
-      item.inputmask.setValue("");
+      if (item.inputmask){
+        item.inputmask.setValue("");
+      } else {
+        item.value = "";
+      }
     });
   }
 
@@ -123,7 +127,7 @@ class Form {
 
   onSubmit() {
     // TODO: удалить. Только для разработки без бека
-    this.toggleSuccessMessage(true);
+    // this.toggleSuccessMessage(true);
 
     if (this.onValidate() === false) {
       console.log("%c Поля заполнены с ошибками", "color: #212121; font-weight: bold; padding: 1em; background: #fa9f0c");
@@ -142,11 +146,7 @@ class Form {
         throw Error(response.statusText);
       }
 
-      if (!response.ok) {
-        throw Error(response.statusText);
-      }
-
-      return response;
+      return response.json();
     };
 
     window.grecaptcha.ready(() => {
@@ -160,11 +160,16 @@ class Form {
 
         fetch(this.submitUrl, params)
           .then(handleErrors)
-          .then(() => {
+          .then((json) => {
+            console.log(json);
+            
+            if (json.status === "error") {
+              throw Error(json.message);
+            }
+
             this.toggleSuccessMessage(true);
             this.clearForm();
-            // console.log("форма отправилась");
-            // console.log(res.json());
+            console.log("форма отправилась");
             // console.log(res.json().status);
           })
           .catch((error) => console.error("Форма не отправилась", error));

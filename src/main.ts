@@ -1,11 +1,9 @@
 import Simplebar from "simplebar";
 import "simplebar/dist/simplebar.css";
 import "./styles/index.css";
-
 // @ts-ignore
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.min.css";
-
 
 import dialog from "./scripts/dialog";
 import service from "./scripts/service";

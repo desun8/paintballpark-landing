@@ -27,7 +27,7 @@
   .footer-contacts {
     grid-column: 2/3;
     display: grid;
-    grid-template-columns: repeat(2, 240px) auto;
+    grid-template-columns: repeat(2, minmax(auto, 240px)) auto;
     justify-content: start;
     gap: 14px;
     color: var(--c-blue);
