@@ -60,7 +60,7 @@ export const initInstagramCarousel = () => {
     animationTimingFunc: "ease",
   }).mount();
 
-  const controllBtns = Array.from(document.querySelectorAll(".block-gallery .service-tabs__controllers")) as HTMLButtonElement[];
+  const controllBtns = Array.from(document.querySelectorAll(".block-gallery .service-tabs__controllers .service-tabs__btn")) as HTMLButtonElement[];
 
   controllBtns.forEach(btn => {
     btn.addEventListener("click", () => {

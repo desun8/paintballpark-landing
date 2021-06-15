@@ -1,7 +1,6 @@
 // Фикс якорных ссылок под locomotive
 export default () => {
   const linksToTop: HTMLAnchorElement[] | [] = Array.from(document.querySelectorAll("a[href^='#']:not([href$='#'])"));
-  console.log(linksToTop);
 
   if (linksToTop.length) {
     linksToTop.forEach(link => {

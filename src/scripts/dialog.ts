@@ -155,6 +155,17 @@ export default () => {
     });
 
     dialogScrollLock(dialog);
+
+    // Ставим на паузу видео, если оно есть в модалке и проигрывается.
+    dialog.on("hide", function (element) {
+      const videoElms = Array.from(element.querySelectorAll('video')) as HTMLVideoElement[];
+
+      if (videoElms.length > 0) {
+        videoElms.forEach(videoElm => {
+          videoElm.pause();
+        })
+      }
+    })
   };
 
   menuDialog();

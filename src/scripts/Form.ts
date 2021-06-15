@@ -162,7 +162,7 @@ class Form {
           .then(handleErrors)
           .then((json) => {
             console.log(json);
-            
+
             if (json.status === "error") {
               throw Error(json.message);
             }
@@ -181,6 +181,8 @@ class Form {
 
   init() {
     this.setInputMask();
+
+    this.$elm.successMessage.elm.style.transitionDuration = '0.5s';
 
     // При фокусе на форме, загружаем рекапчу
     this.$elm.form.addEventListener("focusin", () => {

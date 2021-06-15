@@ -12,7 +12,6 @@
   visibility: hidden;
   transform: translateX(-60px);
   transition-property: opacity, transform, visibility;
-  transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
 }

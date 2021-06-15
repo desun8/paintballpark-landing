@@ -56,11 +56,10 @@ export default () => {
         return;
       }
 
-      console.log("start pinned header");
+      // console.log("start pinned header");
       clearTimer(timerId);
 
       isHeaderPinned = true;
-      // headerElement.style.willChange = "transform";
 
       if (isNative) {
         headerElement.style.position = "fixed";
@@ -118,7 +117,7 @@ export default () => {
         return;
       }
 
-      console.log("start unpinned header");
+      // console.log("start unpinned header");
       clearTimer(timerId);
 
       headerElement.style.willChange = "transform";
@@ -179,8 +178,5 @@ export default () => {
       // console.log(e);
       toggleHeader(e.scroll.y);
     });
-    // locomotiveScroll!.addListener((status: Status) => {
-    //   toggleHeader(status.offset.y);
-    // });
   }
 }
