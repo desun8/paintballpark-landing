@@ -121,8 +121,8 @@
   height: 200px;
   background-color: var(--c-red);
   mask-repeat: no-repeat;
-  mask-position: right center;
-  mask-size: contain;
+  mask-position: 14px center;
+  mask-size: 150px;
 }
 
 .no-webp .hero-video__icon::before {
@@ -312,6 +312,6 @@
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
     width: 200px;
-    mask: url("/images/btn-bg-splash.svg") no-repeat center/135px;
+    mask: url("/images/btn-bg-splash.svg") no-repeat center/135px !important;
   }
 }

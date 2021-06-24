@@ -39,37 +39,49 @@
   background-image: url("/images/icon-tag.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 25px;
+  background-size: 24px;
   border-radius: 50%;
 }
 
-.short-nav__item:nth-child(3n-2) .short-nav__icon {
+.short-nav__item:nth-child(4n-3) .short-nav__icon {
   --bg-color: #00a878;
 }
 
-.short-nav__item:nth-child(3n) .short-nav__icon {
+.short-nav__item:nth-child(4n-2) .short-nav__icon {
+  --bg-color: var(--c-blue-dark);
+}
+
+.short-nav__item:nth-child(4n-1) .short-nav__icon {
   --bg-color: #fe5e41;
 }
 
+.short-nav__item:nth-child(4n) .short-nav__icon {
+  --bg-color: var(--c-blue);
+}
+
 .short-nav__icon--wa {
-  background-color: #00a878;
   background-image: url("/images/icon-wa.svg");
   background-size: 28px;
 }
 
 .short-nav__icon--phone {
-  background-color: var(--c-blue-dark);
   background-image: url("/images/icon-phone.svg");
 }
 
 .short-nav__icon--map {
-  background-color: #fe5e41;
   background-image: url("/images/icon-marker.svg");
   background-size: 18px;
 }
 
+.short-nav__icon--service {
+  background-image: url("/images/icon-service.svg");
+}
+
+.short-nav__icon--mail {
+  background-image: url("/images/icon-mail.svg");
+}
+
 .short-nav__icon--instagram {
-  background-color: var(--c-red);
   background-image: url("/images/icon-instagram.svg");
 }
 

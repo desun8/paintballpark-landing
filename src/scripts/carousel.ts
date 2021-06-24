@@ -42,6 +42,13 @@ export const initServiceCarousel = (index: number) => {
     animationTimingFunc: "ease",
   }).mount();
 
+  const perView = glide.settings.perView!;
+  const totalSize = glide._c.Sizes.length;
+
+  if (totalSize <= perView) {
+    glide.disable();
+  }
+
   serviceControllBtns.forEach(btn => {
     btn.addEventListener("click", () => {
       const isPrev = btn.classList.contains("service-tabs__btn--prev");

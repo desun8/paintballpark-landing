@@ -28,7 +28,7 @@
 }
 
 .page-header.is-fixed::before {
-  opacity: 0;
+  content: none;
 }
 
 .page-header__head {

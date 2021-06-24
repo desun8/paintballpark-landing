@@ -45,7 +45,7 @@ export default () => {
   const menuDialog = () => {
     const element = document.querySelector("#page-menu") as HTMLElement;
     const btnClose = element.querySelector(".dialog-btn-close") as HTMLButtonElement;
-    const items = Array.from(element.querySelectorAll('.main-nav__link')) as HTMLAnchorElement[];
+    const items = Array.from(element.querySelectorAll(".main-nav__link")) as HTMLAnchorElement[];
     const anchorForm = element.querySelector(".page-nav__btn-form") as HTMLButtonElement;
     const dialog = new A11yDialog(element);
 
@@ -92,9 +92,16 @@ export default () => {
 
       if (rootVideo && rootImage === null) {
         const videoElement = rootVideo.cloneNode(true) as HTMLVideoElement;
+        const sourceElms = videoElement.querySelectorAll("source");
+        sourceElms.forEach(elm => {
+          elm.src = `${elm.src}#t=0.01`;
+        })
+
         videoElement.setAttribute("controls", "");
+        videoElement.setAttribute("preload", "metadata");
         videoElement.removeAttribute("loop");
         videoElement.removeAttribute("muted");
+        videoElement.removeAttribute("playsinline");
         modalMedia.appendChild(videoElement);
       }
 
@@ -158,14 +165,14 @@ export default () => {
 
     // Ставим на паузу видео, если оно есть в модалке и проигрывается.
     dialog.on("hide", function (element) {
-      const videoElms = Array.from(element.querySelectorAll('video')) as HTMLVideoElement[];
+      const videoElms = Array.from(element.querySelectorAll("video")) as HTMLVideoElement[];
 
       if (videoElms.length > 0) {
         videoElms.forEach(videoElm => {
           videoElm.pause();
-        })
+        });
       }
-    })
+    });
   };
 
   menuDialog();

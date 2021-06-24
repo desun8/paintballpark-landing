@@ -53,5 +53,10 @@
     padding: 25px;
     background-color: var(--c-green-light);
     border-radius: 10px;
+    transition: background-color var(--duration);
+  }
+
+  .map-directions__item:hover {
+    background-color: var(--c-red);
   }
 }

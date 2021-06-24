@@ -77,6 +77,7 @@ input[type="radio"]#radio-service-groups:checked ~ .service-tabs__list .service-
   text-align: center;
   border-radius: 10px;
   cursor: pointer;
+  outline: 0;
 }
 
 /* controllers */

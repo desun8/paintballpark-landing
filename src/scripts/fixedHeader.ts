@@ -92,13 +92,12 @@ export default () => {
         headerElement.style.position = "absolute";
       } else {
         headerParent.classList.remove("is-fixed");
-        headerElement.style.transform = "translate3d(0, 0, 0)";
       }
 
       headerElement.style.zIndex = "";
       headerElement.style.transition = "";
       headerElement.classList.remove("is-fixed");
-      headerElement.style.transform = "translate3d(0, 0, 0)";
+      headerElement.style.transform = "none";
 
       isHeaderPinned = false;
       headerElement.style.willChange = "";

@@ -264,7 +264,7 @@
   .block-map__play::before {
     width: 350px;
     height: 350px;
-    mask: url("/images/btn-bg-splash.svg") no-repeat center/250px;
+    mask: url("/images/btn-bg-splash.svg") no-repeat center/250px !important;
   }
 
   .block-map__play::after {
