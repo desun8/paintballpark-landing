@@ -2,6 +2,10 @@ import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css";
 import isDesktop from "./utils/isDesktop";
 
+interface MyGlide extends Glide.Properties {
+  _c?:any
+}
+
 if (isDesktop()) {
   const addCarouselStyleClass = (rootElm: HTMLElement) => {
     const slidesElm = rootElm.querySelector("[data-glide-slides]")!;
@@ -33,7 +37,7 @@ export const initServiceCarousel = (index: number) => {
   }
 
   const selector = `.glide[data-type="${glideElm.dataset.type}"]`;
-  const glide = new Glide(selector, {
+  const glide: MyGlide = new Glide(selector, {
     perView: 3,
     gap: 28,
     peek: {before: 0, after: 150},
